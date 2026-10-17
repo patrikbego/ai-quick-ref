@@ -2,3 +2,9 @@
 .DS_Store
 *.swp
 *.swo
+
+# Local Maintenance & Agent Automation (kept local, not pushed to remote)
+AGENTS.md
+MAINTENANCE.md
+.agents/
+scripts/
