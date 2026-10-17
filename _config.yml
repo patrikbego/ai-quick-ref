@@ -1,5 +1,7 @@
 title: AI Quick Reference
 description: Curated quick reference guides on AI, LLMs, and Agents from ByteByteGo
+url: "https://patrikbego.github.io"
+baseurl: "/ai-quick-ref"
 remote_theme: just-the-docs/just-the-docs
 
 # Color scheme
