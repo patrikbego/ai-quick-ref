@@ -19,7 +19,23 @@ Comprehensive quick reference covering foundational AI engineering roadmaps, gen
 
 ---
 
-## 1. What’s Next in AI: Five Trends to Watch in 2026
+## 1. AI & LLM History Timeline (1950–2026)
+{: .d-inline-block }
+1950–2026
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Chronicles the pivotal technological milestones shaping modern artificial intelligence across four foundational eras: early symbolic AI and formal computing foundations (Turing, Perceptron, ELIZA), the machine learning era (backpropagation revival, Deep Blue), deep learning breakthroughs (AlexNet), and the transformer & large language model revolution (Attention Is All You Need, BERT, GPT series, multimodal reasoning, and autonomous agent loops).
+
+### Key Diagrams
+
+#### AI & LLM History Timeline
+![AI & LLM History Timeline](../assets/images/foundations/ai-llm-history-timeline.png)
+*Milestone timeline charting the evolution of AI systems from symbolic reasoning (1950s) to neural networks, transformers, reasoning models, and autonomous coding agents (2026).*
+
+---
+
+## 2. What’s Next in AI: Five Trends to Watch in 2026
 {: .d-inline-block }
 04 Mar 2026
 {: .label .label-purple }
@@ -47,7 +63,7 @@ Analyzes five dominant AI architectural shifts defining 2026: reasoning models a
 
 ---
 
-## 2. EP207: Top 12 GitHub AI Repositories
+## 3. EP207: Top 12 GitHub AI Repositories
 {: .d-inline-block }
 21 Mar 2026
 {: .label .label-blue }
@@ -67,7 +83,7 @@ Profiles the top 12 trending AI open-source repositories across agent execution 
 
 ---
 
-## 3. Top AI GitHub Repositories in 2026
+## 4. Top AI GitHub Repositories in 2026
 {: .d-inline-block }
 09 Mar 2026
 {: .label .label-green }
@@ -87,7 +103,7 @@ Deep dives into open-source architecture paradigms, examining OpenClaw's local g
 
 ---
 
-## 4. EP198: Best Resources to Learn AI in 2026
+## 5. EP198: Best Resources to Learn AI in 2026
 {: .d-inline-block }
 17 Jan 2026
 {: .label .label-yellow }
@@ -107,7 +123,7 @@ Comprehensive learning roadmap decomposing seminal research papers, essential sy
 
 ---
 
-## 5. Start Learning AI — Our New YouTube Channel is Live (ByteByteAI)
+## 6. Start Learning AI — Our New YouTube Channel is Live (ByteByteAI)
 {: .d-inline-block }
 12 Sep 2025
 {: .label .label-purple }
@@ -123,7 +139,7 @@ Visual roadmap establishing core AI engineering learning paths spanning reasonin
 
 ---
 
-## 6. EP171: The Generative AI Tech Stack
+## 7. EP171: The Generative AI Tech Stack
 {: .d-inline-block }
 12 Jul 2025
 {: .label .label-blue }
@@ -143,7 +159,7 @@ Details the end-to-end Generative AI infrastructure and application stack, organ
 
 ---
 
-## 7. EP168: AI Vs Machine Learning Vs Deep Learning Vs Generative AI
+## 8. EP168: AI Vs Machine Learning Vs Deep Learning Vs Generative AI
 {: .d-inline-block }
 21 Jun 2025
 {: .label .label-green }
@@ -163,7 +179,7 @@ Clarifies the taxonomy and nesting hierarchy between Artificial Intelligence, Ma
 
 ---
 
-## 8. EP167: Top 20 AI Concepts You Should Know
+## 9. EP167: Top 20 AI Concepts You Should Know
 {: .d-inline-block }
 14 Jun 2025
 {: .label .label-yellow }
@@ -183,7 +199,7 @@ Outlines the 20 fundamental AI concepts spanning ML algorithms, neural represent
 
 ---
 
-## 9. EP146: The Open Source AI Stack
+## 10. EP146: The Open Source AI Stack
 {: .d-inline-block }
 18 Jan 2025
 {: .label .label-purple }
@@ -199,7 +215,7 @@ Synthesizes the open-source alternative ecosystem across frontend (Next.js, Stre
 
 ---
 
-## 10. Generative AI System Design Interview Guide
+## 11. Generative AI System Design Interview Guide
 {: .d-inline-block }
 18 Nov 2024
 {: .label .label-blue }
@@ -215,7 +231,7 @@ Introduces ByteByteGo's comprehensive guide to Generative AI System Design Inter
 
 ---
 
-## 11. EP129: The Ultimate Walkthrough of the Generative AI Landscape
+## 12. EP129: The Ultimate Walkthrough of the Generative AI Landscape
 {: .d-inline-block }
 14 Sep 2024
 {: .label .label-green }
@@ -231,7 +247,7 @@ Provides an end-to-end panoramic walkthrough of the Generative AI landscape, det
 
 ---
 
-## 12. Where to get started with GenAI
+## 13. Where to get started with GenAI
 {: .d-inline-block }
 16 Jul 2024
 {: .label .label-yellow }
