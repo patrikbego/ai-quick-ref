@@ -1,39 +1,96 @@
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# Language & Timezone
+lang: en
+timezone: UTC
+
+# SEO & Meta settings
 title: AI Quick Reference
-description: Curated quick reference guides on AI, LLMs, and Agents from ByteByteGo
+tagline: AI, LLM & Agent Systems Architecture
+description: >-
+  Curated architectural quick reference guides covering autonomous AI agents,
+  LLM inference, RAG systems, Model Context Protocol (MCP), and production engineering architectures.
+
+# URL & Baseurl for GitHub Pages project site
 url: "https://patrikbego.github.io"
 baseurl: "/ai-quick-ref"
-remote_theme: just-the-docs/just-the-docs
 
-# Color scheme
-color_scheme: dark
+# Author & Social links
+github:
+  username: patrikbego
 
-# Enable search
-search_enabled: true
-search:
-  heading_level: 3
-  previews: 3
+social:
+  name: Patrik Bego
+  links:
+    - https://github.com/patrikbego/ai-quick-ref
 
-# Heading anchors
-heading_anchors: true
+# Color scheme: dark by default, with sidebar toggle enabled
+theme_mode: dark
 
-# Enable callouts
-callouts:
-  note:
-    title: Note
-    color: purple
-  tip:
-    title: Tip
-    color: green
-  important:
-    title: Important
-    color: blue
-  warning:
-    title: Warning
-    color: red
+# PWA
+pwa:
+  enabled: false
 
-# Auxiliary links in navigation header
-aux_links:
-  "GitHub Repository": "https://github.com/patrikbego/ai-quick-ref"
+# Collections: sidebar tabs
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
-# Footer content
-footer_content: "Curated AI quick references from ByteByteGo newsletters."
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      toc: true
+      permalink: /:title/
+
+# Markdown & Syntax Highlighting
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+# Excluded paths
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - tools
+  - README.md
+  - LICENSE
+  - scripts
+  - AGENTS.md
+  - MAINTENANCE.md
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"

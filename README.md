@@ -31,11 +31,13 @@ All visual diagrams are persisted locally under `assets/images/` to ensure persi
 
 ## Architecture & Technology Stack
 
-- **Site Engine:** Native GitHub Pages with [Jekyll](https://jekyllrb.com/)
-- **Theme:** [Just the Docs](https://just-the-docs.com/) (`remote_theme: just-the-docs/just-the-docs`)
-- **Search:** Built-in client-side full-text search powered by Lunr.js
+- **Site Engine:** GitHub Pages via GitHub Actions with [Jekyll](https://jekyllrb.com/)
+- **Theme:** [Chirpy](https://chirpy.cotes.page/) (`jekyll-theme-chirpy`)
+- **Navigation:** Multi-tab sidebar navigation with FontAwesome icons
+- **Table of Contents:** Floating interactive right-rail TOC tracking live scroll position
+- **Search:** Built-in client-side full-text search
 - **Visual Assets:** 690+ local high-resolution architecture diagrams and infographics
-- **Color Scheme:** Dark mode enabled by default
+- **Color Scheme:** Dark mode enabled by default with light/system theme switcher
 
 ---
 
