@@ -2,7 +2,7 @@
 layout: page
 title: "RAG & Vector Search"
 icon: fas fa-database
-order: 4
+order: 3
 toc: true
 ---
 

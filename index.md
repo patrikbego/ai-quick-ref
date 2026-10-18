@@ -11,16 +11,16 @@ A curated, searchable engineering knowledge base covering modern **Artificial In
 
 Explore the 8 comprehensive architectural guides using the sidebar navigation on the left, or jump directly from the directory below:
 
-| # | Topic Guide | Key Architectural Focus | Quick Link |
-|:---|:---|:---|:---|
-| **01** | **AI Agents & Multi-Agent** | Agent loops, memory tiers, Stripe agent payments (MPP), A2A/ACP communication protocols | [Explore Agents]({{ '/01-ai-agents/' | relative_url }}) |
-| **02** | **Model Context Protocol & Tools** | Anthropic MCP protocol, tool gateways, Pinterest & Figma MCP ecosystems, MCP vs Skills | [Explore MCP]({{ '/02-mcp-and-tools/' | relative_url }}) |
-| **03** | **LLM Architecture & Inference** | Positional RoPE, LoRA/QLoRA, KV-cache optimization, speculative decoding, TPU systolic arrays | [Explore LLM]({{ '/03-llm-architecture/' | relative_url }}) |
-| **04** | **RAG & Vector Search** | GraphRAG, Agentic RAG, CockroachDB distributed vector indexing, Airtable hybrid search | [Explore RAG]({{ '/04-rag-vector-search/' | relative_url }}) |
-| **05** | **AI Evals & Safety** | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models | [Explore Evals]({{ '/05-ai-evals-safety/' | relative_url }}) |
-| **06** | **Industry Case Studies** | Production architectures across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn | [Explore Case Studies]({{ '/06-industry-case-studies/' | relative_url }}) |
-| **07** | **Developer AI Tools** | Claude Code CLI, Cursor coding agents, GitHub/Vercel/Replit dev platforms | [Explore Dev Tools]({{ '/07-developer-tools/' | relative_url }}) |
-| **08** | **Foundations & Roadmaps** | AI ecosystem landscapes, generative AI tech stacks, open-source AI frameworks, learning roadmaps | [Explore Foundations]({{ '/08-foundations-roadmaps/' | relative_url }}) |
+| # | Topic Guide | Key Architectural Focus |
+|:---|:---|:---|
+| **01** | [**Foundational Roadmaps & Concepts**]({{ '/01-foundations-roadmaps/' | relative_url }}) | AI ecosystem landscapes, generative AI tech stacks, open-source AI frameworks, learning roadmaps |
+| **02** | [**LLM Architecture & Inference**]({{ '/02-llm-architecture/' | relative_url }}) | Positional RoPE, LoRA/QLoRA, KV-cache optimization, speculative decoding, TPU systolic arrays |
+| **03** | [**RAG & Vector Search**]({{ '/03-rag-vector-search/' | relative_url }}) | GraphRAG, Agentic RAG, CockroachDB distributed vector indexing, Airtable hybrid search |
+| **04** | [**Model Context Protocol & Tools**]({{ '/04-mcp-and-tools/' | relative_url }}) | Anthropic MCP protocol, tool gateways, Pinterest & Figma MCP ecosystems, MCP vs Skills |
+| **05** | [**AI Agents & Multi-Agent**]({{ '/05-ai-agents/' | relative_url }}) | Agent loops, memory tiers, Stripe agent payments (MPP), A2A/ACP communication protocols |
+| **06** | [**AI Evals & Safety**]({{ '/06-ai-evals-safety/' | relative_url }}) | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models |
+| **07** | [**Developer AI Tools**]({{ '/07-developer-tools/' | relative_url }}) | Claude Code CLI, Cursor coding agents, GitHub/Vercel/Replit dev platforms |
+| **08** | [**Industry Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) | Production architectures across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn |
 
 ---
 

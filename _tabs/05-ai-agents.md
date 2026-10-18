@@ -2,7 +2,7 @@
 layout: page
 title: "AI Agents & Multi-Agent"
 icon: fas fa-robot
-order: 1
+order: 5
 toc: true
 ---
 

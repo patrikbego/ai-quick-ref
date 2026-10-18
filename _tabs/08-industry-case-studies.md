@@ -2,7 +2,7 @@
 layout: page
 title: "Industry Case Studies"
 icon: fas fa-building
-order: 6
+order: 8
 toc: true
 ---
 

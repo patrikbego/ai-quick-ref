@@ -2,7 +2,7 @@
 layout: page
 title: "LLM Architecture & Inference"
 icon: fas fa-microchip
-order: 3
+order: 2
 toc: true
 ---
 

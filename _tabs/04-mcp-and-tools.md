@@ -2,7 +2,7 @@
 layout: page
 title: "Model Context Protocol & Tools"
 icon: fas fa-plug
-order: 2
+order: 4
 toc: true
 ---
 

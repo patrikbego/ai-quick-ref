@@ -18,14 +18,14 @@ All visual diagrams are persisted locally under `assets/images/` to ensure persi
 
 | # | Guide | Focus Area | Highlights |
 |:--|:---|:---|:---|
-| **01** | [**AI Agents & Multi-Agent Architectures**](docs/01-ai-agents-multi-agent.md) | Autonomous agents, loops, coordination & memory | Multi-agent control loops, memory hierarchies, A2A/ACP communication protocols, agentic payment settlement |
-| **02** | [**Model Context Protocol (MCP) & Tools**](docs/02-mcp-and-tool-use.md) | Standardized tool integration & context routing | Model Context Protocol specifications, MCP vs APIs, MCP vs Skills, enterprise tool gateways (Pinterest, Figma) |
-| **03** | [**LLM Architecture, Training & Inference**](docs/03-llm-architecture-inference.md) | Model internals, optimization & hardware acceleration | Attention mechanisms (RoPE), KV-cache paging & compression, speculative decoding, LoRA/QLoRA, TPU/GPU systolic arrays |
-| **04** | [**RAG, Vector Search & Retrieval**](docs/04-rag-and-vector-search.md) | Enterprise data grounding & knowledge retrieval | GraphRAG, Agentic RAG, multi-tenant vector partitioning, distributed SQL vector indexing (CockroachDB), hybrid search |
-| **05** | [**AI Evaluations, Safety & Robustness**](docs/05-ai-evals-safety-robustness.md) | Benchmarking, alignment, security & guardrails | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models, automated evaluation flywheels |
-| **06** | [**Industry Case Studies & Implementations**](docs/06-industry-case-studies.md) | Production architectures from tier-1 engineering teams | Real-world deployments across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn, Uber, and more |
+| **01** | [**Foundational Roadmaps & Core Concepts**](docs/08-foundations-and-roadmaps.md) | Ecosystem landscapes, taxonomies & learning paths | Generative AI tech stacks, open-source AI frameworks, top GitHub machine learning repositories, system design interview frameworks |
+| **02** | [**LLM Architecture, Training & Inference**](docs/03-llm-architecture-inference.md) | Model internals, optimization & hardware acceleration | Attention mechanisms (RoPE), KV-cache paging & compression, speculative decoding, LoRA/QLoRA, TPU/GPU systolic arrays |
+| **03** | [**RAG, Vector Search & Retrieval**](docs/04-rag-and-vector-search.md) | Enterprise data grounding & knowledge retrieval | GraphRAG, Agentic RAG, multi-tenant vector partitioning, distributed SQL vector indexing (CockroachDB), hybrid search |
+| **04** | [**Model Context Protocol (MCP) & Tools**](docs/02-mcp-and-tool-use.md) | Standardized tool integration & context routing | Model Context Protocol specifications, MCP vs APIs, MCP vs Skills, enterprise tool gateways (Pinterest, Figma) |
+| **05** | [**AI Agents & Multi-Agent Architectures**](docs/01-ai-agents-multi-agent.md) | Autonomous agents, loops, coordination & memory | Multi-agent control loops, memory hierarchies, A2A/ACP communication protocols, agentic payment settlement |
+| **06** | [**AI Evaluations, Safety & Robustness**](docs/05-ai-evals-safety-robustness.md) | Benchmarking, alignment, security & guardrails | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models, automated evaluation flywheels |
 | **07** | [**Developer AI Tools & Coding Agents**](docs/07-developer-tools-coding-agents.md) | Developer tooling, CLI agents & workflows | Claude Code, Cursor coding agent architecture, GitHub/Vercel/Replit platforms, AI-native software engineering practices |
-| **08** | [**Foundational Roadmaps & Core Concepts**](docs/08-foundations-and-roadmaps.md) | Ecosystem landscapes, taxonomies & learning paths | Generative AI tech stacks, open-source AI frameworks, top GitHub machine learning repositories, system design interview frameworks |
+| **08** | [**Industry Case Studies & Implementations**](docs/06-industry-case-studies.md) | Production architectures from tier-1 engineering teams | Real-world deployments across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn, Uber, and more |
 
 ---
 

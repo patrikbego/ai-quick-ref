@@ -2,7 +2,7 @@
 layout: page
 title: "AI Evals & Safety"
 icon: fas fa-shield-halved
-order: 5
+order: 6
 toc: true
 ---
 
