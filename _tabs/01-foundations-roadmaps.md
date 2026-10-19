@@ -28,7 +28,23 @@ Chronicles the pivotal technological milestones shaping modern artificial intell
 
 ---
 
-## 2. What’s Next in AI: Five Trends to Watch in 2026
+## 2. General Algorithm Behind a Basic LLM
+
+> ⚙️ **Core Mechanism:** From Text Input to Next-Token Prediction & Generated Output
+{: .label .label-blue }
+
+**Architectural Summary:**  
+Details the six-stage autoregressive lifecycle of a modern Large Language Model: prompt input, tokenization, numeric embedding with positional encodings, contextual representation across stacked transformer layers (self-attention, feed-forward, and residual norms), probability distribution projection for next-token prediction, and iterative autoregressive decoding loops. Also contrasts the fundamental mechanics of training (cross-entropy next-token loss with gradient descent) with runtime inference (iterative sample/argmax generation until a stop token).
+
+### Key Diagrams
+
+#### General Algorithm Behind a Basic LLM
+![General Algorithm Behind a Basic LLM](/assets/images/foundations/llm-algorithm-flow-infographic.png)
+*End-to-end dataflow from text prompt tokenization and embedding to transformer self-attention blocks, next-token probability distribution, and iterative autoregressive decoding loops alongside the core training and inference algorithms.*
+
+---
+
+## 3. What’s Next in AI: Five Trends to Watch in 2026
 
 > 🗓️ **Date:** 04 Mar 2026
 
@@ -55,7 +71,7 @@ Analyzes five dominant AI architectural shifts defining 2026: reasoning models a
 
 ---
 
-## 3. EP207: Top 12 GitHub AI Repositories
+## 4. EP207: Top 12 GitHub AI Repositories
 
 > 🗓️ **Date:** 21 Mar 2026
 {: .label .label-blue }
@@ -75,7 +91,7 @@ Profiles the top 12 trending AI open-source repositories across agent execution 
 
 ---
 
-## 4. Top AI GitHub Repositories in 2026
+## 5. Top AI GitHub Repositories in 2026
 
 > 🗓️ **Date:** 09 Mar 2026
 {: .label .label-green }
@@ -95,7 +111,7 @@ Deep dives into open-source architecture paradigms, examining OpenClaw's local g
 
 ---
 
-## 5. EP198: Best Resources to Learn AI in 2026
+## 6. EP198: Best Resources to Learn AI in 2026
 
 > 🗓️ **Date:** 17 Jan 2026
 {: .label .label-yellow }
@@ -115,7 +131,7 @@ Comprehensive learning roadmap decomposing seminal research papers, essential sy
 
 ---
 
-## 6. Start Learning AI — Our New YouTube Channel is Live (ByteByteAI)
+## 7. Start Learning AI — Our New YouTube Channel is Live (ByteByteAI)
 
 > 🗓️ **Date:** 12 Sep 2025
 
@@ -130,7 +146,7 @@ Visual roadmap establishing core AI engineering learning paths spanning reasonin
 
 ---
 
-## 7. EP171: The Generative AI Tech Stack
+## 8. EP171: The Generative AI Tech Stack
 
 > 🗓️ **Date:** 12 Jul 2025
 {: .label .label-blue }
@@ -150,7 +166,7 @@ Details the end-to-end Generative AI infrastructure and application stack, organ
 
 ---
 
-## 8. EP168: AI Vs Machine Learning Vs Deep Learning Vs Generative AI
+## 9. EP168: AI Vs Machine Learning Vs Deep Learning Vs Generative AI
 
 > 🗓️ **Date:** 21 Jun 2025
 {: .label .label-green }
@@ -170,7 +186,7 @@ Clarifies the taxonomy and nesting hierarchy between Artificial Intelligence, Ma
 
 ---
 
-## 9. EP167: Top 20 AI Concepts You Should Know
+## 10. EP167: Top 20 AI Concepts You Should Know
 
 > 🗓️ **Date:** 14 Jun 2025
 {: .label .label-yellow }
@@ -190,7 +206,7 @@ Outlines the 20 fundamental AI concepts spanning ML algorithms, neural represent
 
 ---
 
-## 10. EP146: The Open Source AI Stack
+## 11. EP146: The Open Source AI Stack
 
 > 🗓️ **Date:** 18 Jan 2025
 
@@ -205,7 +221,7 @@ Synthesizes the open-source alternative ecosystem across frontend (Next.js, Stre
 
 ---
 
-## 11. Generative AI System Design Interview Guide
+## 12. Generative AI System Design Interview Guide
 
 > 🗓️ **Date:** 18 Nov 2024
 {: .label .label-blue }
@@ -221,7 +237,7 @@ Introduces The comprehensive guide to Generative AI System Design Interviews, de
 
 ---
 
-## 12. EP129: The Ultimate Walkthrough of the Generative AI Landscape
+## 13. EP129: The Ultimate Walkthrough of the Generative AI Landscape
 
 > 🗓️ **Date:** 14 Sep 2024
 {: .label .label-green }
@@ -237,7 +253,7 @@ Provides an end-to-end panoramic walkthrough of the Generative AI landscape, det
 
 ---
 
-## 13. Where to get started with GenAI
+## 14. Where to get started with GenAI
 
 > 🗓️ **Date:** 16 Jul 2024
 {: .label .label-yellow }
