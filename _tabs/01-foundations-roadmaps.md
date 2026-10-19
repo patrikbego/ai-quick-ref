@@ -49,7 +49,7 @@ Details the six-stage autoregressive lifecycle of a modern Large Language Model:
 > 🗓️ **Date:** 04 Mar 2026
 
 **Architectural Summary:**  
-Analyzes five dominant AI architectural shifts defining 2026: reasoning models and test-time compute scaling, Reinforcement Learning with Verifiable Rewards (RLVR), autonomous coding agent loops, multimodal interfaces, and open-weight model convergence.
+Analyzes dominant AI architectural shifts defining 2026 and forecasts five key evolutionary trends shaping 2027: multi-agent AI systems with A2A/MCP orchestration, autonomous software engineering (AI-driven CI/CD and coding agents), physical AI & robotics in logistics/automation, adaptive reasoning with persistent memory, and production-ready efficient systems focused on small models, intelligent routing, and enterprise governance.
 
 ### Key Diagrams
 
@@ -68,6 +68,10 @@ Analyzes five dominant AI architectural shifts defining 2026: reasoning models a
 #### Test-Time Compute Scaling Curves
 ![Test-Time Compute Scaling](/assets/images/foundations/ai-trends-2026-06-test-time-compute-scaling.png)
 *Accuracy gains achieved by trading inference compute and latency for deeper reasoning search.*
+
+#### Five AI Trends of 2027 Forecast
+![Five AI Trends of 2027 Forecast](/assets/images/foundations/ai-trends-2027-forecast.png)
+*Forward-looking architectural forecast from 2026 to 2027 tracking the transition from raw model capabilities to autonomous execution at scale: multi-agent ecosystems, self-directed software development, physical AI robotics, adaptive reasoning with persistent memory, and production-grade cost/governance frameworks.*
 
 ---
 
