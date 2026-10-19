@@ -57,27 +57,43 @@ Details the six-stage autoregressive lifecycle of a modern Large Language Model:
 {: .label .label-purple }
 
 **Architectural Summary:**  
-Analyzes dominant AI architectural shifts defining 2026 and forecasts five key evolutionary trends shaping 2027: multi-agent AI systems with A2A/MCP orchestration, autonomous software engineering (AI-driven CI/CD and coding agents), physical AI & robotics in logistics/automation, adaptive reasoning with persistent memory, and production-ready efficient systems focused on small models, intelligent routing, and enterprise governance.
+Deconstructs the five transformative AI trends defining 2026—Agentic AI, AI Coding, Multimodal Generation, Reasoning Models, and Open-Weight Efficiency—and maps out the post-training paradigm shift from subjective human feedback (RLHF) to automated verifiable rewards (RLVR). Concludes with a strategic 2027 forecast tracking the progression from raw model capabilities to autonomous multi-agent execution at scale.
 
 ### Key Diagrams
 
-#### Five AI Trends of 2026 Overview
+#### 1. Five AI Trends of 2026 Overview
 ![Five Trends Infographic](../assets/images/foundations/ai-trends-2026-01-infographic.png)
-*High-level overview covering test-time compute, RLVR, autonomous agents, and open models.*
+*High-level overview covering the five macro shifts: Agentic AI, AI Coding, Multimodal Generation, Reasoning Models, and Open-Weight democratization.*
 
-#### Direct Prompting vs. Test-Time Reasoning
+#### 2. Direct Prompting vs. Test-Time Reasoning
 ![Direct vs Reasoning](../assets/images/foundations/ai-trends-2026-02-direct-vs-reasoning.png)
-*How test-time reasoning models allocate dynamic thinking tokens to explore search trees before emitting final answers.*
+*Contrasts traditional single-pass generation (fast, fixed token budget) with test-time reasoning (allocating dynamic compute to generate, evaluate, and search reasoning candidates before outputting).*
 
-#### RLVR vs. Traditional RLHF
-![RLVR vs RLHF](../assets/images/foundations/ai-trends-2026-03-rlvr-vs-rlhf.png)
-*Shifting from noisy subjective human preference scores to programmatic, deterministic compiler and unit-test rewards.*
+#### 3. Frontier Thinking & Reasoning Models Landscape
+![Frontier Thinking Models](../assets/images/foundations/ai-trends-2026-03-frontier-thinking-models.png)
+*Ecosystem of frontier reasoning models deploying test-time thinking: GPT-5.2-thinking, Opus-4-6-thinking, DeepSeek-R1, Kimi K2.5, Gemini 3, and Qwen3.*
 
-#### Test-Time Compute Scaling Curves
-![Test-Time Compute Scaling](../assets/images/foundations/ai-trends-2026-06-test-time-compute-scaling.png)
-*Accuracy gains achieved by trading inference compute and latency for deeper reasoning search.*
+#### 4. The 3-Stage LLM Training Pipeline
+![Pre-training SFT and RL Pipeline](../assets/images/foundations/ai-trends-2026-04-pretrain-sft-rl-pipeline.png)
+*The end-to-end foundation model lifecycle: web-scale pre-training creates base models, supervised fine-tuning (SFT) yields instruction followers, and reinforcement learning (RL) aligns reasoning and behavior.*
 
-#### Five AI Trends of 2027 Forecast
+#### 5. Traditional RLHF Alignment (Human Feedback)
+![Traditional RLHF Pipeline](../assets/images/foundations/ai-trends-2026-05-traditional-rlhf-pipeline.png)
+*Traditional alignment workflow: human annotators rank outputs to train a subjective Reward Model, which then guides policy optimization via PPO or GRPO (effective for tone, but limited for complex formal reasoning).*
+
+#### 6. Modern RLVR Alignment (Verifiable Rewards)
+![Aligning LLM with RLVR](../assets/images/foundations/ai-trends-2026-06-rlvr-verifiable-alignment.png)
+*The breakthrough behind reasoning models: replacing noisy human reward models with automated, deterministic verifiers (compilers, math solvers, unit tests) to reinforce valid multi-step thought paths via GRPO.*
+
+#### 7. Autonomous AI Agent Architecture & Loop
+![AI Agent Loop Architecture](../assets/images/foundations/ai-trends-2026-07-ai-agent-loop-architecture.png)
+*The closed-loop autonomous agent topology: an orchestrator coordinates planning LLMs, triggers tool execution and memory retrieval, and iterates based on environmental observations.*
+
+#### 8. Fine-Tuning Specialized Coding LLMs
+![Fine-Tuning Coding LLMs](../assets/images/foundations/ai-trends-2026-08-coding-llm-fine-tuning.png)
+*Specialized domain post-training: curating high-signal code repositories, formal math datasets, and synthetic problem sets to fine-tune general-purpose models into dedicated software engineering engines.*
+
+#### 9. Five AI Trends of 2027 Forecast
 ![Five AI Trends of 2027 Forecast](../assets/images/foundations/ai-trends-2027-forecast.png)
 *Forward-looking architectural forecast from 2026 to 2027 tracking the transition from raw model capabilities to autonomous execution at scale: multi-agent ecosystems, self-directed software development, physical AI robotics, adaptive reasoning with persistent memory, and production-grade cost/governance frameworks.*
 
