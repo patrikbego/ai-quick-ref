@@ -26,6 +26,10 @@ Deconstructs the complete lifecycle of production Retrieval-Augmented Generation
 ![AI App Stack RAG](/assets/images/foundations/ai-app-stack-rag.jpeg)
 *Complete multi-tier RAG architecture: ingestion pipeline, chunking, embedding generation, vector indexing, retrieval routing, and LLM context synthesis.*
 
+> 💻 **Hands-on Implementation:**  
+> Looking for production code? See the runnable [Python & Java Hybrid RAG Implementation](/07-developer-tools/#pattern-1-production-hybrid-rag-pipeline-dense--sparse-rrf--reranker) in Developer AI Tools, featuring dense vector retrieval, BM25 sparse search, Reciprocal Rank Fusion (RRF), and citation tracking.
+{: .prompt-tip }
+
 ---
 
 ## 2. GraphRAG: How AI Answers Questions Hidden Across Many Documents

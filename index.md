@@ -25,6 +25,7 @@ Choose a structured learning track or explore the complete topic guides below:
 2. [**Model Context Protocol (MCP)**]({{ '/04-mcp-and-tools/' | relative_url }}) — Standardized context routing, tool gateways, and MCP vs APIs.
 3. [**Autonomous Agent Loops & Memory**]({{ '/05-ai-agents/#1-autonomous-ai-agent-architecture--core-building-blocks' | relative_url }}) — Orchestrator topologies, planning, working/episodic memory, and A2A communication.
 4. [**Developer AI Tools & Coding Agents**]({{ '/07-developer-tools/' | relative_url }}) — Claude Code CLI, Cursor architectures, and AI-driven CI/CD.
+5. [**Hands-on Production Architectures (Python & Java)**]({{ '/07-developer-tools/#1-hands-on-production-architectures-python--java-implementation-guide' | relative_url }}) — Runnable code patterns: Hybrid RAG with RRF, FastMCP servers, Spring AI clients, ReAct agent loops, and schema guardrails.
 
 ### 🏛️ 3. Architect AI (Production Engineering & Systems at Scale)
 *Design scalable, resilient enterprise infrastructure with rigorous evaluation, safety guardrails, and real-world reference architectures.*
@@ -47,7 +48,7 @@ Explore the 8 comprehensive architectural guides using the sidebar navigation on
 | **04** | [**Model Context Protocol & Tools**]({{ '/04-mcp-and-tools/' | relative_url }}) | Anthropic MCP protocol, tool gateways, Pinterest & Figma MCP ecosystems, MCP vs Skills |
 | **05** | [**AI Agents & Multi-Agent**]({{ '/05-ai-agents/' | relative_url }}) | Agent loops, memory tiers, Stripe agent payments (MPP), A2A/ACP communication protocols |
 | **06** | [**AI Evals & Safety**]({{ '/06-ai-evals-safety/' | relative_url }}) | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models |
-| **07** | [**Developer AI Tools**]({{ '/07-developer-tools/' | relative_url }}) | Claude Code CLI, Cursor coding agents, GitHub/Vercel/Replit dev platforms |
+| **07** | [**Developer AI Tools & Code Examples**]({{ '/07-developer-tools/' | relative_url }}) | Production Python & Java code (RAG, MCP, Agents), Claude Code CLI, Cursor coding agents, dev platforms |
 | **08** | [**Industry Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) | Production architectures across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn |
 
 ---

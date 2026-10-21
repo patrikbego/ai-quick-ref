@@ -25,6 +25,10 @@ Compares the three foundational pillars of modern LLM architectures—MCP (open 
 ![MCP vs RAG vs AI Agents Comparison](/assets/images/mcp/mcp-vs-rag-vs-agents-ep224.png)
 *Detailed matrix evaluating MCP, RAG, and AI Agents across primary role, data access mechanics, interaction modes, statefulness, and autonomy levels.*
 
+> 💻 **Hands-on Implementation:**  
+> Looking for production code? See the runnable [FastMCP Server (Python) & Spring AI MCP Client (Java)](/07-developer-tools/#pattern-2-model-context-protocol-mcp-server--client) in Developer AI Tools, demonstrating dynamic tool discovery, Pydantic validation, and stdio transport.
+{: .prompt-tip }
+
 ---
 
 ## 2. How Pinterest Built a Production MCP Ecosystem

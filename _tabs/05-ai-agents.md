@@ -34,6 +34,10 @@ Deconstructs the foundational loop topology of autonomous AI agents, detailing h
 ![Agentic AI Roadmap](/assets/images/foundations/agentic-ai-learning-roadmap.jpeg)
 *Evolution from basic prompt engineering to single-agent tools and complex multi-agent orchestration.*
 
+> 💻 **Hands-on Implementation:**  
+> Looking for production code? See the runnable [Autonomous ReAct Agent Loop (Python & Java)](/07-developer-tools/#pattern-3-autonomous-agent-loop--multi-tool-orchestration) in Developer AI Tools, featuring typed tool calling, loop iteration bounds, and error reflection.
+{: .prompt-tip }
+
 ---
 
 ## 2. AI Agents Can Think. Now They Can Pay.
