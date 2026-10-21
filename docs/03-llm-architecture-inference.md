@@ -9,7 +9,7 @@ permalink: /docs/llm-architecture-inference/
 # LLM Architecture, Training & Inference
 {: .no_toc }
 
-Comprehensive quick reference covering transformer self-attention internals, Rotary Positional Embeddings (RoPE), Energy-Based Models, PagedAttention and KV-cache optimizations, speculative decoding, parameter-efficient fine-tuning (LoRA/QLoRA), model routing gateways, and specialized hardware (GPUs and TPUs) extracted from ByteByteGo newsletters.
+Comprehensive quick reference covering transformer self-attention internals, Rotary Positional Embeddings (RoPE), Energy-Based Models, PagedAttention and KV-cache optimizations, speculative decoding, parameter-efficient fine-tuning (LoRA/QLoRA), model routing gateways, and specialized hardware (GPUs and TPUs).
 
 ## Table of Contents
 {: .no_toc .text-delta }
@@ -19,7 +19,39 @@ Comprehensive quick reference covering transformer self-attention internals, Rot
 
 ---
 
-## 1. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences
+## 1. Test-Time Reasoning & Post-Training Alignment: Direct Prompting, SFT, RLHF, and RLVR
+{: .d-inline-block }
+Reasoning & Alignment
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Examines the architectural evolution from single-pass direct prompting to test-time reasoning models (e.g. OpenAI o1/o3, DeepSeek-R1) that allocate dynamic compute search trees before emitting tokens. Deconstructs the full 3-stage training pipeline (web-scale Pre-training, Supervised Fine-Tuning, and Reinforcement Learning), contrasting traditional RLHF (human preference rating models with PPO) with modern RLVR (Reinforcement Learning with Verifiable Rewards via automated compiler, math, and unit-test verifiers using GRPO).
+
+### Key Diagrams
+
+#### 1. Direct Prompting vs. Test-Time Reasoning
+![Direct vs Reasoning](../assets/images/foundations/ai-trends-2026-02-direct-vs-reasoning.png)
+*Contrasts traditional single-pass generation (fixed token budget) with test-time reasoning (allocating dynamic compute to generate, evaluate, and search reasoning candidates before outputting).*
+
+#### 2. Frontier Thinking & Reasoning Models Landscape
+![Frontier Thinking Models](../assets/images/foundations/ai-trends-2026-03-frontier-thinking-models.png)
+*Ecosystem of frontier reasoning models deploying test-time thinking: GPT-5.2-thinking, Opus-4-6-thinking, DeepSeek-R1, Kimi K2.5, Gemini 3, and Qwen3.*
+
+#### 3. The 3-Stage LLM Training Pipeline
+![Pre-training SFT and RL Pipeline](../assets/images/foundations/ai-trends-2026-04-pretrain-sft-rl-pipeline.png)
+*The foundation model lifecycle: web-scale pre-training creates base models, supervised fine-tuning (SFT) yields instruction followers, and reinforcement learning (RL) aligns reasoning and behavior.*
+
+#### 4. Traditional RLHF Alignment (Human Feedback)
+![Traditional RLHF Pipeline](../assets/images/foundations/ai-trends-2026-05-traditional-rlhf-pipeline.png)
+*Traditional alignment workflow: human annotators rank outputs to train a subjective Reward Model, which then guides policy optimization via PPO or GRPO (effective for tone, but limited for complex formal reasoning).*
+
+#### 5. Modern RLVR Alignment (Verifiable Rewards)
+![Aligning LLM with RLVR](../assets/images/foundations/ai-trends-2026-06-rlvr-verifiable-alignment.png)
+*The breakthrough behind reasoning models: replacing noisy human reward models with automated, deterministic verifiers (compilers, math solvers, unit tests) to reinforce valid multi-step thought paths via GRPO.*
+
+---
+
+## 2. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences
 {: .d-inline-block }
 13 Oct 2026
 {: .label .label-purple }
@@ -39,7 +71,7 @@ Traces the mathematical lineage between Fourier's heat diffusion equations and m
 
 ---
 
-## 2. How to Build Models Without Language, with Logical Intelligence
+## 3. How to Build Models Without Language, with Logical Intelligence
 {: .d-inline-block }
 12 Oct 2026
 {: .label .label-blue }
@@ -59,7 +91,7 @@ Contrasts token-by-token autoregressive LLMs with Energy-Based Models (EBMs) tha
 
 ---
 
-## 3. How to Customize a Model to Learn New Tricks
+## 4. How to Customize a Model to Learn New Tricks
 {: .d-inline-block }
 23 Sep 2026
 {: .label .label-green }
@@ -79,7 +111,7 @@ Details parameter-efficient fine-tuning techniques (PEFT), breaking down low-ran
 
 ---
 
-## 4. How to Run a Big Model on Cheap Hardware?
+## 5. How to Run a Big Model on Cheap Hardware?
 {: .d-inline-block }
 21 Sep 2026
 {: .label .label-yellow }
@@ -99,7 +131,7 @@ Comprehensive engineering handbook on local and edge LLM inference, analyzing po
 
 ---
 
-## 5. How Smart Model Routing Can Cut LLM Costs by 10X
+## 6. How Smart Model Routing Can Cut LLM Costs by 10X
 {: .d-inline-block }
 09 Sep 2026
 {: .label .label-purple }
@@ -119,7 +151,7 @@ Details production model routing architectures that partition incoming prompts a
 
 ---
 
-## 6. How to Shrink a Language Model Without Making it Too Dumb
+## 7. How to Shrink a Language Model Without Making it Too Dumb
 {: .d-inline-block }
 01 Sep 2026
 {: .label .label-red }
@@ -139,7 +171,7 @@ Deep dives into the triad of model compression—post-training quantization (sca
 
 ---
 
-## 7. What Happens Inside an AI Chatbot Between Enter and the First Word?
+## 8. What Happens Inside an AI Chatbot Between Enter and the First Word?
 {: .d-inline-block }
 31 Aug 2026
 {: .label .label-blue }
@@ -159,7 +191,7 @@ Unpacks the end-to-end request execution lifecycle of modern LLM serving engines
 
 ---
 
-## 8. How to Make LLMs 3X Faster
+## 9. How to Make LLMs 3X Faster
 {: .d-inline-block }
 26 Aug 2026
 {: .label .label-green }
@@ -179,7 +211,7 @@ Unpacks speculative decoding mechanics, explaining how small auxiliary draft mod
 
 ---
 
-## 9. EP223: Ollama vs vLLM vs SGLang
+## 10. EP223: Ollama vs vLLM vs SGLang
 {: .d-inline-block }
 22 Aug 2026
 {: .label .label-purple }
@@ -195,7 +227,7 @@ Evaluates the three dominant open-weight inference serving engines—Ollama (dev
 
 ---
 
-## 10. The New American AI Model Designed to be Customized
+## 11. The New American AI Model Designed to be Customized
 {: .d-inline-block }
 18 Aug 2026
 {: .label .label-yellow }
@@ -215,7 +247,7 @@ Dissects Thinking Machines' (Mira Murati) Inkling architecture, detailing its 66
 
 ---
 
-## 11. EP222: What is Google’s TPU?
+## 12. EP222: What is Google’s TPU?
 {: .d-inline-block }
 15 Aug 2026
 {: .label .label-blue }
@@ -231,7 +263,7 @@ Details the microarchitecture of Google’s Tensor Processing Unit (TPU), contra
 
 ---
 
-## 12. How Big Models Teach Small Models to Be Smart
+## 13. How Big Models Teach Small Models to Be Smart
 {: .d-inline-block }
 05 Aug 2026
 {: .label .label-green }
@@ -251,7 +283,7 @@ Details the mathematical and architectural pipeline of knowledge distillation, e
 
 ---
 
-## 13. Why An LLM’s Memory Gets Expensive and How to Fix It
+## 14. Why An LLM’s Memory Gets Expensive and How to Fix It
 {: .d-inline-block }
 04 Aug 2026
 {: .label .label-purple }
@@ -271,7 +303,7 @@ Breaks down why KV-cache memory consumes the majority of GPU VRAM during long-co
 
 ---
 
-## 14. How NVIDIA Builds Open Models for the Age of AI
+## 15. How NVIDIA Builds Open Models for the Age of AI
 {: .d-inline-block }
 27 Jul 2026
 {: .label .label-blue }
@@ -291,7 +323,7 @@ Features an in-depth interview with NVIDIA's VP of Applied Deep Learning Researc
 
 ---
 
-## 15. How LLMs Learn to Be Helpful (RLHF vs DPO)
+## 16. How LLMs Learn to Be Helpful (RLHF vs DPO)
 {: .d-inline-block }
 14 Jul 2026
 {: .label .label-green }
@@ -311,7 +343,7 @@ Explores post-training preference alignment architectures, detailing how pre-tra
 
 ---
 
-## 16. ChatGPT vs Gemini vs Claude: How They Differ
+## 17. ChatGPT vs Gemini vs Claude: How They Differ
 {: .d-inline-block }
 07 Jul 2026
 {: .label .label-yellow }
@@ -331,7 +363,7 @@ Contrasts the core architectural forks across frontier LLMs, analyzing Dense vs 
 
 ---
 
-## 17. Large Language Models vs Small Language Models
+## 18. Large Language Models vs Small Language Models
 {: .d-inline-block }
 24 Jun 2026
 {: .label .label-purple }
@@ -351,7 +383,7 @@ Examines the architectural split between cloud datacenter LLMs and edge/device S
 
 ---
 
-## 18. EP219: 12 Open-source LLMs
+## 19. EP219: 12 Open-source LLMs
 {: .d-inline-block }
 20 Jun 2026
 {: .label .label-blue }
@@ -371,7 +403,7 @@ Visual reference guide and taxonomy comparing 12 leading open-weight LLMs (Llama
 
 ---
 
-## 19. How Open-Weight Models Changed the AI Landscape
+## 20. How Open-Weight Models Changed the AI Landscape
 {: .d-inline-block }
 16 Jun 2026
 {: .label .label-green }
@@ -391,7 +423,7 @@ Dissects open-weight model architectures and the borrow-and-build innovation tra
 
 ---
 
-## 20. A Guide to AI Inference Engineering
+## 21. A Guide to AI Inference Engineering
 {: .d-inline-block }
 15 Jun 2026
 {: .label .label-yellow }
@@ -411,7 +443,7 @@ In-depth guide to production inference engineering, dissecting the metrics that 
 
 ---
 
-## 21. Token Spend Out of Control? The Case for Smarter Routing
+## 22. Token Spend Out of Control? The Case for Smarter Routing
 {: .d-inline-block }
 08 Jun 2026
 {: .label .label-red }
@@ -431,7 +463,7 @@ Comprehensive guide on production LLM cost optimization through intelligent requ
 
 ---
 
-## 22. EP205: CPU vs GPU vs TPU
+## 23. EP205: CPU vs GPU vs TPU
 {: .d-inline-block }
 07 Mar 2026
 {: .label .label-purple }
@@ -451,7 +483,7 @@ Contrasts computer hardware architectures for deep learning, analyzing CPU seque
 
 ---
 
-## 23. The Architecture Behind Open-Source LLMs
+## 24. The Architecture Behind Open-Source LLMs
 {: .d-inline-block }
 02 Mar 2026
 {: .label .label-blue }
@@ -471,7 +503,7 @@ Deep dive into the architectural innovations across modern open models, analyzin
 
 ---
 
-## 24. How Large Language Models Learn
+## 25. How Large Language Models Learn
 {: .d-inline-block }
 23 Feb 2026
 {: .label .label-green }
@@ -491,7 +523,7 @@ Breaks down the mathematical mechanics of neural network training, detailing cro
 
 ---
 
-## 25. How Transformers Architecture Powers Modern LLMs
+## 26. How Transformers Architecture Powers Modern LLMs
 {: .d-inline-block }
 02 Feb 2026
 {: .label .label-yellow }
@@ -511,7 +543,7 @@ Step-by-step technical breakdown of the Transformer architecture, detailing inpu
 
 ---
 
-## 26. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs
+## 27. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs
 {: .d-inline-block }
 19 Jan 2026
 {: .label .label-blue }
@@ -531,7 +563,7 @@ Explains the hardware architecture requirements of deep learning workloads, deta
 
 ---
 
-## 27. How Google’s Tensor Processing Unit (TPU) Works?
+## 28. How Google’s Tensor Processing Unit (TPU) Works?
 {: .d-inline-block }
 05 Jan 2026
 {: .label .label-purple }
@@ -551,7 +583,7 @@ Dissects Google's custom ASIC Tensor Processing Unit, detailing its weight-stati
 
 ---
 
-## 28. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos
+## 29. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos
 {: .d-inline-block }
 22 Dec 2025
 {: .label .label-green }
@@ -571,7 +603,7 @@ Architectural foundations of Multimodal Large Language Models (MLLMs), explainin
 
 ---
 
-## 29. The $250 Million Paper
+## 30. The $250 Million Paper
 {: .d-inline-block }
 10 Dec 2025
 {: .label .label-yellow }
@@ -587,7 +619,7 @@ Dissects the architecture of the open-weight Molmo vision-language model, analyz
 
 ---
 
-## 30. How LLMs Learn from the Internet: The Training Process
+## 31. How LLMs Learn from the Internet: The Training Process
 {: .d-inline-block }
 01 Dec 2025
 {: .label .label-purple }
@@ -607,7 +639,7 @@ Comprehensive breakdown of the end-to-end foundation model training pipeline, fr
 
 ---
 
-## 31. EP187: Why is DeepSeek-OCR such a BIG DEAL?
+## 32. EP187: Why is DeepSeek-OCR such a BIG DEAL?
 {: .d-inline-block }
 01 Nov 2025
 {: .label .label-blue }
@@ -623,7 +655,7 @@ Analyzes DeepSeek-OCR's architectural breakthrough in extreme visual document co
 
 ---
 
-## 32. What Actually Happens When You Press ‘Send’ to ChatGPT
+## 33. What Actually Happens When You Press ‘Send’ to ChatGPT
 {: .d-inline-block }
 20 Oct 2025
 {: .label .label-green }
@@ -643,7 +675,7 @@ Step-by-step trace of a prompt's execution path inside ChatGPT's infrastructure:
 
 ---
 
-## 33. How Fine-Tuning Transforms Generic AI Models into Specialists
+## 34. How Fine-Tuning Transforms Generic AI Models into Specialists
 {: .d-inline-block }
 24 Sep 2025
 {: .label .label-purple }
@@ -659,7 +691,7 @@ Deep dive into domain specialization of pre-trained models, contrasting full par
 
 ---
 
-## 34. How LLMs See Images, Audio, and More
+## 35. How LLMs See Images, Audio, and More
 {: .d-inline-block }
 18 Aug 2025
 {: .label .label-yellow }
@@ -679,7 +711,7 @@ Deep architectural exploration of multimodal tokenization strategies across moda
 
 ---
 
-## 35. How LLMs See the World
+## 36. How LLMs See the World
 {: .d-inline-block }
 04 Aug 2025
 {: .label .label-blue }

@@ -12,7 +12,63 @@ Comprehensive quick reference covering Claude Code, Cursor's coding agent and mu
 
 ---
 
-## 1. GitHub vs Vercel vs Replit: What Dev Platforms Do When AI Code Is Cheap
+## 1. Top 12 GitHub AI Repositories & Execution Runtimes
+
+> 🗓️ **Date:** 21 Mar 2026
+{: .label .label-blue }
+
+**Architectural Summary:**  
+Profiles the top 12 trending AI open-source repositories across agent execution runtimes (OpenClaw, Claude Code, CrewAI), local inference (Ollama), visual workflow builders (n8n, Langflow, Dify), and enterprise RAG (RAGFlow).
+
+### Key Diagrams
+
+#### Top 12 GitHub AI Repositories
+![Top 12 Repos](/assets/images/foundations/top-12-github-ai-repos.png)
+*Comprehensive landscape mapping framework tiers, community adoption, and architectural roles.*
+
+#### Multi-Agent Deep Research Topologies
+![AI Agents Deep Research](/assets/images/foundations/ai-agents-deep-research.png)
+*Iterative search, document summarization, and claim reconciliation architectures across agent swarms.*
+
+---
+
+## 2. Top AI GitHub Repositories: OpenClaw Local Gateway & Architecture Matrix
+
+> 🗓️ **Date:** 09 Mar 2026
+{: .label .label-green }
+
+**Architectural Summary:**  
+Deep dives into open-source architecture paradigms, examining OpenClaw's local gateway, channel bridging, dynamic skill generation, and n8n visual AI workflow engines alongside cross-project taxonomy matrices.
+
+### Key Diagrams
+
+#### OpenClaw Local Gateway Architecture
+![OpenClaw Architecture](/assets/images/foundations/top-ai-repos-2026-01-openclaw-arch.png)
+*Local bridge orchestrating multi-channel input, tool dispatch, and dynamic  loading.*
+
+#### Comparative Architectural Matrix
+![Comparative Matrix](/assets/images/foundations/top-ai-repos-2026-02-comparative-matrix.png)
+*Detailed matrix contrasting agent frameworks, local inference engines, and visual node builders.*
+
+---
+
+## 3. Fine-Tuning Specialized Coding LLMs
+
+> 🗓️ **Architecture Guide:** Engineering Domain Specialization
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Examines the specialized post-training data and training recipes required to transform general-purpose foundation models into dedicated software engineering engines through curated high-signal code syntax, mathematical proofs, and synthetic problem sets.
+
+### Key Diagrams
+
+#### Fine-Tuning Specialized Coding LLMs
+![Fine-Tuning Coding LLMs](/assets/images/foundations/ai-trends-2026-08-coding-llm-fine-tuning.png)
+*Specialized domain post-training: curating high-signal code repositories, formal math datasets, and synthetic problem sets to fine-tune general-purpose models into dedicated software engineering engines.*
+
+---
+
+## 4. GitHub vs Vercel vs Replit: What Dev Platforms Do When AI Code Is Cheap
 
 > 🗓️ **Date:** 12 Aug 2026
 
@@ -47,7 +103,7 @@ Analyzes platform architecture shifts as raw AI code generation becomes a commod
 
 ---
 
-## 2. A Practical Guide to Becoming an AI-Native Engineer
+## 5. A Practical Guide to Becoming an AI-Native Engineer
 
 > 🗓️ **Date:** 02 Jun 2026
 {: .label .label-blue }
@@ -79,7 +135,7 @@ Written by Meta's Global Head of Autonomous ML Iteration, this guide defines the
 
 ---
 
-## 3. EP214: Claude Code vs. OpenClaw: 5 Design Dimensions
+## 6. EP214: Claude Code vs. OpenClaw: 5 Design Dimensions
 
 > 🗓️ **Date:** 09 May 2026
 {: .label .label-green }
@@ -99,7 +155,7 @@ Compares Claude Code and OpenClaw across five core architectural dimensions (exe
 
 ---
 
-## 4. EP209: 12 Claude Code Features Every Engineer Should Know
+## 7. EP209: 12 Claude Code Features Every Engineer Should Know
 
 > 🗓️ **Date:** 04 Apr 2026
 
@@ -118,7 +174,7 @@ Systematically analyzes the 12 core capabilities powering Claude Code for produc
 
 ---
 
-## 5. How Cursor Shipped its Coding Agent to Production
+## 8. How Cursor Shipped its Coding Agent to Production
 
 > 🗓️ **Date:** 26 Jan 2026
 {: .label .label-yellow }
@@ -162,7 +218,7 @@ Written with Cursor engineering, this edition details the systems architecture b
 
 ---
 
-## 6. How Cursor Serves Billions of AI Code Completions Every Day
+## 9. How Cursor Serves Billions of AI Code Completions Every Day
 
 > 🗓️ **Date:** 29 Jul 2025
 {: .label .label-blue }
@@ -172,7 +228,7 @@ Details Cursor's low-latency speculation engine that pairs lightweight draft mod
 
 ---
 
-## 7. EP201: The Evolution of AI in Software Development
+## 10. EP201: The Evolution of AI in Software Development
 
 > 🗓️ **Date:** 07 Feb 2026
 {: .label .label-green }
@@ -182,7 +238,7 @@ Traces the progression of AI-assisted engineering through three major waves—fr
 
 ---
 
-## 8. EP204: 11 Ways To Use AI To Increase Your Productivity
+## 11. EP204: 11 Ways To Use AI To Increase Your Productivity
 
 > 🗓️ **Date:** 28 Feb 2026
 
@@ -191,7 +247,7 @@ Highlights 11 high-leverage engineering patterns for incorporating LLMs into dai
 
 ---
 
-## 9. Build with Claude Code & Live Systems Curriculum
+## 12. Build with Claude Code & Live Systems Curriculum
 
 May – Sep 2026
 {: .label .label-yellow }

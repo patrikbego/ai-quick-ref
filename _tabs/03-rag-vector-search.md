@@ -12,7 +12,23 @@ Comprehensive quick reference covering GraphRAG, Agentic RAG control loops, embe
 
 ---
 
-## 1. GraphRAG: How AI Answers Questions Hidden Across Many Documents
+## 1. The End-to-End RAG Application Stack
+
+> 🗓️ **Architecture Guide:** Enterprise Retrieval-Augmented Generation Foundations
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Deconstructs the complete lifecycle of production Retrieval-Augmented Generation (RAG) systems across six core architectural stages: multi-format document ingestion, semantic chunking and metadata enrichment, dense vector embedding generation, high-dimensional vector database persistence and indexing, similarity/hybrid retrieval, and context-augmented prompt synthesis with guardrails.
+
+### Key Diagrams
+
+#### End-to-End RAG Application Stack
+![AI App Stack RAG](/assets/images/foundations/ai-app-stack-rag.jpeg)
+*Complete multi-tier RAG architecture: ingestion pipeline, chunking, embedding generation, vector indexing, retrieval routing, and LLM context synthesis.*
+
+---
+
+## 2. GraphRAG: How AI Answers Questions Hidden Across Many Documents
 
 > 🗓️ **Date:** 19 Aug 2026
 
@@ -51,7 +67,7 @@ Overcomes standard vector similarity limits on corpus-wide aggregation by extrac
 
 ---
 
-## 2. Why Your RAG System Is Only as Good as Its Translator Model
+## 3. Why Your RAG System Is Only as Good as Its Translator Model
 
 > 🗓️ **Date:** 02 Sep 2026
 {: .label .label-blue }
@@ -87,7 +103,7 @@ Argues that RAG accuracy is fundamentally bounded by the quality and domain alig
 
 ---
 
-## 3. EP220: RAG vs Graph RAG vs Agentic RAG
+## 4. EP220: RAG vs Graph RAG vs Agentic RAG
 
 > 🗓️ **Date:** 27 Jun 2026
 {: .label .label-green }
@@ -103,7 +119,7 @@ Contrasts the three primary retrieval paradigms—Standard RAG (single-turn sema
 
 ---
 
-## 4. How Airtable Built the Search Layer Behind Their AI Features
+## 5. How Airtable Built the Search Layer Behind Their AI Features
 
 > 🗓️ **Date:** 27 May 2026
 
@@ -134,7 +150,7 @@ Explains how Airtable architected a multi-tenant vector search system on Milvus 
 
 ---
 
-## 5. How CockroachDB Built Vector Indexing at Scale
+## 6. How CockroachDB Built Vector Indexing at Scale
 
 > 🗓️ **Date:** 25 May 2026
 {: .label .label-blue }
@@ -162,7 +178,7 @@ Details C-SPANN, CockroachDB's distributed vector indexing engine designed to el
 
 ---
 
-## 6. EP216: RAGs vs Agents
+## 7. EP216: RAGs vs Agents
 
 > 🗓️ **Date:** 23 May 2026
 {: .label .label-yellow }
@@ -182,7 +198,7 @@ Contrasts the single-turn, low-cost grounding architecture of RAG (embed -> vect
 
 ---
 
-## 7. How Agentic RAG Works?
+## 8. How Agentic RAG Works?
 
 > 🗓️ **Date:** 23 Mar 2026
 
@@ -209,7 +225,7 @@ Replaces rigid one-way RAG pipelines with an iterative control loop where an age
 
 ---
 
-## 8. Dropbox Multimedia Search: Making File Search More Useful
+## 9. Dropbox Multimedia Search: Making File Search More Useful
 
 > 🗓️ **Date:** 09 Dec 2025
 {: .label .label-blue }
@@ -233,7 +249,7 @@ Details the architecture powering Dropbox Dash’s multimedia search across bill
 
 ---
 
-## 9. How RAG Enables AI For Your Data
+## 10. How RAG Enables AI For Your Data
 
 > 🗓️ **Date:** 23 Sep 2025
 {: .label .label-green }
@@ -261,7 +277,7 @@ Establishes the foundational end-to-end RAG architecture—solving training cuto
 
 ---
 
-## 10. How Dropbox Built an AI Product Dash with RAG and AI Agents
+## 11. How Dropbox Built an AI Product Dash with RAG and AI Agents
 
 > 🗓️ **Date:** 02 Sep 2025
 
@@ -284,7 +300,7 @@ Explores the architecture of Dropbox Dash, uniting enterprise-wide cross-platfor
 
 ---
 
-## 11. EP169: RAG vs Agentic RAG
+## 12. EP169: RAG vs Agentic RAG
 
 > 🗓️ **Date:** 28 Jun 2025
 {: .label .label-yellow }

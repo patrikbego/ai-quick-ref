@@ -9,7 +9,7 @@ permalink: /docs/mcp-and-tools/
 # Model Context Protocol (MCP) & Tools
 {: .no_toc }
 
-Comprehensive quick reference covering Anthropic's Model Context Protocol (MCP), tool use evolution, enterprise MCP ecosystems (Pinterest, Figma), MCP vs Skills, and protocol architectures extracted from ByteByteGo newsletters.
+Comprehensive quick reference covering Anthropic's Model Context Protocol (MCP), tool use evolution, enterprise MCP ecosystems (Pinterest, Figma), MCP vs Skills, and protocol architectures.
 
 ## Table of Contents
 {: .no_toc .text-delta }

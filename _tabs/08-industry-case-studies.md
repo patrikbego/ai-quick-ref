@@ -12,7 +12,23 @@ Architectural breakdown of real-world AI, LLM, and agent deployments across top 
 
 ---
 
-## 1. How Netflix Taught an LLM to Recommend Movies So That You Keep Watching
+## 1. Generative AI System Design Interview & Production Architecture Guide
+
+> 🗓️ **Date:** 18 Nov 2024
+{: .label .label-blue }
+
+**Architectural Summary:**  
+Introduces the foundational 7-step evaluation and design framework for architecting enterprise Generative AI systems. Breaks down production architectural patterns across 10 core production systems (Smart Compose, Enterprise RAG, Text-to-Image, Text-to-Video, and personal assistants), establishing evaluation criteria, latency budgets, cache tiers, and fallback strategies for the case studies that follow.
+
+### Key Diagrams
+
+#### Generative AI System Design Evaluation Architecture
+![GenAI Interview Book](/assets/images/foundations/genai-system-design-interview-book.jpeg)
+*The 7-step evaluation and design framework for architecting scalable, resilient Generative AI applications in production.*
+
+---
+
+## 2. How Netflix Taught an LLM to Recommend Movies So That You Keep Watching
 
 > 🗓️ **Date:** 07 Oct 2026
 
@@ -47,7 +63,7 @@ Netflix's GenRec model converts viewer behavior histories into natural language 
 
 ---
 
-## 2. How DoorDash Built a Toolbox for AI Agents
+## 3. How DoorDash Built a Toolbox for AI Agents
 
 > 🗓️ **Date:** 30 Sep 2026
 
@@ -78,7 +94,7 @@ DoorDash engineered an enterprise MCP tool gateway that centralizes tool discove
 
 ---
 
-## 3. How OpenAI Built GPT-Live
+## 4. How OpenAI Built GPT-Live
 
 > 🗓️ **Date:** 22 Sep 2026
 
@@ -113,7 +129,7 @@ OpenAI replaced multi-model speech-to-text -> LLM -> text-to-speech pipelines wi
 
 ---
 
-## 4. How Cloudflare Is Making AI Pay for Content
+## 5. How Cloudflare Is Making AI Pay for Content
 
 > 🗓️ **Date:** 11 Aug 2026
 
@@ -144,7 +160,7 @@ Cloudflare created an edge-level micropayment settlement architecture over HTTP 
 
 ---
 
-## 5. How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference
+## 6. How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference
 
 > 🗓️ **Date:** 29 Jul 2026
 
@@ -179,7 +195,7 @@ OpenAI dissects the ChatGPT agent loop across the client harness, API gateway, a
 
 ---
 
-## 6. Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways
+## 7. Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways
 
 > 🗓️ **Date:** 28 Jul 2026
 
@@ -206,7 +222,7 @@ Examines the divergent architectural paradigms chosen by three food-delivery tit
 
 ---
 
-## 7. Inside Roblox’s Bet on World Models
+## 8. Inside Roblox’s Bet on World Models
 
 > 🗓️ **Date:** 21 Jul 2026
 
@@ -237,7 +253,7 @@ Roblox combines classical deterministic game engine physics with generative AI w
 
 ---
 
-## 8. AI Customer Support at Scale: The Travel Industry’s $Billion Bet
+## 9. AI Customer Support at Scale: The Travel Industry’s $Billion Bet
 
 > 🗓️ **Date:** 15 Jul 2026
 
@@ -264,7 +280,7 @@ Analyzes production multi-agent customer support architectures in global travel 
 
 ---
 
-## 9. How Microsoft Ships AI Agents at Enterprise Scale
+## 10. How Microsoft Ships AI Agents at Enterprise Scale
 
 > 🗓️ **Date:** 13 Jul 2026
 
@@ -291,7 +307,7 @@ Microsoft Foundry couples agent runtime platforms with Microsoft 365 Work IQ con
 
 ---
 
-## 10. How OpenAI Delivers Low-Latency Voice AI for 900M Users
+## 11. How OpenAI Delivers Low-Latency Voice AI for 900M Users
 
 > 🗓️ **Date:** 01 Jul 2026
 
@@ -318,7 +334,7 @@ Deep dive into the real-time networking and transceiver infrastructure behind Op
 
 ---
 
-## 11. Inside Thinking Machines’ Interaction Models
+## 12. Inside Thinking Machines’ Interaction Models
 
 > 🗓️ **Date:** 30 Jun 2026
 
@@ -345,7 +361,7 @@ Explores Thinking Machines' continuous-time interaction architecture, which disc
 
 ---
 
-## 12. What Salesforce Learned from 20,000 Enterprise Agent Deployments
+## 13. What Salesforce Learned from 20,000 Enterprise Agent Deployments
 
 > 🗓️ **Date:** 09 Jun 2026
 
@@ -372,7 +388,7 @@ Salesforce shares hard architectural metrics from Agentforce rollouts, highlight
 
 ---
 
-## 13. How OpenAI Built Its Data Agent
+## 14. How OpenAI Built Its Data Agent
 
 > 🗓️ **Date:** 03 Jun 2026
 
@@ -399,7 +415,7 @@ Details OpenAI's internal Data Agent architecture that automates SQL queries, Ai
 
 ---
 
-## 14. How Netflix is Using Multimodal AI to Power Video Search
+## 15. How Netflix is Using Multimodal AI to Power Video Search
 
 > 🗓️ **Date:** 20 May 2026
 
@@ -426,7 +442,7 @@ Netflix solves search across 216 million video frames per season by building a d
 
 ---
 
-## 15. How Snapchat Serves a Billion Predictions Per Second
+## 16. How Snapchat Serves a Billion Predictions Per Second
 
 > 🗓️ **Date:** 19 May 2026
 
@@ -453,7 +469,7 @@ Snapchat decomposes real-time feed recommendations into a two-stage pipeline: Be
 
 ---
 
-## 16. How Grab is Using AI Agents to Boost Team Productivity
+## 17. How Grab is Using AI Agents to Boost Team Productivity
 
 > 🗓️ **Date:** 18 May 2026
 
@@ -480,7 +496,7 @@ Grab deploys specialized, domain-focused multi-agent systems connected to intern
 
 ---
 
-## 17. How Stripe Detects Fraudulent Transactions Within 100 ms
+## 18. How Stripe Detects Fraudulent Transactions Within 100 ms
 
 > 🗓️ **Date:** 28 Apr 2026
 
@@ -507,7 +523,7 @@ Stripe Radar migrates from gradient boosted trees to deep neural networks, trans
 
 ---
 
-## 18. How Amazon Uses LLMs to Recommend Products
+## 19. How Amazon Uses LLMs to Recommend Products
 
 > 🗓️ **Date:** 27 Apr 2026
 
@@ -526,7 +542,7 @@ Amazon addresses semantic search mismatch by deploying LLMs to infer implicit pr
 
 ---
 
-## 19. The Security Architecture of GitHub Agentic Workflow
+## 20. The Security Architecture of GitHub Agentic Workflow
 
 > 🗓️ **Date:** 20 Apr 2026
 
@@ -549,7 +565,7 @@ GitHub's autonomous CI/CD agent operates under a 'three layers of distrust' secu
 
 ---
 
-## 20. How LinkedIn Feed Uses LLMs to Serve 1.3 Billion Users
+## 21. How LinkedIn Feed Uses LLMs to Serve 1.3 Billion Users
 
 > 🗓️ **Date:** 13 Apr 2026
 
@@ -576,7 +592,7 @@ LinkedIn unifies post ranking across 1.3 billion members by running approximate 
 
 ---
 
-## 21. How Roblox Uses AI to Translate 16 Languages in 100 Milliseconds
+## 22. How Roblox Uses AI to Translate 16 Languages in 100 Milliseconds
 
 > 🗓️ **Date:** 30 Mar 2026
 
@@ -603,7 +619,7 @@ Roblox achieves real-time in-game chat translation in under 100ms using a sparse
 
 ---
 
-## 22. How OpenAI Codex Works
+## 23. How OpenAI Codex Works
 
 > 🗓️ **Date:** 18 Mar 2026
 
@@ -630,7 +646,7 @@ Breaks down the OpenAI Codex coding agent engine, illustrating how it manages co
 
 ---
 
-## 23. How Stripe’s Minions Ship 1,300 PRs a Week
+## 24. How Stripe’s Minions Ship 1,300 PRs a Week
 
 > 🗓️ **Date:** 16 Mar 2026
 
@@ -653,7 +669,7 @@ Stripe ships 1,300 automated PRs weekly by pairing non-deterministic LLM coding 
 
 ---
 
-## 24. How Vimeo Implemented AI-Powered Subtitles
+## 25. How Vimeo Implemented AI-Powered Subtitles
 
 > 🗓️ **Date:** 11 Mar 2026
 
@@ -676,7 +692,7 @@ Vimeo overcomes subtitle translation issues (such as grammatical lag in Japanese
 
 ---
 
-## 25. The Algorithm That Powers Your X (Twitter) Post
+## 26. The Algorithm That Powers Your X (Twitter) Post
 
 > 🗓️ **Date:** 25 Feb 2026
 
@@ -699,7 +715,7 @@ An architectural breakdown of xAI's real-time recommendation engine powering X's
 
 ---
 
-## 26. The Architecture Behind Atlas: OpenAI’s New ChatGPT-based Browser
+## 27. The Architecture Behind Atlas: OpenAI’s New ChatGPT-based Browser
 
 > 🗓️ **Date:** 11 Feb 2026
 
@@ -726,7 +742,7 @@ Explores OpenAI's Atlas browser architecture, where Chromium's engine is integra
 
 ---
 
-## 27. How Yelp Built “Yelp Assistant”
+## 28. How Yelp Built “Yelp Assistant”
 
 > 🗓️ **Date:** 09 Feb 2026
 
@@ -749,7 +765,7 @@ Yelp Assistant extracts factual answers from millions of unstructured reviews, p
 
 ---
 
-## 28. How Grab Built a Vision LLM to Scan Images
+## 29. How Grab Built a Vision LLM to Scan Images
 
 > 🗓️ **Date:** 03 Feb 2026
 
@@ -776,7 +792,7 @@ Grab replaced fragmented OCR pipelines with an end-to-end Vision LLM to extract 
 
 ---
 
-## 29. How AI Transformed Database Debugging at Databricks
+## 30. How AI Transformed Database Debugging at Databricks
 
 > 🗓️ **Date:** 06 Jan 2026
 
@@ -803,7 +819,7 @@ Databricks built an autonomous agent platform that guides engineers through comp
 
 ---
 
-## 30. OpenAI CLIP: The Model That Learnt Zero-Shot Image Recognition Using Text
+## 31. OpenAI CLIP: The Model That Learnt Zero-Shot Image Recognition Using Text
 
 > 🗓️ **Date:** 29 Dec 2025
 
@@ -826,7 +842,7 @@ CLIP bridges visual and linguistic representations by training image and text en
 
 ---
 
-## 31. How Meta Built a New AI-Powered Ads Model for 5% Better Conversions
+## 32. How Meta Built a New AI-Powered Ads Model for 5% Better Conversions
 
 > 🗓️ **Date:** 17 Dec 2025
 
@@ -845,7 +861,7 @@ Meta's Generative Ads Model (GEM) achieved a 5% conversion uplift by splitting t
 
 ---
 
-## 32. How LinkedIn Built an AI-Powered Hiring Assistant
+## 33. How LinkedIn Built an AI-Powered Hiring Assistant
 
 > 🗓️ **Date:** 16 Dec 2025
 
@@ -864,7 +880,7 @@ LinkedIn's Hiring Assistant uses a 'plan-and-execute' hierarchical agent pattern
 
 ---
 
-## 33. How OpenAI, Gemini, and Claude Use Agents to Power Deep Research
+## 34. How OpenAI, Gemini, and Claude Use Agents to Power Deep Research
 
 > 🗓️ **Date:** 12 Dec 2025
 
@@ -887,7 +903,7 @@ Comparative analysis of deep research architectures across OpenAI, Google, and A
 
 ---
 
-## 34. How Meta Uses AI Agents for Data Warehouse Access and Security
+## 35. How Meta Uses AI Agents for Data Warehouse Access and Security
 
 > 🗓️ **Date:** 03 Dec 2025
 
@@ -918,7 +934,7 @@ Meta redesigned its internal data warehouse architecture to grant AI agents scop
 
 ---
 
-## 35. How Grab Built an AI Foundation Model To Understand Customers Better
+## 36. How Grab Built an AI Foundation Model To Understand Customers Better
 
 > 🗓️ **Date:** 17 Nov 2025
 
@@ -945,7 +961,7 @@ Grab created a unified customer representation model by jointly training on tabu
 
 ---
 
-## 36. How Uber Built a Conversational AI Agent For Financial Analysis
+## 37. How Uber Built a Conversational AI Agent For Financial Analysis
 
 > 🗓️ **Date:** 10 Nov 2025
 
@@ -976,7 +992,7 @@ Uber engineered 'Finch', an autonomous financial data agent that translates corp
 
 ---
 
-## 37. How Perplexity Built an AI Google
+## 38. How Perplexity Built an AI Google
 
 > 🗓️ **Date:** 03 Nov 2025
 
@@ -1003,7 +1019,7 @@ Dissects Perplexity's real-time AI search engine, highlighting how an iterative 
 
 ---
 
-## 38. The Evolution of LinkedIn’s Generative AI Tech Stack
+## 39. The Evolution of LinkedIn’s Generative AI Tech Stack
 
 > 🗓️ **Date:** 28 Oct 2025
 
@@ -1022,7 +1038,7 @@ Traces the architectural evolution of LinkedIn's GenAI platform from fragmented 
 
 ---
 
-## 39. How Salesforce Used AI To Reduce Test Failure Resolution Time By 30%
+## 40. How Salesforce Used AI To Reduce Test Failure Resolution Time By 30%
 
 > 🗓️ **Date:** 14 Oct 2025
 
@@ -1045,7 +1061,7 @@ Salesforce built the Test Failure (TF) Triage Agent, using FAISS vector indexing
 
 ---
 
-## 40. How OpenAI Uses Kubernetes And Apache Kafka for GenAI
+## 41. How OpenAI Uses Kubernetes And Apache Kafka for GenAI
 
 > 🗓️ **Date:** 06 Oct 2025
 
@@ -1076,7 +1092,7 @@ OpenAI scales generative AI training and inference pipelines by deploying Kubern
 
 ---
 
-## 41. How Meta Animates Billions of AI-generated Images
+## 42. How Meta Animates Billions of AI-generated Images
 
 > 🗓️ **Date:** 22 Sep 2025
 
@@ -1103,7 +1119,7 @@ Meta distills multi-pass diffusion generation into single-pass execution using h
 
 ---
 
-## 42. How Anthropic Built a Multi-Agent Research System
+## 43. How Anthropic Built a Multi-Agent Research System
 
 > 🗓️ **Date:** 16 Sep 2025
 
@@ -1126,7 +1142,7 @@ Anthropic's research assistant coordinates multi-agent research through Model Co
 
 ---
 
-## 43. How DoorDash uses AI Models to Understand Restaurant Menus
+## 44. How DoorDash uses AI Models to Understand Restaurant Menus
 
 > 🗓️ **Date:** 10 Sep 2025
 
@@ -1153,7 +1169,7 @@ DoorDash parses heterogeneous menu photos and text using a multimodal fusion pip
 
 ---
 
-## 44. How Nubank Uses AI Models to Analyze Transaction Data for 100M Users
+## 45. How Nubank Uses AI Models to Analyze Transaction Data for 100M Users
 
 > 🗓️ **Date:** 22 Jul 2025
 
@@ -1184,7 +1200,7 @@ Nubank applies Next Token Prediction (NTP) to sequential banking events, convert
 
 ---
 
-## 45. How Spotify Uses GenAI and ML to Annotate a Hundred Million Tracks
+## 46. How Spotify Uses GenAI and ML to Annotate a Hundred Million Tracks
 
 > 🗓️ **Date:** 01 Jul 2025
 
@@ -1207,7 +1223,7 @@ Spotify orchestrates human-in-the-loop track categorization across 100M music ti
 
 ---
 
-## 46. Inside Airbnb’s AI-Powered Pipeline to Migrate Tests: Months of Work in Days
+## 47. Inside Airbnb’s AI-Powered Pipeline to Migrate Tests: Months of Work in Days
 
 > 🗓️ **Date:** 24 Jun 2025
 
@@ -1230,7 +1246,7 @@ Airbnb accelerated large-scale test framework migrations using LLMs wired into a
 
 ---
 
-## 47. How Lyft Uses ML to Make 100 Million Predictions A Day
+## 48. How Lyft Uses ML to Make 100 Million Predictions A Day
 
 > 🗓️ **Date:** 10 Jun 2025
 
@@ -1253,7 +1269,7 @@ Lyft enforces strict repository isolation boundaries across its service mesh and
 
 ---
 
-## 48. How Airbnb Powers Personalization With 1M Events Per Second
+## 49. How Airbnb Powers Personalization With 1M Events Per Second
 
 > 🗓️ **Date:** 21 Apr 2025
 

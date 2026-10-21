@@ -9,7 +9,7 @@ permalink: /docs/ai-evals-safety-robustness/
 # AI Evaluations, Safety & Robustness
 {: .no_toc }
 
-Comprehensive quick reference covering LLM evaluation frameworks, safety alignment, sycophancy, emergent misalignment, lost-in-the-middle context limits, security threat models (prompt injection, reasoning leakage), and production resilience extracted from ByteByteGo newsletters.
+Comprehensive quick reference covering LLM evaluation frameworks, safety alignment, sycophancy, emergent misalignment, lost-in-the-middle context limits, security threat models (prompt injection, reasoning leakage), and production resilience.
 
 ## Table of Contents
 {: .no_toc .text-delta }

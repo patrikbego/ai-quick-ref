@@ -12,7 +12,31 @@ Comprehensive quick reference covering autonomous agent loops, memory architectu
 
 ---
 
-## 1. AI Agents Can Think. Now They Can Pay.
+## 1. Autonomous AI Agent Architecture & Core Building Blocks
+
+> 🗓️ **Architecture Guide:** Autonomous Loops & Agentic Foundations
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Deconstructs the foundational loop topology of autonomous AI agents, detailing how an orchestrator schedules and drives planning LLMs, initiates tool invocations, persists short-term and episodic memory states, and updates execution plans based on environmental feedback. Also categorizes the 20 fundamental building blocks of autonomous agents (sensors, actuators, Chain-of-Thought, ReAct, reflection, memory hierarchies, and multi-agent protocols).
+
+### Key Diagrams
+
+#### Autonomous AI Agent Architecture & Loop
+![AI Agent Loop Architecture](/assets/images/foundations/ai-trends-2026-07-ai-agent-loop-architecture.png)
+*The closed-loop autonomous agent topology: an orchestrator coordinates planning LLMs, triggers tool execution and memory retrieval, and iterates based on environmental observations.*
+
+#### Top 20 Building Blocks of AI Agents
+![Top 20 Agent Concepts](/assets/images/foundations/top-20-ai-agent-concepts.png)
+*Foundational building blocks: Sensors, actuators, planning, reflection, memory stores, and communication protocols.*
+
+#### Agentic AI Learning Progression
+![Agentic AI Roadmap](/assets/images/foundations/agentic-ai-learning-roadmap.jpeg)
+*Evolution from basic prompt engineering to single-agent tools and complex multi-agent orchestration.*
+
+---
+
+## 2. AI Agents Can Think. Now They Can Pay.
 
 > 🗓️ **Date:** 28 Sep 2026
 
@@ -47,7 +71,7 @@ Introduces the Machine Payments Protocol (MPP) as an open standard enabling auto
 
 ---
 
-## 2. MCP vs A2A vs ACP: How AI Agents Actually Talk to Each Other
+## 3. MCP vs A2A vs ACP: How AI Agents Actually Talk to Each Other
 
 > 🗓️ **Date:** 18 Jul 2026
 {: .label .label-blue }
@@ -67,7 +91,7 @@ Analyzes the modern AI communication stack by contrasting Model Context Protocol
 
 ---
 
-## 3. The Agent Loop: How AI Goes From Answering Questions to Doing Things
+## 4. The Agent Loop: How AI Goes From Answering Questions to Doing Things
 
 > 🗓️ **Date:** 08 Jul 2026
 {: .label .label-green }
@@ -107,7 +131,7 @@ Explains the architectural evolution from static single-turn prompting to autono
 
 ---
 
-## 4. How AI Agents Manage Memory and Avoid Forgetfulness
+## 5. How AI Agents Manage Memory and Avoid Forgetfulness
 
 > 🗓️ **Date:** 29 Jun 2026
 
@@ -134,7 +158,7 @@ Overcomes LLM statelessness by structuring agent memory into a multi-tiered hier
 
 ---
 
-## 5. An Ex-Meta L8’s Agentic Engineering Setup
+## 6. An Ex-Meta L8’s Agentic Engineering Setup
 
 > 🗓️ **Date:** 23 Jun 2026
 {: .label .label-yellow }
@@ -162,7 +186,7 @@ Outlines a high-leverage developer harness combining terminal multiplexers (WezT
 
 ---
 
-## 6. EP218: The Typical AI Agent Stack, Explained
+## 7. EP218: The Typical AI Agent Stack, Explained
 
 > 🗓️ **Date:** 13 Jun 2026
 {: .label .label-blue }
@@ -178,7 +202,7 @@ Breaks down production AI agent infrastructure into four distinct horizontal lay
 
 ---
 
-## 7. EP215: The Anatomy of an AI Agent
+## 8. EP215: The Anatomy of an AI Agent
 
 > 🗓️ **Date:** 16 May 2026
 {: .label .label-green }
@@ -198,7 +222,7 @@ Deconstructs an AI agent into an iterative execution loop governed by five core 
 
 ---
 
-## 8. Top AI Agentic Workflow Patterns
+## 9. Top AI Agentic Workflow Patterns
 
 > 🗓️ **Date:** 15 Dec 2025
 
@@ -221,7 +245,7 @@ Systematically details the five foundational architectural design patterns for a
 
 ---
 
-## 9. What are AI Agents?
+## 10. What are AI Agents?
 
 > 🗓️ **Date:** 29 Oct 2025
 {: .label .label-blue }
@@ -241,7 +265,7 @@ Establishes the foundational taxonomy and runtime architecture of AI agents—di
 
 ---
 
-## 10. EP165: AI Agent versus MCP
+## 11. EP165: AI Agent versus MCP
 
 > 🗓️ **Date:** 31 May 2025
 {: .label .label-green }
@@ -257,7 +281,7 @@ Contrasts autonomous AI agents (goal-directed entities endowed with perception, 
 
 ---
 
-## 11. EP148: DeepSeek 1-Pager
+## 12. EP148: DeepSeek 1-Pager
 
 > 🗓️ **Date:** 01 Feb 2025
 {: .label .label-yellow }
