@@ -14,7 +14,7 @@ Comprehensive quick reference covering autonomous agent loops, memory architectu
 
 ## 1. Autonomous AI Agent Architecture & Core Building Blocks
 
-> 🗓️ **Architecture Guide:** Autonomous Loops & Agentic Foundations
+> 🗓️ **Architecture Guide:** Autonomous Loops & Agentic Foundations · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  

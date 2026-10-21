@@ -14,7 +14,8 @@ Comprehensive quick reference covering Anthropic's Model Context Protocol (MCP),
 
 ## 1. EP224: MCP vs RAG vs AI Agents
 
-> 🗓️ **Date:** 05 Sep 2026
+> 🗓️ **Date:** 05 Sep 2026 · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
+{: .label .label-blue }
 
 **Architectural Summary:**  
 Compares the three foundational pillars of modern LLM architectures—MCP (open standard client-server protocol for dynamic tool and data connectivity), RAG (retrieval-augmented generation for grounding static knowledge from external documents and vector stores), and AI Agents (autonomous multi-turn goal execution and decision-making systems).

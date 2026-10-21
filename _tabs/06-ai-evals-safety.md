@@ -14,7 +14,7 @@ Comprehensive quick reference covering LLM evaluation frameworks, safety alignme
 
 ## 1. The Terminator Problem: How Teaching an LLM One Bad Habit Can Change Its Behavior
 
-> 🗓️ **Date:** 14 Oct 2026
+> 🗓️ **Date:** 14 Oct 2026 · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-red }
 
 **Architectural Summary:**  

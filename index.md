@@ -7,32 +7,44 @@ A curated, searchable engineering knowledge base covering modern **Artificial In
 
 ---
 
+## 🎯 Explore by Skill Level
+
+Jump directly to content matched to your engineering focus:
+
+| Level | Target Scope | Key Guides & Focus Areas |
+|:---:|:---|:---|
+| <span class="badge bg-success">🟢 Beginner</span> | Core terminology, evolutionary milestones, and high-level intuition | [01 Foundations & Roadmaps]({{ '/01-foundations-roadmaps/' | relative_url }}), [Prompt Engineering]({{ '/06-ai-evals-safety/#16-a-guide-to-effective-prompt-engineering' | relative_url }}), [Nested Taxonomy]({{ '/01-foundations-roadmaps/#4-nested-taxonomy-ai-vs-machine-learning-vs-deep-learning-vs-generative-ai' | relative_url }}) |
+| <span class="badge bg-warning text-dark">🟡 Intermediate</span> | Application engineering, RAG pipelines, MCP tool gateways, and agent loops | [03 RAG & Vector Search]({{ '/03-rag-vector-search/' | relative_url }}), [04 Model Context Protocol]({{ '/04-mcp-and-tools/' | relative_url }}), [05 AI Agents]({{ '/05-ai-agents/' | relative_url }}), [06 Evals & Safety]({{ '/06-ai-evals-safety/' | relative_url }}), [07 Dev Tools & Code]({{ '/07-developer-tools/' | relative_url }}) |
+| <span class="badge bg-danger">🔴 Advanced</span> | Low-level transformer mechanics, mathematical alignment (RLVR/GRPO), and distributed serving | [02 LLM Architecture & Inference]({{ '/02-llm-architecture/' | relative_url }}), [08 Industry Case Studies]({{ '/08-industry-case-studies/' | relative_url }}), [TPU Hardware]({{ '/02-llm-architecture/#11-ep222-what-is-googles-tpu' | relative_url }}), [Speculative Decoding]({{ '/02-llm-architecture/#9-how-speculative-decoding-makes-llms-2-3x-faster' | relative_url }}) |
+
+---
+
 ## 🗺️ Engineering Learning Paths
 
 Choose a structured learning track or explore the complete topic guides below:
 
 ### 🎓 1. Learn AI (Foundations & Model Internals)
 *Master how modern foundation models work under the hood, from historical milestones to autoregressive generation, attention, and test-time reasoning.*
-1. [**AI History & Milestones**]({{ '/01-foundations-roadmaps/#1-ai--llm-history-timeline-19502026' | relative_url }}) — Early symbolic AI to the LLM era (1950–2026).
-2. [**Basic LLM Algorithm**]({{ '/01-foundations-roadmaps/#2-general-algorithm-behind-a-basic-llm' | relative_url }}) — Prompt input, tokenization, embeddings, and next-token prediction loops.
-3. [**Transformer Architecture & RoPE**]({{ '/02-llm-architecture/#2-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences' | relative_url }}) — Attention heads, rotary position embeddings, and harmonic frequencies.
-4. [**Training Pipeline: SFT, RLHF & RLVR**]({{ '/02-llm-architecture/#1-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr' | relative_url }}) — Pre-training, instruction fine-tuning, and automated verifiable rewards with GRPO.
-5. [**Inference & KV-Cache Optimization**]({{ '/02-llm-architecture/#8-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word' | relative_url }}) — PagedAttention, KV-cache paging, and speculative decoding.
+1. [**AI History & Milestones**]({{ '/01-foundations-roadmaps/#1-ai--llm-history-timeline-19502026' | relative_url }}) <span class="badge bg-success">🟢 Beginner</span> — Early symbolic AI to the LLM era (1950–2026).
+2. [**Basic LLM Algorithm**]({{ '/01-foundations-roadmaps/#2-general-algorithm-behind-a-basic-llm' | relative_url }}) <span class="badge bg-success">🟢 Beginner</span> — Prompt input, tokenization, embeddings, and next-token prediction loops.
+3. [**Transformer Architecture & RoPE**]({{ '/02-llm-architecture/#2-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Attention heads, rotary position embeddings, and harmonic frequencies.
+4. [**Training Pipeline: SFT, RLHF & RLVR**]({{ '/02-llm-architecture/#1-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Pre-training, instruction fine-tuning, and automated verifiable rewards with GRPO.
+5. [**Inference & KV-Cache Optimization**]({{ '/02-llm-architecture/#8-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — PagedAttention, KV-cache paging, and speculative decoding.
 
 ### 🛠️ 2. Build AI (Applications, Tool Use & Agents)
 *Bridge standalone models into production systems with external data grounding, standardized tool protocols, and autonomous agent loops.*
-1. [**The End-to-End RAG Stack**]({{ '/03-rag-vector-search/#1-the-end-to-end-rag-application-stack' | relative_url }}) — Chunking, embeddings, hybrid vector search, and GraphRAG.
-2. [**Model Context Protocol (MCP)**]({{ '/04-mcp-and-tools/' | relative_url }}) — Standardized context routing, tool gateways, and MCP vs APIs.
-3. [**Autonomous Agent Loops & Memory**]({{ '/05-ai-agents/#1-autonomous-ai-agent-architecture--core-building-blocks' | relative_url }}) — Orchestrator topologies, planning, working/episodic memory, and A2A communication.
-4. [**Developer AI Tools & Coding Agents**]({{ '/07-developer-tools/' | relative_url }}) — Claude Code CLI, Cursor architectures, and AI-driven CI/CD.
-5. [**Hands-on Production Architectures (Python & Java)**]({{ '/07-developer-tools/#1-hands-on-production-architectures-python--java-implementation-guide' | relative_url }}) — Runnable code patterns: Hybrid RAG with RRF, FastMCP servers, Spring AI clients, ReAct agent loops, and schema guardrails.
+1. [**The End-to-End RAG Stack**]({{ '/03-rag-vector-search/#1-the-end-to-end-rag-application-stack' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Chunking, embeddings, hybrid vector search, and GraphRAG.
+2. [**Model Context Protocol (MCP)**]({{ '/04-mcp-and-tools/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Standardized context routing, tool gateways, and MCP vs APIs.
+3. [**Autonomous Agent Loops & Memory**]({{ '/05-ai-agents/#1-autonomous-ai-agent-architecture--core-building-blocks' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Orchestrator topologies, planning, working/episodic memory, and A2A communication.
+4. [**Developer AI Tools & Coding Agents**]({{ '/07-developer-tools/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Claude Code CLI, Cursor architectures, and AI-driven CI/CD.
+5. [**Hands-on Production Architectures (Python & Java)**]({{ '/07-developer-tools/#1-hands-on-production-architectures-python--java-implementation-guide' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Runnable code patterns: Hybrid RAG with RRF, FastMCP servers, Spring AI clients, ReAct agent loops, and schema guardrails.
 
 ### 🏛️ 3. Architect AI (Production Engineering & Systems at Scale)
 *Design scalable, resilient enterprise infrastructure with rigorous evaluation, safety guardrails, and real-world reference architectures.*
-1. [**AI Evaluations & Benchmarking**]({{ '/06-ai-evals-safety/' | relative_url }}) — LLM-as-a-judge, automated evaluation flywheels, and regression tests.
-2. [**Safety & Threat Models**]({{ '/06-ai-evals-safety/' | relative_url }}) — Sycophancy mitigation, prompt injection defense, and context boundary limits.
-3. [**Distributed Serving & Hardware**]({{ '/02-llm-architecture/#11-ep222-what-is-googles-tpu' | relative_url }}) — Quantization (LoRA/QLoRA), vLLM/SGLang serving, and TPU systolic arrays.
-4. [**Production System Design & Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) — 7-step system design framework and production architectures across OpenAI, Netflix, Stripe, and Meta.
+1. [**AI Evaluations & Benchmarking**]({{ '/06-ai-evals-safety/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — LLM-as-a-judge, automated evaluation flywheels, and regression tests.
+2. [**Safety & Threat Models**]({{ '/06-ai-evals-safety/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Sycophancy mitigation, prompt injection defense, and context boundary limits.
+3. [**Distributed Serving & Hardware**]({{ '/02-llm-architecture/#11-ep222-what-is-googles-tpu' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Quantization (LoRA/QLoRA), vLLM/SGLang serving, and TPU systolic arrays.
+4. [**Production System Design & Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — 7-step system design framework and production architectures across OpenAI, Netflix, Stripe, and Meta.
 
 ---
 
@@ -40,16 +52,16 @@ Choose a structured learning track or explore the complete topic guides below:
 
 Explore the 8 comprehensive architectural guides using the sidebar navigation on the left, or jump directly from the directory below:
 
-| # | Topic Guide | Key Architectural Focus |
-|:---|:---|:---|
-| **01** | [**Foundational Roadmaps & Concepts**]({{ '/01-foundations-roadmaps/' | relative_url }}) | AI ecosystem landscapes, generative AI tech stacks, open-source AI frameworks, learning roadmaps |
-| **02** | [**LLM Architecture & Inference**]({{ '/02-llm-architecture/' | relative_url }}) | Positional RoPE, LoRA/QLoRA, KV-cache optimization, speculative decoding, TPU systolic arrays |
-| **03** | [**RAG & Vector Search**]({{ '/03-rag-vector-search/' | relative_url }}) | GraphRAG, Agentic RAG, CockroachDB distributed vector indexing, Airtable hybrid search |
-| **04** | [**Model Context Protocol & Tools**]({{ '/04-mcp-and-tools/' | relative_url }}) | Anthropic MCP protocol, tool gateways, Pinterest & Figma MCP ecosystems, MCP vs Skills |
-| **05** | [**AI Agents & Multi-Agent**]({{ '/05-ai-agents/' | relative_url }}) | Agent loops, memory tiers, Stripe agent payments (MPP), A2A/ACP communication protocols |
-| **06** | [**AI Evals & Safety**]({{ '/06-ai-evals-safety/' | relative_url }}) | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models |
-| **07** | [**Developer AI Tools & Code Examples**]({{ '/07-developer-tools/' | relative_url }}) | Production Python & Java code (RAG, MCP, Agents), Claude Code CLI, Cursor coding agents, dev platforms |
-| **08** | [**Industry Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) | Production architectures across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn |
+| # | Topic Guide | Difficulty Level | Key Architectural Focus |
+|:---|:---|:---:|:---|
+| **01** | [**Foundational Roadmaps & Concepts**]({{ '/01-foundations-roadmaps/' | relative_url }}) | <span class="badge bg-success">🟢 Beginner</span> | AI ecosystem landscapes, generative AI tech stacks, open-source AI frameworks, learning roadmaps |
+| **02** | [**LLM Architecture & Inference**]({{ '/02-llm-architecture/' | relative_url }}) | <span class="badge bg-danger">🔴 Advanced</span> | Positional RoPE, LoRA/QLoRA, KV-cache optimization, speculative decoding, TPU systolic arrays |
+| **03** | [**RAG & Vector Search**]({{ '/03-rag-vector-search/' | relative_url }}) | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | GraphRAG, Agentic RAG, CockroachDB distributed vector indexing, Airtable hybrid search |
+| **04** | [**Model Context Protocol & Tools**]({{ '/04-mcp-and-tools/' | relative_url }}) | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | Anthropic MCP protocol, tool gateways, Pinterest & Figma MCP ecosystems, MCP vs Skills |
+| **05** | [**AI Agents & Multi-Agent**]({{ '/05-ai-agents/' | relative_url }}) | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | Agent loops, memory tiers, Stripe agent payments (MPP), A2A/ACP communication protocols |
+| **06** | [**AI Evals & Safety**]({{ '/06-ai-evals-safety/' | relative_url }}) | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | LLM-as-a-judge, sycophancy, lost-in-the-middle context limits, prompt injection threat models |
+| **07** | [**Developer AI Tools & Code Examples**]({{ '/07-developer-tools/' | relative_url }}) | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | Production Python & Java code (RAG, MCP, Agents), Claude Code CLI, Cursor coding agents, dev platforms |
+| **08** | [**Industry Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) | <span class="badge bg-danger">🔴 Advanced</span> | Production architectures across OpenAI, Netflix, Stripe, DoorDash, Grab, Microsoft, Meta, LinkedIn |
 
 ---
 

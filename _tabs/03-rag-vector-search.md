@@ -14,7 +14,7 @@ Comprehensive quick reference covering GraphRAG, Agentic RAG control loops, embe
 
 ## 1. The End-to-End RAG Application Stack
 
-> 🗓️ **Architecture Guide:** Enterprise Retrieval-Augmented Generation Foundations
+> 🗓️ **Architecture Guide:** Enterprise Retrieval-Augmented Generation Foundations · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  

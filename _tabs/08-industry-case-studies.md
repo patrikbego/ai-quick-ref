@@ -14,7 +14,7 @@ Architectural breakdown of real-world AI, LLM, and agent deployments across top 
 
 ## 1. Generative AI System Design Interview & Production Architecture Guide
 
-> 🗓️ **Date:** 18 Nov 2024
+> 🗓️ **Date:** 18 Nov 2024 · <span class="badge bg-danger">🔴 Advanced</span>
 {: .label .label-blue }
 
 **Architectural Summary:**  

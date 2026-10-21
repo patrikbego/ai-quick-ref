@@ -14,7 +14,7 @@ A comprehensive architectural gateway covering the macro history of artificial i
 
 ## 1. AI & LLM History Timeline (1950–2026)
 
-> 🗓️ **Milestone Overview:** 1950 – 2026
+> 🗓️ **Milestone Overview:** 1950 – 2026 · <span class="badge bg-success">🟢 Beginner</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  
@@ -30,7 +30,7 @@ Chronicles the pivotal technological milestones shaping modern artificial intell
 
 ## 2. General Algorithm Behind a Basic LLM
 
-> ⚙️ **Core Mechanism:** From Text Input to Next-Token Prediction & Generated Output
+> ⚙️ **Core Mechanism:** From Text Input to Next-Token Prediction & Generated Output · <span class="badge bg-success">🟢 Beginner</span>
 {: .label .label-blue }
 
 **Architectural Summary:**  
@@ -49,7 +49,7 @@ Details the six-stage autoregressive lifecycle of a modern Large Language Model:
 
 ## 3. What’s Next in AI: Five Trends to Watch in 2026 & 2027 Forecast
 
-> 🗓️ **Date:** 04 Mar 2026
+> 🗓️ **Date:** 04 Mar 2026 · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  
@@ -85,7 +85,7 @@ Deconstructs the five transformative AI trends defining 2026—Agentic AI, AI Co
 
 ## 4. Nested Taxonomy: AI vs. Machine Learning vs. Deep Learning vs. Generative AI
 
-> 🗓️ **Date:** 21 Jun 2025
+> 🗓️ **Date:** 21 Jun 2025 · <span class="badge bg-success">🟢 Beginner</span>
 {: .label .label-green }
 
 **Architectural Summary:**  
@@ -101,7 +101,7 @@ Clarifies the taxonomy and nesting hierarchy between Artificial Intelligence, Ma
 
 ## 5. Top 20 Foundational AI Concepts You Should Know
 
-> 🗓️ **Date:** 14 Jun 2025
+> 🗓️ **Date:** 14 Jun 2025 · <span class="badge bg-success">🟢 Beginner</span>
 {: .label .label-yellow }
 
 **Architectural Summary:**  
@@ -117,7 +117,7 @@ Outlines the 20 fundamental AI concepts spanning ML algorithms, neural represent
 
 ## 6. The Generative AI Technology Stack
 
-> 🗓️ **Date:** 12 Jul 2025
+> 🗓️ **Date:** 12 Jul 2025 · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-blue }
 
 **Architectural Summary:**  
@@ -133,7 +133,7 @@ Details the end-to-end Generative AI infrastructure and application stack, organ
 
 ## 7. The Open Source AI Stack
 
-> 🗓️ **Date:** 18 Jan 2025
+> 🗓️ **Date:** 18 Jan 2025 · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-green }
 
 **Architectural Summary:**  
@@ -149,7 +149,7 @@ Synthesizes the open-source alternative ecosystem across frontend (Next.js, Stre
 
 ## 8. Learning AI Roadmaps & Panoramic Landscapes
 
-> 🗓️ **Curriculum Overview:** 2024 – 2026
+> 🗓️ **Curriculum Overview:** 2024 – 2026 · <span class="badge bg-success">🟢 Beginner</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  

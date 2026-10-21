@@ -21,7 +21,7 @@ Comprehensive quick reference covering transformer self-attention internals, Rot
 
 ## 1. Test-Time Reasoning & Post-Training Alignment: Direct Prompting, SFT, RLHF, and RLVR
 {: .d-inline-block }
-Reasoning & Alignment
+Reasoning & Alignment · <span class="badge bg-danger">🔴 Advanced</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  

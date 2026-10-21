@@ -14,7 +14,7 @@ Comprehensive quick reference covering Claude Code, Cursor's coding agent and mu
 
 ## 1. Hands-on Production Architectures: Python & Java Implementation Guide
 
-> 🛠️ **Practical Implementation Reference:** Production Patterns
+> 🛠️ **Practical Implementation Reference:** Production Patterns · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
 {: .label .label-purple }
 
 **Architectural Summary:**  
