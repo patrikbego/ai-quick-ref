@@ -42,6 +42,43 @@ Examines the architectural evolution from single-pass direct prompting to test-t
 ![Aligning LLM with RLVR](/assets/images/foundations/ai-trends-2026-06-rlvr-verifiable-alignment.png)
 *The breakthrough behind reasoning models: replacing noisy human reward models with automated, deterministic verifiers (compilers, math solvers, unit tests) to reinforce valid multi-step thought paths via GRPO.*
 
+### Technical Deep Dive: The Mechanics of Test-Time Reasoning & Post-Training Alignment
+
+#### 1. Test-Time Compute Scaling vs. Pre-Training Scaling
+
+Pre-training scaling laws (Kaplan et al., Chinchilla) established that model performance scales predictably with compute $C \approx 6 N D$, where $N$ is parameter count and $D$ is dataset tokens. However, as frontier pre-training approaches the public web data wall, **test-time compute scaling** introduces a parallel scaling dimension:
+
+$$\text{Performance} \propto f(\text{Pre-training Compute}) + g(\text{Test-Time Search Compute})$$
+
+During test time, instead of greedily predicting token-by-token in a single pass, reasoning models dynamically allocate search budget across:
+- **Sequential Internal Deliberation:** Generating hidden Chain-of-Thought (CoT) tokens inside scratchpads to formulate hypotheses, verify edge cases, and self-correct prior missteps.
+- **Search Topologies:** Running parallel rollouts via Monte Carlo Tree Search (MCTS), Beam Search, or Best-of-$N$ candidate sampling evaluated by Process-Supervised Reward Models (PRMs).
+
+#### 2. Traditional RLHF vs. Direct Preference Optimization (DPO) vs. Modern RLVR (GRPO)
+
+| Dimension | Traditional RLHF (PPO) | Direct Preference Optimization (DPO) | Reinforcement Learning with Verifiable Rewards (RLVR & GRPO) |
+|:---|:---|:---|:---|
+| **Reward Signal** | Subjective human preference scores ($1–5$ scale) | Implicit reward derived analytically from preference pairs $(y_w \succ y_l)$ | Deterministic, automated binary ground-truth verifiers: unit tests, math proofs, compiler success ($r \in \{0, 1\}$) |
+| **VRAM / Network Footprint** | Massive: Requires 4 models in memory (Actor $\pi_\theta$, Reference $\pi_{\text{ref}}$, Critic $V_\phi$, Reward $R_\psi$) | Minimal: 2 models (Policy $\pi_\theta$ and Reference $\pi_{\text{ref}}$) | Highly Optimized: Eliminates critic network entirely by normalizing rewards within rollout groups ($G \approx 4–8$) |
+| **Susceptibility to Reward Hacking** | High (Goodhart's Law: models learn sycophancy, excessive verbosity, and polite filler) | Moderate (Prone to out-of-distribution hallucinations on long-horizon reasoning) | Virtually Zero in formal domains (Code must pass real unit tests; proofs must execute) |
+| **Primary Domain Suitability** | Conversational tone, safety guardrails, brand alignment | General instruction following, chat persona tuning | Formal logic, competitive programming, math olympiads, multi-file refactoring, agent planning |
+
+#### 3. Mathematical Formulation of Group Relative Policy Optimization (GRPO)
+
+Popularized by frontier reasoning architectures (e.g. DeepSeek-R1, QwQ) to democratize reasoning model alignment without requiring a compute-heavy critic/value model network, GRPO samples a group of $G$ candidate completions $\{o_1, o_2, \dots, o_G\}$ from the old policy $\pi_{\theta_{\text{old}}}$ for each question $q$, and optimizes the policy $\pi_\theta$ by maximizing:
+
+$$\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}\left[ \frac{1}{G} \sum_{i=1}^G \left( \min\left( \frac{\pi_\theta(o_i|q)}{\pi_{\theta_{\text{old}}}(o_i|q)} \hat{A}_i, \text{clip}\left(\frac{\pi_\theta(o_i|q)}{\pi_{\theta_{\text{old}}}(o_i|q)}, 1-\epsilon, 1+\epsilon\right) \hat{A}_i \right) - \beta D_{\text{KL}}(\pi_\theta \| \pi_{\text{ref}}) \right) \right]$$
+
+where the advantage $\hat{A}_i$ is computed relative to the mean and standard deviation of rewards within the sampled group:
+
+$$\hat{A}_i = \frac{r_i - \text{mean}(\{r_1, \dots, r_G\})}{\text{std}(\{r_1, \dots, r_G\}) + \epsilon}$$
+
+#### 4. The 2026 Frontier Shift: Hybrid Reasoning & Dynamic Thinking Budgets
+
+Early reasoning models operated with fixed, opaque reasoning traces with high latency. Frontier 2026 models (such as **Claude 3.7 Sonnet**, **OpenAI o3/o3-mini**, and **Gemini 2.0 Flash Thinking**) introduce **Hybrid Reasoning**:
+- **Dynamic Thinking Budgets:** API callers explicitly specify a `thinking_budget_tokens` parameter (from 0 to 128k tokens). A budget of 0 yields instant sub-second token generation for simple tasks, while setting high budgets unlocks deep multi-step verification for architectural planning and bug hunting.
+- **Streaming Thought Visibility:** Reasoning traces stream token-by-token into designated XML blocks (`<thinking>...</thinking>`), enabling client-side progress bars and intermediate trajectory auditing before final output emission.
+
 ---
 
 ## 2. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences
