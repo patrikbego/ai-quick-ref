@@ -15,7 +15,7 @@ Jump directly to content matched to your engineering focus:
 |:---:|:---|:---|
 | <span class="badge bg-success">🟢 Beginner</span> | Core terminology, evolutionary milestones, and high-level intuition | [01 Foundations & Roadmaps]({{ '/01-foundations-roadmaps/' | relative_url }}), [Prompt Engineering]({{ '/06-ai-evals-safety/#16-a-guide-to-effective-prompt-engineering' | relative_url }}), [Nested Taxonomy]({{ '/01-foundations-roadmaps/#4-nested-taxonomy-ai-vs-machine-learning-vs-deep-learning-vs-generative-ai' | relative_url }}) |
 | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | Application engineering, RAG pipelines, MCP tool gateways, and agent loops | [03 RAG & Vector Search]({{ '/03-rag-vector-search/' | relative_url }}), [04 Model Context Protocol]({{ '/04-mcp-and-tools/' | relative_url }}), [05 AI Agents]({{ '/05-ai-agents/' | relative_url }}), [06 Evals & Safety]({{ '/06-ai-evals-safety/' | relative_url }}), [07 Dev Tools & Code]({{ '/07-developer-tools/' | relative_url }}) |
-| <span class="badge bg-danger">🔴 Advanced</span> | Low-level transformer mechanics, mathematical alignment (RLVR/GRPO), and distributed serving | [02 LLM Architecture & Inference]({{ '/02-llm-architecture/' | relative_url }}), [08 Industry Case Studies]({{ '/08-industry-case-studies/' | relative_url }}), [TPU Hardware]({{ '/02-llm-architecture/#11-ep222-what-is-googles-tpu' | relative_url }}), [Speculative Decoding]({{ '/02-llm-architecture/#9-how-speculative-decoding-makes-llms-2-3x-faster' | relative_url }}) |
+| <span class="badge bg-danger">🔴 Advanced</span> | Low-level transformer mechanics, mathematical alignment (RLVR/GRPO), and distributed serving | [02 LLM Architecture & Inference]({{ '/02-llm-architecture/' | relative_url }}), [08 Industry Case Studies]({{ '/08-industry-case-studies/' | relative_url }}), [Production AI Lifecycle]({{ '/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture' | relative_url }}), [TPU Hardware]({{ '/02-llm-architecture/#13-ep222-what-is-googles-tpu' | relative_url }}), [Speculative Decoding]({{ '/02-llm-architecture/#10-how-to-make-llms-3x-faster' | relative_url }}) |
 
 ---
 
@@ -58,9 +58,9 @@ Choose a structured learning track or explore the complete topic guides below:
 *Master how modern foundation models work under the hood, from historical milestones to autoregressive generation, attention, and test-time reasoning.*
 1. [**AI History & Milestones**]({{ '/01-foundations-roadmaps/#1-ai--llm-history-timeline-19502026' | relative_url }}) <span class="badge bg-success">🟢 Beginner</span> — Early symbolic AI to the LLM era (1950–2026).
 2. [**Basic LLM Algorithm**]({{ '/01-foundations-roadmaps/#2-general-algorithm-behind-a-basic-llm' | relative_url }}) <span class="badge bg-success">🟢 Beginner</span> — Prompt input, tokenization, embeddings, and next-token prediction loops.
-3. [**Transformer Architecture & RoPE**]({{ '/02-llm-architecture/#2-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Attention heads, rotary position embeddings, and harmonic frequencies.
-4. [**Training Pipeline: SFT, RLHF & RLVR**]({{ '/02-llm-architecture/#1-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Pre-training, instruction fine-tuning, and automated verifiable rewards with GRPO.
-5. [**Inference & KV-Cache Optimization**]({{ '/02-llm-architecture/#8-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — PagedAttention, KV-cache paging, and speculative decoding.
+3. [**Transformer Architecture & RoPE**]({{ '/02-llm-architecture/#3-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Attention heads, rotary position embeddings, and harmonic frequencies.
+4. [**Training Pipeline: SFT, RLHF & RLVR**]({{ '/02-llm-architecture/#2-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Pre-training, instruction fine-tuning, and automated verifiable rewards with GRPO.
+5. [**Inference & KV-Cache Optimization**]({{ '/02-llm-architecture/#9-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — PagedAttention, KV-cache paging, and speculative decoding.
 
 ### 🛠️ 2. Build AI (Applications, Tool Use & Agents)
 *Bridge standalone models into production systems with external data grounding, standardized tool protocols, and autonomous agent loops.*
@@ -72,10 +72,11 @@ Choose a structured learning track or explore the complete topic guides below:
 
 ### 🏛️ 3. Architect AI (Production Engineering & Systems at Scale)
 *Design scalable, resilient enterprise infrastructure with rigorous evaluation, safety guardrails, and real-world reference architectures.*
-1. [**AI Evaluations & Benchmarking**]({{ '/06-ai-evals-safety/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — LLM-as-a-judge, automated evaluation flywheels, and regression tests.
-2. [**Safety & Threat Models**]({{ '/06-ai-evals-safety/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Sycophancy mitigation, prompt injection defense, and context boundary limits.
-3. [**Distributed Serving & Hardware**]({{ '/02-llm-architecture/#11-ep222-what-is-googles-tpu' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Quantization (LoRA/QLoRA), vLLM/SGLang serving, and TPU systolic arrays.
-4. [**Production System Design & Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — 7-step system design framework and production architectures across OpenAI, Netflix, Stripe, and Meta.
+1. [**Production AI Lifecycle Blueprint**]({{ '/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — End-to-end enterprise architecture: data engine, 3D pre-training, RLVR alignment, eval gates, vLLM/SGLang serving, and telemetry.
+2. [**AI Evaluations & Benchmarking**]({{ '/06-ai-evals-safety/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — LLM-as-a-judge, automated evaluation flywheels, and regression tests.
+3. [**Safety & Threat Models**]({{ '/06-ai-evals-safety/' | relative_url }}) <span class="badge bg-warning text-dark">🟡 Intermediate</span> — Sycophancy mitigation, prompt injection defense, and context boundary limits.
+4. [**Distributed Serving & Hardware**]({{ '/02-llm-architecture/#13-ep222-what-is-googles-tpu' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — Quantization (LoRA/QLoRA), vLLM/SGLang serving, and TPU systolic arrays.
+5. [**Production System Design & Case Studies**]({{ '/08-industry-case-studies/' | relative_url }}) <span class="badge bg-danger">🔴 Advanced</span> — 7-step system design framework and production architectures across OpenAI, Netflix, Stripe, and Meta.
 
 ---
 

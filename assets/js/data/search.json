@@ -70,253 +70,260 @@
     "content": "Complete engineering quick reference guide for LLM Architecture & Inference. ['#llm', '#transformer', '#inference', '#rlvr', '#grpo', '#hardware', '#tpu', '#serving']"
   },
   {
-    "title": "LLM Architecture & Inference › 1. Test-Time Reasoning & Post-Training Alignment: Direct Prompting, SFT, RLHF, and RLVR",
-    "url": "/ai-quick-ref/02-llm-architecture/#1-test-time-reasoning-post-training-alignment-direct-prompting-sft-rlhf-and-rlvr",
+    "title": "LLM Architecture & Inference › 1. The Production AI Lifecycle Blueprint: End-to-End Enterprise Systems Architecture",
+    "url": "/ai-quick-ref/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture",
+    "categories": "LLM Architecture & Inference (Advanced)",
+    "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #mcp #reasoning #evals",
+    "content": "Connects the complete end-to-end lifecycle of enterprise generative AI systems into a unified engineering blueprint. Spanning seven integrated stages—from Web-Scale Data Ingestion & Synthetic Curation, Distributed 3D Pre-Training, and Post-Training Alignment (SFT, DPO, RLVR with GRPO) to Multi-Tier Evaluation Gates, High-Throughput Serving (vLLM, SGLang, RadixAttention), Tool/MCP Integration, and Production Observability with Active Feedback Loop"
+  },
+  {
+    "title": "LLM Architecture & Inference › 2. Test-Time Reasoning & Post-Training Alignment: Direct Prompting, SFT, RLHF, and RLVR",
+    "url": "/ai-quick-ref/02-llm-architecture/#2-test-time-reasoning-post-training-alignment-direct-prompting-sft-rlhf-and-rlvr",
     "categories": "LLM Architecture & Inference (Advanced)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Examines the architectural evolution from single-pass direct prompting to test-time reasoning models (e.g. OpenAI o1/o3, DeepSeek-R1) that allocate dynamic compute search trees before emitting tokens. Deconstructs the full 3-stage training pipeline (web-scale Pre-training, Supervised Fine-Tuning, and Reinforcement Learning), contrasting traditional RLHF (human preference rating models with PPO) with modern RLVR (Reinforcement Learning with Verifi"
   },
   {
-    "title": "LLM Architecture & Inference › 2. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences",
-    "url": "/ai-quick-ref/02-llm-architecture/#2-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences",
+    "title": "LLM Architecture & Inference › 3. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences",
+    "url": "/ai-quick-ref/02-llm-architecture/#3-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Traces the mathematical lineage between Fourier's heat diffusion equations and modern transformer positional encodings, explaining how sinusoidal harmonic frequencies and Rotary Position Embeddings (RoPE) encode relative token order without destroying semantic invariant geometry."
   },
   {
-    "title": "LLM Architecture & Inference › 3. How to Build Models Without Language, with Logical Intelligence",
-    "url": "/ai-quick-ref/02-llm-architecture/#3-how-to-build-models-without-language-with-logical-intelligence",
+    "title": "LLM Architecture & Inference › 4. How to Build Models Without Language, with Logical Intelligence",
+    "url": "/ai-quick-ref/02-llm-architecture/#4-how-to-build-models-without-language-with-logical-intelligence",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Contrasts token-by-token autoregressive LLMs with Energy-Based Models (EBMs) that perform non-autoregressive reasoning in continuous latent space, demonstrating how energy minimization and gradient-based inference solve combinatorial logic and constraint satisfaction at a fraction of LLM compute costs."
   },
   {
-    "title": "LLM Architecture & Inference › 4. How to Customize a Model to Learn New Tricks",
-    "url": "/ai-quick-ref/02-llm-architecture/#4-how-to-customize-a-model-to-learn-new-tricks",
+    "title": "LLM Architecture & Inference › 5. How to Customize a Model to Learn New Tricks",
+    "url": "/ai-quick-ref/02-llm-architecture/#5-how-to-customize-a-model-to-learn-new-tricks",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details parameter-efficient fine-tuning techniques (PEFT), breaking down low-rank adaptation matrix decomposition (LoRA) and 4-bit quantized adaptation (QLoRA) to specialize foundation models on domain tasks while drastically reducing GPU VRAM requirements."
   },
   {
-    "title": "LLM Architecture & Inference › 5. How to Run a Big Model on Cheap Hardware?",
-    "url": "/ai-quick-ref/02-llm-architecture/#5-how-to-run-a-big-model-on-cheap-hardware",
+    "title": "LLM Architecture & Inference › 6. How to Run a Big Model on Cheap Hardware?",
+    "url": "/ai-quick-ref/02-llm-architecture/#6-how-to-run-a-big-model-on-cheap-hardware",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Comprehensive engineering handbook on local and edge LLM inference, analyzing post-training quantization (FP16 down to INT4), layer-wise GPU/CPU/RAM offloading, Mixture-of-Experts sparse routing, KV-cache memory budgeting, and speculative decoding acceleration."
   },
   {
-    "title": "LLM Architecture & Inference › 6. How Smart Model Routing Can Cut LLM Costs by 10X",
-    "url": "/ai-quick-ref/02-llm-architecture/#6-how-smart-model-routing-can-cut-llm-costs-by-10x",
+    "title": "LLM Architecture & Inference › 7. How Smart Model Routing Can Cut LLM Costs by 10X",
+    "url": "/ai-quick-ref/02-llm-architecture/#7-how-smart-model-routing-can-cut-llm-costs-by-10x",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details production model routing architectures that partition incoming prompts across tiered LLMs, comparing SLM classification gateways, cascading fallback verification, semantic vector similarity routing, and learned contextual bandits to cut inference costs by up to 90%."
   },
   {
-    "title": "LLM Architecture & Inference › 7. How to Shrink a Language Model Without Making it Too Dumb",
-    "url": "/ai-quick-ref/02-llm-architecture/#7-how-to-shrink-a-language-model-without-making-it-too-dumb",
+    "title": "LLM Architecture & Inference › 8. How to Shrink a Language Model Without Making it Too Dumb",
+    "url": "/ai-quick-ref/02-llm-architecture/#8-how-to-shrink-a-language-model-without-making-it-too-dumb",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Deep dives into the triad of model compression—post-training quantization (scale factor mapping and INT8/INT4 rounding), structured/unstructured pruning, and teacher-student knowledge distillation with soft-target cross-entropy—to shrink multi-gigabyte models for constrained inference."
   },
   {
-    "title": "LLM Architecture & Inference › 8. What Happens Inside an AI Chatbot Between Enter and the First Word?",
-    "url": "/ai-quick-ref/02-llm-architecture/#8-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word",
+    "title": "LLM Architecture & Inference › 9. What Happens Inside an AI Chatbot Between Enter and the First Word?",
+    "url": "/ai-quick-ref/02-llm-architecture/#9-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Unpacks the end-to-end request execution lifecycle of modern LLM serving engines, mapping the architectural transition from compute-bound parallel prompt prefill to memory-bandwidth-bound autoregressive decoding, continuous GPU batching, and KV-cache reuse."
   },
   {
-    "title": "LLM Architecture & Inference › 9. How to Make LLMs 3X Faster",
-    "url": "/ai-quick-ref/02-llm-architecture/#9-how-to-make-llms-3x-faster",
+    "title": "LLM Architecture & Inference › 10. How to Make LLMs 3X Faster",
+    "url": "/ai-quick-ref/02-llm-architecture/#10-how-to-make-llms-3x-faster",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Unpacks speculative decoding mechanics, explaining how small auxiliary draft models (or Medusa multi-head decoders) propose candidate token sequences verified concurrently by the target model in a single memory-bandwidth pass with lossless mathematical distribution guarantees."
   },
   {
-    "title": "LLM Architecture & Inference › 10. EP223: Ollama vs vLLM vs SGLang",
-    "url": "/ai-quick-ref/02-llm-architecture/#10-ep223-ollama-vs-vllm-vs-sglang",
+    "title": "LLM Architecture & Inference › 11. EP223: Ollama vs vLLM vs SGLang",
+    "url": "/ai-quick-ref/02-llm-architecture/#11-ep223-ollama-vs-vllm-vs-sglang",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #agents #evals",
     "content": "Evaluates the three dominant open-weight inference serving engines—Ollama (developer ease via llama.cpp backend), vLLM (high-throughput PagedAttention server), and SGLang (RadixAttention tree-structured KV cache reuse for complex structured/agentic outputs)—alongside Claude's pseudorandom logit watermarking algorithm."
   },
   {
-    "title": "LLM Architecture & Inference › 11. The New American AI Model Designed to be Customized",
-    "url": "/ai-quick-ref/02-llm-architecture/#11-the-new-american-ai-model-designed-to-be-customized",
+    "title": "LLM Architecture & Inference › 12. The New American AI Model Designed to be Customized",
+    "url": "/ai-quick-ref/02-llm-architecture/#12-the-new-american-ai-model-designed-to-be-customized",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects Thinking Machines' (Mira Murati) Inkling architecture, detailing its 66-layer hybrid design featuring 256 fine-grained MoE experts (activating only 6 per token), interleaved local sliding-window attention, short token-mixing convolutions, and modular fine-tuning surfaces."
   },
   {
-    "title": "LLM Architecture & Inference › 12. EP222: What is Google’s TPU?",
-    "url": "/ai-quick-ref/02-llm-architecture/#12-ep222-what-is-googles-tpu",
+    "title": "LLM Architecture & Inference › 13. EP222: What is Google’s TPU?",
+    "url": "/ai-quick-ref/02-llm-architecture/#13-ep222-what-is-googles-tpu",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details the microarchitecture of Google’s Tensor Processing Unit (TPU), contrasting general-purpose GPU execution with TPU Matrix Multiply Units (MXUs) that use systolic arrays to stream matrix products directly between registers without intermediate memory access."
   },
   {
-    "title": "LLM Architecture & Inference › 13. How Big Models Teach Small Models to Be Smart",
-    "url": "/ai-quick-ref/02-llm-architecture/#13-how-big-models-teach-small-models-to-be-smart",
+    "title": "LLM Architecture & Inference › 14. How Big Models Teach Small Models to Be Smart",
+    "url": "/ai-quick-ref/02-llm-architecture/#14-how-big-models-teach-small-models-to-be-smart",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details the mathematical and architectural pipeline of knowledge distillation, examining how student models learn from teacher \"soft labels\" and temperature-scaled logits to capture dark knowledge relationships across tokens while retaining 90%+ accuracy at 10x lower inference latency."
   },
   {
-    "title": "LLM Architecture & Inference › 14. Why An LLM’s Memory Gets Expensive and How to Fix It",
-    "url": "/ai-quick-ref/02-llm-architecture/#14-why-an-llms-memory-gets-expensive-and-how-to-fix-it",
+    "title": "LLM Architecture & Inference › 15. Why An LLM’s Memory Gets Expensive and How to Fix It",
+    "url": "/ai-quick-ref/02-llm-architecture/#15-why-an-llms-memory-gets-expensive-and-how-to-fix-it",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Breaks down why KV-cache memory consumes the majority of GPU VRAM during long-context serving, detailing structural fixes including Grouped-Query Attention (GQA), FP8/INT4 KV quantization, attention sinks/eviction policies, and PagedAttention virtual memory mapping."
   },
   {
-    "title": "LLM Architecture & Inference › 15. How NVIDIA Builds Open Models for the Age of AI",
-    "url": "/ai-quick-ref/02-llm-architecture/#15-how-nvidia-builds-open-models-for-the-age-of-ai",
+    "title": "LLM Architecture & Inference › 16. How NVIDIA Builds Open Models for the Age of AI",
+    "url": "/ai-quick-ref/02-llm-architecture/#16-how-nvidia-builds-open-models-for-the-age-of-ai",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Features an in-depth interview with NVIDIA's VP of Applied Deep Learning Research Bryan Catanzaro, explaining NVIDIA's open model strategy (Nemotron/Cosmos), hardware-software co-design for Tensor Core FP8/FP4 precision, and hybrid Mamba-Transformer SSM architectures that slash linear memory complexity."
   },
   {
-    "title": "LLM Architecture & Inference › 16. How LLMs Learn to Be Helpful (RLHF vs DPO)",
-    "url": "/ai-quick-ref/02-llm-architecture/#16-how-llms-learn-to-be-helpful-rlhf-vs-dpo",
+    "title": "LLM Architecture & Inference › 17. How LLMs Learn to Be Helpful (RLHF vs DPO)",
+    "url": "/ai-quick-ref/02-llm-architecture/#17-how-llms-learn-to-be-helpful-rlhf-vs-dpo",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Explores post-training preference alignment architectures, detailing how pre-trained and fine-tuned base models are aligned using Reinforcement Learning from Human Feedback (RLHF with PPO), Direct Preference Optimization (DPO's closed-form mathematical policy), and Reinforcement Learning with Verifiable Rewards (RLVR) to avoid reward hacking while aligning models with human values."
   },
   {
-    "title": "LLM Architecture & Inference › 17. ChatGPT vs Gemini vs Claude: How They Differ",
-    "url": "/ai-quick-ref/02-llm-architecture/#17-chatgpt-vs-gemini-vs-claude-how-they-differ",
+    "title": "LLM Architecture & Inference › 18. ChatGPT vs Gemini vs Claude: How They Differ",
+    "url": "/ai-quick-ref/02-llm-architecture/#18-chatgpt-vs-gemini-vs-claude-how-they-differ",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Contrasts the core architectural forks across frontier LLMs, analyzing Dense vs Sparse Mixture-of-Experts (MoE) parameter scaling, native multimodal sensor fusion vs modular projection, context window scaling and degradation mitigation, and inference-time thinking tokens (routed vs adaptive reasoning)."
   },
   {
-    "title": "LLM Architecture & Inference › 18. Large Language Models vs Small Language Models",
-    "url": "/ai-quick-ref/02-llm-architecture/#18-large-language-models-vs-small-language-models",
+    "title": "LLM Architecture & Inference › 19. Large Language Models vs Small Language Models",
+    "url": "/ai-quick-ref/02-llm-architecture/#19-large-language-models-vs-small-language-models",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Examines the architectural split between cloud datacenter LLMs and edge/device Small Language Models (SLMs), detailing KV-cache cross-layer sharing, Quantization-Aware Training (QAT), Chinchilla overtraining compute trade-offs, and hybrid hierarchical orchestration."
   },
   {
-    "title": "LLM Architecture & Inference › 19. EP219: 12 Open-source LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#19-ep219-12-open-source-llms",
+    "title": "LLM Architecture & Inference › 20. EP219: 12 Open-source LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#20-ep219-12-open-source-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Visual reference guide and taxonomy comparing 12 leading open-weight LLMs (Llama 3, Mistral, Gemma, DeepSeek, Qwen, Falcon, Phi, Command R+, StarCoder), dissecting parameter scales, architecture types (Dense vs MoE), license terms, and SLM vs LLM serving characteristics."
   },
   {
-    "title": "LLM Architecture & Inference › 20. How Open-Weight Models Changed the AI Landscape",
-    "url": "/ai-quick-ref/02-llm-architecture/#20-how-open-weight-models-changed-the-ai-landscape",
+    "title": "LLM Architecture & Inference › 21. How Open-Weight Models Changed the AI Landscape",
+    "url": "/ai-quick-ref/02-llm-architecture/#21-how-open-weight-models-changed-the-ai-landscape",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects open-weight model architectures and the borrow-and-build innovation transfer cycle, detailing sparse MoE block routing, attention variants (MHA vs GQA vs Sliding Window Attention), and end-to-end training pipelines across open models."
   },
   {
-    "title": "LLM Architecture & Inference › 21. A Guide to AI Inference Engineering",
-    "url": "/ai-quick-ref/02-llm-architecture/#21-a-guide-to-ai-inference-engineering",
+    "title": "LLM Architecture & Inference › 22. A Guide to AI Inference Engineering",
+    "url": "/ai-quick-ref/02-llm-architecture/#22-a-guide-to-ai-inference-engineering",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "In-depth guide to production inference engineering, dissecting the metrics that govern LLM serving (TTFT prefill vs TPS decode), latency-throughput Pareto tradeoffs, prefix caching with KV reuse, speculative decoding under load, and distributed multi-GPU parallelism (Tensor, Pipeline, and Expert Parallelism)."
   },
   {
-    "title": "LLM Architecture & Inference › 22. Token Spend Out of Control? The Case for Smarter Routing",
-    "url": "/ai-quick-ref/02-llm-architecture/#22-token-spend-out-of-control-the-case-for-smarter-routing",
+    "title": "LLM Architecture & Inference › 23. Token Spend Out of Control? The Case for Smarter Routing",
+    "url": "/ai-quick-ref/02-llm-architecture/#23-token-spend-out-of-control-the-case-for-smarter-routing",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Comprehensive guide on production LLM cost optimization through intelligent request routing, breaking down multi-turn context compounding, unified provider abstractions, heuristic vs learned classifier routing, and background chore offloading."
   },
   {
-    "title": "LLM Architecture & Inference › 23. EP205: CPU vs GPU vs TPU",
-    "url": "/ai-quick-ref/02-llm-architecture/#23-ep205-cpu-vs-gpu-vs-tpu",
+    "title": "LLM Architecture & Inference › 24. EP205: CPU vs GPU vs TPU",
+    "url": "/ai-quick-ref/02-llm-architecture/#24-ep205-cpu-vs-gpu-vs-tpu",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Contrasts computer hardware architectures for deep learning, analyzing CPU sequential low-latency execution, GPU massive SIMT thread parallelism and memory latency hiding, and TPU domain-specific systolic array tensor compute."
   },
   {
-    "title": "LLM Architecture & Inference › 24. The Architecture Behind Open-Source LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#24-the-architecture-behind-open-source-llms",
+    "title": "LLM Architecture & Inference › 25. The Architecture Behind Open-Source LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#25-the-architecture-behind-open-source-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Deep dive into the architectural innovations across modern open models, analyzing DeepSeek’s Multi-Head Latent Attention (MLA) low-rank KV compression, Meta Llama's GQA dense scaling, and Reinforcement Learning with Verifiable Rewards (RLVR)."
   },
   {
-    "title": "LLM Architecture & Inference › 25. How Large Language Models Learn",
-    "url": "/ai-quick-ref/02-llm-architecture/#25-how-large-language-models-learn",
+    "title": "LLM Architecture & Inference › 26. How Large Language Models Learn",
+    "url": "/ai-quick-ref/02-llm-architecture/#26-how-large-language-models-learn",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Breaks down the mathematical mechanics of neural network training, detailing cross-entropy loss calculation, automatic differentiation backpropagation, and stochastic gradient descent parameter adjustment loops."
   },
   {
-    "title": "LLM Architecture & Inference › 26. How Transformers Architecture Powers Modern LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#26-how-transformers-architecture-powers-modern-llms",
+    "title": "LLM Architecture & Inference › 27. How Transformers Architecture Powers Modern LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#27-how-transformers-architecture-powers-modern-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Step-by-step technical breakdown of the Transformer architecture, detailing input token embeddings, scaled dot-product multi-head self-attention (Q, K, V), Feed-Forward Networks (FFN), layer normalization, and end-to-end execution."
   },
   {
-    "title": "LLM Architecture & Inference › 27. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#27-why-ai-needs-gpus-and-tpus-the-hardware-behind-llms",
+    "title": "LLM Architecture & Inference › 28. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#28-why-ai-needs-gpus-and-tpus-the-hardware-behind-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Explains the hardware architecture requirements of deep learning workloads, detailing the memory-compute Von Neumann bottleneck, 2D systolic array matrix multiplication flow, and floating-point formats (FP32, FP16, BF16, and INT8)."
   },
   {
-    "title": "LLM Architecture & Inference › 28. How Google’s Tensor Processing Unit (TPU) Works?",
-    "url": "/ai-quick-ref/02-llm-architecture/#28-how-googles-tensor-processing-unit-tpu-works",
+    "title": "LLM Architecture & Inference › 29. How Google’s Tensor Processing Unit (TPU) Works?",
+    "url": "/ai-quick-ref/02-llm-architecture/#29-how-googles-tensor-processing-unit-tpu-works",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects Google's custom ASIC Tensor Processing Unit, detailing its weight-stationary matrix multiply unit (MXU), systolic array 2D dataflow, bfloat16 hardware support, and interconnect topology."
   },
   {
-    "title": "LLM Architecture & Inference › 29. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos",
-    "url": "/ai-quick-ref/02-llm-architecture/#29-multimodal-llms-basics-how-llms-process-text-images-audio-videos",
+    "title": "LLM Architecture & Inference › 30. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos",
+    "url": "/ai-quick-ref/02-llm-architecture/#30-multimodal-llms-basics-how-llms-process-text-images-audio-videos",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Architectural foundations of Multimodal Large Language Models (MLLMs), explaining how modality-specific encoders map visual, auditory, and textual inputs into a shared geometric embedding space via projection layers and cross-attention blocks."
   },
   {
-    "title": "LLM Architecture & Inference › 30. The $250 Million Paper",
-    "url": "/ai-quick-ref/02-llm-architecture/#30-the-250-million-paper",
+    "title": "LLM Architecture & Inference › 31. The $250 Million Paper",
+    "url": "/ai-quick-ref/02-llm-architecture/#31-the-250-million-paper",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects the architecture of the open-weight Molmo vision-language model, analyzing its synthetic-free PixMo human-annotated dataset, visual grounding/pointing mechanism, and efficient cross-attention multi-modal projection."
   },
   {
-    "title": "LLM Architecture & Inference › 31. How LLMs Learn from the Internet: The Training Process",
-    "url": "/ai-quick-ref/02-llm-architecture/#31-how-llms-learn-from-the-internet-the-training-process",
+    "title": "LLM Architecture & Inference › 32. How LLMs Learn from the Internet: The Training Process",
+    "url": "/ai-quick-ref/02-llm-architecture/#32-how-llms-learn-from-the-internet-the-training-process",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Comprehensive breakdown of the end-to-end foundation model training pipeline, from raw web scraping and heuristic quality filtering to BPE subword tokenization, unsupervised autoregressive pre-training, SFT, and RLHF reward alignment."
   },
   {
-    "title": "LLM Architecture & Inference › 32. EP187: Why is DeepSeek-OCR such a BIG DEAL?",
-    "url": "/ai-quick-ref/02-llm-architecture/#32-ep187-why-is-deepseek-ocr-such-a-big-deal",
+    "title": "LLM Architecture & Inference › 33. EP187: Why is DeepSeek-OCR such a BIG DEAL?",
+    "url": "/ai-quick-ref/02-llm-architecture/#33-ep187-why-is-deepseek-ocr-such-a-big-deal",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Analyzes DeepSeek-OCR's architectural breakthrough in extreme visual document compression, demonstrating how visual tokenizers compress high-resolution documents into a fraction of traditional token counts while preserving OCR fidelity."
   },
   {
-    "title": "LLM Architecture & Inference › 33. What Actually Happens When You Press ‘Send’ to ChatGPT",
-    "url": "/ai-quick-ref/02-llm-architecture/#33-what-actually-happens-when-you-press-send-to-chatgpt",
+    "title": "LLM Architecture & Inference › 34. What Actually Happens When You Press ‘Send’ to ChatGPT",
+    "url": "/ai-quick-ref/02-llm-architecture/#34-what-actually-happens-when-you-press-send-to-chatgpt",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Step-by-step trace of a prompt's execution path inside ChatGPT's infrastructure: API gateway routing, content moderation guardrails, high-dimensional vector embeddings lookup, autoregressive decoding loop with KV caching, and dynamic tool orchestration."
   },
   {
-    "title": "LLM Architecture & Inference › 34. How Fine-Tuning Transforms Generic AI Models into Specialists",
-    "url": "/ai-quick-ref/02-llm-architecture/#34-how-fine-tuning-transforms-generic-ai-models-into-specialists",
+    "title": "LLM Architecture & Inference › 35. How Fine-Tuning Transforms Generic AI Models into Specialists",
+    "url": "/ai-quick-ref/02-llm-architecture/#35-how-fine-tuning-transforms-generic-ai-models-into-specialists",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Deep dive into domain specialization of pre-trained models, contrasting full parameter fine-tuning, instruction tuning, Low-Rank Adaptation (LoRA), and 4-bit Quantized LoRA (QLoRA) to preserve base knowledge while adapting to specific enterprise tasks."
   },
   {
-    "title": "LLM Architecture & Inference › 35. How LLMs See Images, Audio, and More",
-    "url": "/ai-quick-ref/02-llm-architecture/#35-how-llms-see-images-audio-and-more",
+    "title": "LLM Architecture & Inference › 36. How LLMs See Images, Audio, and More",
+    "url": "/ai-quick-ref/02-llm-architecture/#36-how-llms-see-images-audio-and-more",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Deep architectural exploration of multimodal tokenization strategies across modalities, analyzing Vision Transformer (ViT) patch extraction, discrete codebooks (VQ-VAE / VQGAN), continuous contrastive embeddings (CLIP), and neural audio codecs (SoundStream / EnCodec RVQ)."
   },
   {
-    "title": "LLM Architecture & Inference › 36. How LLMs See the World",
-    "url": "/ai-quick-ref/02-llm-architecture/#36-how-llms-see-the-world",
+    "title": "LLM Architecture & Inference › 37. How LLMs See the World",
+    "url": "/ai-quick-ref/02-llm-architecture/#37-how-llms-see-the-world",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Deep dive into the foundational role of tokens in language models, comparing Byte-Pair Encoding (BPE), WordPiece, and Unigram tokenization algorithms while examining edge-case vulnerabilities, mathematical reasoning degradation, and tokenization artifacts."

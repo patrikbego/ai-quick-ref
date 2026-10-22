@@ -68,7 +68,8 @@ Deconstructs the five transformative AI trends defining 2026—Agentic AI, AI Co
 | **Inference Serving** | Static batching with unoptimized KV-cache | PagedAttention, RadixAttention tree-caching, speculative decoding | Distributed multi-node speculative draft swarms & edge offloading |
 
 > 🔬 **Specialized Deep Dives:**
-> - **Reasoning & Alignment:** For the full mechanics of test-time search, pre-training, SFT, and RLHF vs. RLVR with verifiable rewards, see [02. LLM Architecture & Training]({{ '/02-llm-architecture/#1-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr' | relative_url }}).
+> - **Production AI Lifecycle:** For the complete 7-stage enterprise lifecycle connecting data, distributed pre-training, RLVR alignment, evaluation gates, and vLLM/SGLang serving, see [02. LLM Architecture & Inference › 1. Production AI Lifecycle]({{ '/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture' | relative_url }}).
+> - **Reasoning & Alignment:** For the full mechanics of test-time search, pre-training, SFT, and RLHF vs. RLVR with verifiable rewards, see [02. LLM Architecture & Training]({{ '/02-llm-architecture/#2-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr' | relative_url }}).
 > - **Autonomous Agents:** For complete agent loop topologies, tools, and memory systems, see [05. AI Agents & Multi-Agent]({{ '/05-ai-agents/#1-autonomous-ai-agent-architecture--core-building-blocks' | relative_url }}).
 > - **AI Coding Tools & Repositories:** For trending open-source runtimes and code model fine-tuning, see [07. Developer AI Tools]({{ '/07-developer-tools/' | relative_url }}).
 {: .prompt-tip }

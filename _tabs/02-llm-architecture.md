@@ -14,7 +14,145 @@ Comprehensive quick reference covering transformer self-attention internals, Rot
 
 ---
 
-## 1. Test-Time Reasoning & Post-Training Alignment: Direct Prompting, SFT, RLHF, and RLVR
+## 1. The Production AI Lifecycle Blueprint: End-to-End Enterprise Systems Architecture
+
+> 🗓️ **Architecture Guide:** Production Systems Engineering & Enterprise Operations · <span class="badge bg-danger">🔴 Advanced</span>
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Connects the complete end-to-end lifecycle of enterprise generative AI systems into a unified engineering blueprint. Spanning seven integrated stages—from Web-Scale Data Ingestion & Synthetic Curation, Distributed 3D Pre-Training, and Post-Training Alignment (SFT, DPO, RLVR with GRPO) to Multi-Tier Evaluation Gates, High-Throughput Serving (vLLM, SGLang, RadixAttention), Tool/MCP Integration, and Production Observability with Active Feedback Loops. Provides systems architects with concrete latency budgets, operational metrics, and failure recovery protocols.
+
+### Architectural Blueprint: End-to-End System Topology
+
+```mermaid
+flowchart TD
+    subgraph S1["1. Data Engine & Ingestion"]
+        Raw["Raw Web Crawls, Enterprise Data & Code"] --> Dedupe["Deduplication (MinHash LSH)"]
+        Dedupe --> Filter["Quality & Safety Classifiers (FastText / FineWeb)"]
+        Filter --> Synth["Synthetic Data & Distillation (Seed Evolution)"]
+        Synth --> Tokenize["Tokenization (Byte-Fallback BPE, 128k Vocab)"]
+    end
+
+    subgraph S2["2. Foundation Model Pre-Training"]
+        Tokenize --> Pretrain["Distributed 3D Parallelism (TP + PP + DP/ZeRO-3)"]
+        Pretrain --> Checkpoint["Base Foundation Checkpoint (BF16 / FP8)"]
+    end
+
+    subgraph S3["3. Post-Training & Reasoning Alignment"]
+        Checkpoint --> SFT["Supervised Fine-Tuning (SFT on Instruction Tuples)"]
+        SFT --> AlignmentBranch{"Alignment Objective"}
+        AlignmentBranch -->|"Style & Tone"| DPO["DPO (Direct Preference Optimization)"]
+        AlignmentBranch -->|"Verifiable Reasoning"| RLVR["RLVR + GRPO (Compiler & Math Verifiers)"]
+        DPO --> AlignedModel["Aligned Policy Weights"]
+        RLVR --> AlignedModel
+    end
+
+    subgraph S4["4. Multi-Tier Evaluation & Safety Gates"]
+        AlignedModel --> DetBench["Deterministic Unit Benchmarks (GSM8K, HumanEval)"]
+        DetBench --> JudgeEval["LLM-as-a-Judge (Position Debiasing & Rubrics)"]
+        JudgeEval --> RedTeam["Safety Red-Teaming (Prompt Injection & Guardrails)"]
+        RedTeam --> GateCheck{"Production Quality Gate Passed?"}
+        GateCheck -- "Fail (Regression Detected)" --> SFT
+    end
+
+    subgraph S5["5. High-Throughput Serving & Engine Optimization"]
+        GateCheck -- "Pass" --> QuantEngine["Quantization (AWQ / GPTQ / FP8 KV-Cache)"]
+        QuantEngine --> Engine["Distributed Serving Engine (vLLM / SGLang)"]
+        Engine --> CacheOpt["RadixAttention & PagedAttention (KV Cache Reuse)"]
+        Engine --> SpecDec["Speculative Decoding (EAGLE / Medusa Draft)"]
+    end
+
+    subgraph S6["6. Tool Gateway, MCP & Agentic Control"]
+        CacheOpt --> Router["Semantic Routing Gateway (Complexity Dispatcher)"]
+        Router --> MCPGateway["Model Context Protocol (MCP) Tool Gateway"]
+        MCPGateway --> AgentLoop["Agentic ReAct Execution Loop (Tool Call & Observe)"]
+    end
+
+    subgraph S7["7. Telemetry & Continuous Feedback Flywheel"]
+        AgentLoop --> UserTraffic["Live Production Traffic"]
+        UserTraffic --> OTel["OpenTelemetry / OpenLLMetry (TTFT, ITL, Cost, Tokens/s)"]
+        OTel --> DriftEval["Online Drift Detection & Quality Sampling"]
+        DriftEval --> Escalation["Human Escalation & Failure Curation"]
+        Escalation -. "Curated Hard Negatives" .-> Synth
+    end
+```
+
+### Seven Core Lifecycle Stages
+
+#### Stage 1: Data Engine & Tokenization Pipeline
+- **Raw Ingestion & Deduplication:** Web data (Common Crawl, FineWeb) undergoes MinHash LSH deduplication at a 0.8 Jaccard threshold, stripping near-duplicate documents that cause model memorization without knowledge gain.
+- **Toxicity & Quality Filtering:** Linear classifiers and heuristic filters (line length, symbol-to-word ratios, boilerplate removal) isolate high-information content.
+- **Synthetic Data Evolution:** Seed datasets are expanded through prompt evolution (UltraFeedback style) and distilled from frontier teacher models, filtering candidate completions through automated syntax validators.
+- **Tokenization:** Modern Byte-Pair Encoding (BPE) vocabularies (e.g., Tiktoken, Gemma tokenizer) utilize byte fallback to ensure zero out-of-vocabulary (`<unk>`) token exceptions.
+
+#### Stage 2: Distributed Pre-Training Architecture
+- **3D Parallelism Topology:** Large foundation models scale across GPU/TPU clusters using Tensor Parallelism (TP) across intra-node NVLink, Pipeline Parallelism (PP) across inter-node InfiniBand, and Zero Redundancy Optimizer (ZeRO-3) or Fully Sharded Data Parallel (FSDP) to eliminate parameter and optimizer state redundancy.
+- **Mixed-Precision Training:** FP8 compute kernels with dynamic FP8/BF16 scaling reduce memory footprint by 40% while preserving gradient stability.
+- **FlashAttention-3 & Chunking:** Hardware-aware I/O kernels eliminate intermediate $O(N^2)$ memory reads from HBM to SRAM, allowing context windows to scale from 8k to 128k+ during continual pre-training.
+
+#### Stage 3: Post-Training & Mathematical Alignment
+- **Supervised Fine-Tuning (SFT):** Multi-turn conversational tuples teach the base model markdown formatting, system prompt compliance, and tool-call invocation syntax without degrading base reasoning knowledge.
+- **Direct Preference Optimization (DPO):** Eliminates explicit reward model training for conversational style and tone by analytically computing implicit rewards directly from chosen vs. rejected pairs:
+  $$\mathcal{L}_{\text{DPO}}(\pi_\theta; \pi_{\text{ref}}) = -\mathbb{E}_{(x, y_w, y_l)}\left[\log \sigma\left(\beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)}\right)\right]$$
+- **RLVR with GRPO (Reasoning Alignment):** Verifiable domains (coding, mathematics, formal logic) bypass human preference judges entirely. Group Relative Policy Optimization (GRPO) samples $G$ reasoning candidate paths per prompt and scores them against deterministic verifiers (compilers, unit tests, symbolic math engines). Normalizing rewards across candidate groups removes the need for a separate Critic model, cutting VRAM overhead by 50%.
+
+#### Stage 4: Multi-Tier Evaluation & Safety Gates
+- **Tier 1: Deterministic Benchmarks:** Automated regression testing against static golden sets (GSM8K, MATH-500, HumanEval, SWE-bench) to verify algorithmic correctness before human exposure.
+- **Tier 2: LLM-as-a-Judge with Position Debiasing:** Pairwise comparison using neutral judge rubrics. Every evaluation is executed twice with swapped candidate orders ($A \text{ vs } B$ and $B \text{ vs } A$) to neutralize position bias, length bias, and self-enhancement bias.
+- **Tier 3: Safety Red-Teaming & Input Guardrails:** Adversarial prompt testing verifying resistance to role-playing jailbreaks, recursive prompt injection, and sycophantic behavior.
+
+#### Stage 5: High-Throughput Serving & Engine Optimization
+- **Continuous Batching & Chunked Prefill:** Engines (vLLM, SGLang) decouple compute-bound prompt prefill from memory-bound token decoding. Chunked prefill slices long context prompts into uniform token chunks (e.g., 512 tokens), preventing prefill tasks from starving ongoing token-generation streams.
+- **PagedAttention & RadixAttention:** Memory paging allocates non-contiguous physical DRAM blocks for the KV-cache, eliminating external memory fragmentation. Radix trees maintain cached KV prefixes across multi-turn sessions and shared system prompts, achieving >70% cache reuse rates.
+- **Speculative Decoding:** Small draft models (or single-layer Medusa heads) speculate multiple future tokens per cycle, which are verified simultaneously in a single forward pass of the target model, accelerating token generation by 2–3× without loss of mathematical precision.
+
+#### Stage 6: Tool Gateway, MCP & Agentic Integration
+- **Semantic Routing:** Directs incoming queries to the optimal compute tier: small language models (SLMs) handle low-complexity classification and extraction; frontier models handle creative synthesis; test-time reasoning models handle complex math, planning, and multi-step code generation.
+- **Model Context Protocol (MCP):** Enterprise microservices and data lakes expose functionality through standardized JSON-RPC MCP servers, decoupling model weights from tool maintenance.
+- **Deterministic Schema Enforcement:** Runtime JSON Schema validation (e.g., via Outlines or instructor) restricts token logit generation to guarantee syntactically valid JSON payloads.
+
+#### Stage 7: Telemetry & Continuous Feedback Flywheel
+- **OpenTelemetry & Observability:** Distributed tracing captures Time-To-First-Token (TTFT), Inter-Token Latency (ITL), token generation speed, and per-query cloud economics.
+- **Production Sampling:** A representative slice (1–5%) of live production exchanges is routed to shadow LLM judges and human escalation queues to identify domain drift, silent degradation, or hallucination spikes.
+- **Continuous Improvement Loop:** Hard negative examples and user escalations are tagged, scrubbed of PII, transformed into unit test golden sets, and cycled back into Stage 1 synthetic datasets for next-cycle fine-tuning.
+
+### Key Diagrams
+
+#### 1. Offline vs. Online Production AI Lifecycle
+![Offline vs Online Production AI Lifecycle](/assets/images/evals/llm-evals-guide-03-offline-online-lifecycle.png)
+*Bridges the gap between offline pre-deployment (data curation, training, deterministic benchmarks, and safety evaluation gates) and online production runtime (continuous batching inference, real-time guardrails, OpenTelemetry tracing, and active feedback loops).*
+
+#### 2. Post-Training Alignment & Multi-Stage Training Pipeline
+![Post-Training Alignment Pipeline](/assets/images/llm/llm-alignment-01-pretrain-sft-alignment-pipeline.png)
+*Progressive transformation of raw foundation model weights through supervised instruction fine-tuning (SFT) and reinforcement learning (RLHF/RLVR) to establish task compliance, instruction following, and reasoning capabilities.*
+
+#### 3. Chunked Prefill & Continuous Batching Serving Architecture
+![Chunked Prefill & Continuous Batching](/assets/images/llm/inference-eng-07-chunked-prefill-continuous-batching.png)
+*High-throughput enterprise serving mechanics: splitting compute-bound prompt prefill into chunks and interleaving continuous batching alongside memory-bandwidth-bound token decode steps to minimize Time-to-First-Token (TTFT) and tail latency.*
+
+#### 4. Streaming Execution & Tool Calling Loop
+![Streaming Tool Calling Loop](/assets/images/llm/llm-lifecycle-06-streaming-tool-calling-loop.png)
+*End-to-end runtime request lifecycle: prompt assembly, input guardrails, token streaming, automated MCP tool interception, external execution, context injection, and final output synthesis.*
+
+#### 5. Automated CI/CD & Model Promotion Pipeline
+![Automated CI/CD & Model Promotion](/assets/images/llm/distillation-07-automated-cicd-pipeline.png)
+*Production deployment lifecycle: GitOps trigger, containerized evaluation harness, automated regression benchmarking, canary routing, shadow traffic testing, and blue/green production deployment.*
+
+### Production Engineering Decision Matrix & SLA Targets
+
+| Lifecycle Stage | Primary Metric / SLA Target | Recommended Enterprise Stack | Critical Failure Mode & Engineering Mitigation |
+|:---|:---|:---|:---|
+| **1. Data Curation** | Deduplication ratio > 35%, PII leak = 0 | MinHash LSH, Datatrove, FastText | **Data Contamination:** Scrub eval benchmarks from pre-training sets using n-gram decontamination filters. |
+| **2. Pre-Training** | Model FLOPs Utilization (MFU) > 48% | Megatron-LM, PyTorch FSDP, FlashAttention-3 | **Loss Spikes:** Automated checkpoint rollback with data shuffle and learning rate warmdown. |
+| **3. Post-Training Alignment** | Verifiable pass rate ($pass@1 > 85\%$) | TRL, DeepSpeed-Chat, OpenRLHF, vLLM-GRPO | **Reward Hacking:** Replace subjective neural reward models with deterministic compilers/verifiers (RLVR). |
+| **4. Multi-Tier Evals** | Evaluation Regression Delta < 0.5% | Promptfoo, DeepEval, Ragas, Cleanlab | **Judge Position Bias:** Enforce two-pass order-swapping ($A/B$ and $B/A$) with score normalization. |
+| **5. High-Throughput Serving** | TTFT < 250ms, ITL < 25ms, Cache Hit > 75% | vLLM, SGLang, TensorRT-LLM, Triton Server | **KV-Cache OOM:** Implement PagedAttention with priority request preemption and chunked prefill. |
+| **6. Tool & MCP Gateways** | Schema validation failure rate < 0.01% | Model Context Protocol (MCP), FastMCP, Outlines | **Stale Tool Context:** Context compression, token budget clipping, and structured JSON constrained decoding. |
+| **7. Production Observability** | Tracing coverage = 100%, Sampling rate 2-5% | OpenLLMetry, OpenTelemetry, Arize Phoenix | **Silent Quality Drift:** Automated daily shadow eval runs on production query clusters with regression alerts. |
+
+---
+
+## 2. Test-Time Reasoning & Post-Training Alignment: Direct Prompting, SFT, RLHF, and RLVR
 
 > 🗓️ **Architecture Guide:** Reasoning Compute & Alignment Paradigms · <span class="badge bg-danger">🔴 Advanced</span>
 {: .label .label-purple }
@@ -83,7 +221,7 @@ Early reasoning models operated with fixed, opaque reasoning traces with high la
 
 ---
 
-## 2. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences
+## 3. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences
 
 > 🗓️ **Date:** 13 Oct 2026
 
@@ -102,7 +240,7 @@ Traces the mathematical lineage between Fourier's heat diffusion equations and m
 
 ---
 
-## 3. How to Build Models Without Language, with Logical Intelligence
+## 4. How to Build Models Without Language, with Logical Intelligence
 
 > 🗓️ **Date:** 12 Oct 2026
 {: .label .label-blue }
@@ -122,7 +260,7 @@ Contrasts token-by-token autoregressive LLMs with Energy-Based Models (EBMs) tha
 
 ---
 
-## 4. How to Customize a Model to Learn New Tricks
+## 5. How to Customize a Model to Learn New Tricks
 
 > 🗓️ **Date:** 23 Sep 2026
 {: .label .label-green }
@@ -142,7 +280,7 @@ Details parameter-efficient fine-tuning techniques (PEFT), breaking down low-ran
 
 ---
 
-## 5. How to Run a Big Model on Cheap Hardware?
+## 6. How to Run a Big Model on Cheap Hardware?
 
 > 🗓️ **Date:** 21 Sep 2026
 {: .label .label-yellow }
@@ -162,7 +300,7 @@ Comprehensive engineering handbook on local and edge LLM inference, analyzing po
 
 ---
 
-## 6. How Smart Model Routing Can Cut LLM Costs by 10X
+## 7. How Smart Model Routing Can Cut LLM Costs by 10X
 
 > 🗓️ **Date:** 09 Sep 2026
 
@@ -181,7 +319,7 @@ Details production model routing architectures that partition incoming prompts a
 
 ---
 
-## 7. How to Shrink a Language Model Without Making it Too Dumb
+## 8. How to Shrink a Language Model Without Making it Too Dumb
 
 > 🗓️ **Date:** 01 Sep 2026
 {: .label .label-red }
@@ -201,7 +339,7 @@ Deep dives into the triad of model compression—post-training quantization (sca
 
 ---
 
-## 8. What Happens Inside an AI Chatbot Between Enter and the First Word?
+## 9. What Happens Inside an AI Chatbot Between Enter and the First Word?
 
 > 🗓️ **Date:** 31 Aug 2026
 {: .label .label-blue }
@@ -221,7 +359,7 @@ Unpacks the end-to-end request execution lifecycle of modern LLM serving engines
 
 ---
 
-## 9. How to Make LLMs 3X Faster
+## 10. How to Make LLMs 3X Faster
 
 > 🗓️ **Date:** 26 Aug 2026
 {: .label .label-green }
@@ -241,7 +379,7 @@ Unpacks speculative decoding mechanics, explaining how small auxiliary draft mod
 
 ---
 
-## 10. EP223: Ollama vs vLLM vs SGLang
+## 11. EP223: Ollama vs vLLM vs SGLang
 
 > 🗓️ **Date:** 22 Aug 2026
 
@@ -256,7 +394,7 @@ Evaluates the three dominant open-weight inference serving engines—Ollama (dev
 
 ---
 
-## 11. The New American AI Model Designed to be Customized
+## 12. The New American AI Model Designed to be Customized
 
 > 🗓️ **Date:** 18 Aug 2026
 {: .label .label-yellow }
@@ -276,7 +414,7 @@ Dissects Thinking Machines' (Mira Murati) Inkling architecture, detailing its 66
 
 ---
 
-## 12. EP222: What is Google’s TPU?
+## 13. EP222: What is Google’s TPU?
 
 > 🗓️ **Date:** 15 Aug 2026
 {: .label .label-blue }
@@ -292,7 +430,7 @@ Details the microarchitecture of Google’s Tensor Processing Unit (TPU), contra
 
 ---
 
-## 13. How Big Models Teach Small Models to Be Smart
+## 14. How Big Models Teach Small Models to Be Smart
 
 > 🗓️ **Date:** 05 Aug 2026
 {: .label .label-green }
@@ -312,7 +450,7 @@ Details the mathematical and architectural pipeline of knowledge distillation, e
 
 ---
 
-## 14. Why An LLM’s Memory Gets Expensive and How to Fix It
+## 15. Why An LLM’s Memory Gets Expensive and How to Fix It
 
 > 🗓️ **Date:** 04 Aug 2026
 
@@ -331,7 +469,7 @@ Breaks down why KV-cache memory consumes the majority of GPU VRAM during long-co
 
 ---
 
-## 15. How NVIDIA Builds Open Models for the Age of AI
+## 16. How NVIDIA Builds Open Models for the Age of AI
 
 > 🗓️ **Date:** 27 Jul 2026
 {: .label .label-blue }
@@ -351,7 +489,7 @@ Features an in-depth interview with NVIDIA's VP of Applied Deep Learning Researc
 
 ---
 
-## 16. How LLMs Learn to Be Helpful (RLHF vs DPO)
+## 17. How LLMs Learn to Be Helpful (RLHF vs DPO)
 
 > 🗓️ **Date:** 14 Jul 2026
 {: .label .label-green }
@@ -371,7 +509,7 @@ Explores post-training preference alignment architectures, detailing how pre-tra
 
 ---
 
-## 17. ChatGPT vs Gemini vs Claude: How They Differ
+## 18. ChatGPT vs Gemini vs Claude: How They Differ
 
 > 🗓️ **Date:** 07 Jul 2026
 {: .label .label-yellow }
@@ -391,7 +529,7 @@ Contrasts the core architectural forks across frontier LLMs, analyzing Dense vs 
 
 ---
 
-## 18. Large Language Models vs Small Language Models
+## 19. Large Language Models vs Small Language Models
 
 > 🗓️ **Date:** 24 Jun 2026
 
@@ -410,7 +548,7 @@ Examines the architectural split between cloud datacenter LLMs and edge/device S
 
 ---
 
-## 19. EP219: 12 Open-source LLMs
+## 20. EP219: 12 Open-source LLMs
 
 > 🗓️ **Date:** 20 Jun 2026
 {: .label .label-blue }
@@ -430,7 +568,7 @@ Visual reference guide and taxonomy comparing 12 leading open-weight LLMs (Llama
 
 ---
 
-## 20. How Open-Weight Models Changed the AI Landscape
+## 21. How Open-Weight Models Changed the AI Landscape
 
 > 🗓️ **Date:** 16 Jun 2026
 {: .label .label-green }
@@ -450,7 +588,7 @@ Dissects open-weight model architectures and the borrow-and-build innovation tra
 
 ---
 
-## 21. A Guide to AI Inference Engineering
+## 22. A Guide to AI Inference Engineering
 
 > 🗓️ **Date:** 15 Jun 2026
 {: .label .label-yellow }
@@ -470,7 +608,7 @@ In-depth guide to production inference engineering, dissecting the metrics that 
 
 ---
 
-## 22. Token Spend Out of Control? The Case for Smarter Routing
+## 23. Token Spend Out of Control? The Case for Smarter Routing
 
 > 🗓️ **Date:** 08 Jun 2026
 {: .label .label-red }
@@ -490,7 +628,7 @@ Comprehensive guide on production LLM cost optimization through intelligent requ
 
 ---
 
-## 23. EP205: CPU vs GPU vs TPU
+## 24. EP205: CPU vs GPU vs TPU
 
 > 🗓️ **Date:** 07 Mar 2026
 
@@ -509,7 +647,7 @@ Contrasts computer hardware architectures for deep learning, analyzing CPU seque
 
 ---
 
-## 24. The Architecture Behind Open-Source LLMs
+## 25. The Architecture Behind Open-Source LLMs
 
 > 🗓️ **Date:** 02 Mar 2026
 {: .label .label-blue }
@@ -529,7 +667,7 @@ Deep dive into the architectural innovations across modern open models, analyzin
 
 ---
 
-## 25. How Large Language Models Learn
+## 26. How Large Language Models Learn
 
 > 🗓️ **Date:** 23 Feb 2026
 {: .label .label-green }
@@ -549,7 +687,7 @@ Breaks down the mathematical mechanics of neural network training, detailing cro
 
 ---
 
-## 26. How Transformers Architecture Powers Modern LLMs
+## 27. How Transformers Architecture Powers Modern LLMs
 
 > 🗓️ **Date:** 02 Feb 2026
 {: .label .label-yellow }
@@ -569,7 +707,7 @@ Step-by-step technical breakdown of the Transformer architecture, detailing inpu
 
 ---
 
-## 27. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs
+## 28. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs
 
 > 🗓️ **Date:** 19 Jan 2026
 {: .label .label-blue }
@@ -583,13 +721,13 @@ Explains the hardware architecture requirements of deep learning workloads, deta
 ![Von Neumann Bottleneck](/assets/images/llm/hardware-llm-01-von-neumann-cpu-vs-gpu.png)
 *Why shuttling weights across traditional memory buses stalls processor execution units.*
 
-#### Floating-Point Formats: FP32 vs. FP16 vs. BF16
-![Floating Point Formats](/assets/images/llm/hardware-llm-04-fp32-fp16-bf16-formats.png)
+#### Floating-Point Formats & Precision Spectrum (FP32, FP16, BF16, INT8)
+![Floating Point Formats](/assets/images/llm/inference-eng-04-quantization-precision-spectrum.png)
 *Dynamic range vs precision bit-width trade-offs for high-throughput tensor processing.*
 
 ---
 
-## 28. How Google’s Tensor Processing Unit (TPU) Works?
+## 29. How Google’s Tensor Processing Unit (TPU) Works?
 
 > 🗓️ **Date:** 05 Jan 2026
 
@@ -608,7 +746,7 @@ Dissects Google's custom ASIC Tensor Processing Unit, detailing its weight-stati
 
 ---
 
-## 29. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos
+## 30. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos
 
 > 🗓️ **Date:** 22 Dec 2025
 {: .label .label-green }
@@ -628,7 +766,7 @@ Architectural foundations of Multimodal Large Language Models (MLLMs), explainin
 
 ---
 
-## 30. The $250 Million Paper
+## 31. The $250 Million Paper
 
 > 🗓️ **Date:** 10 Dec 2025
 {: .label .label-yellow }
@@ -644,7 +782,7 @@ Dissects the architecture of the open-weight Molmo vision-language model, analyz
 
 ---
 
-## 31. How LLMs Learn from the Internet: The Training Process
+## 32. How LLMs Learn from the Internet: The Training Process
 
 > 🗓️ **Date:** 01 Dec 2025
 
@@ -663,7 +801,7 @@ Comprehensive breakdown of the end-to-end foundation model training pipeline, fr
 
 ---
 
-## 32. EP187: Why is DeepSeek-OCR such a BIG DEAL?
+## 33. EP187: Why is DeepSeek-OCR such a BIG DEAL?
 
 > 🗓️ **Date:** 01 Nov 2025
 {: .label .label-blue }
@@ -679,7 +817,7 @@ Analyzes DeepSeek-OCR's architectural breakthrough in extreme visual document co
 
 ---
 
-## 33. What Actually Happens When You Press ‘Send’ to ChatGPT
+## 34. What Actually Happens When You Press ‘Send’ to ChatGPT
 
 > 🗓️ **Date:** 20 Oct 2025
 {: .label .label-green }
@@ -699,7 +837,7 @@ Step-by-step trace of a prompt's execution path inside ChatGPT's infrastructure:
 
 ---
 
-## 34. How Fine-Tuning Transforms Generic AI Models into Specialists
+## 35. How Fine-Tuning Transforms Generic AI Models into Specialists
 
 > 🗓️ **Date:** 24 Sep 2025
 
@@ -714,7 +852,7 @@ Deep dive into domain specialization of pre-trained models, contrasting full par
 
 ---
 
-## 35. How LLMs See Images, Audio, and More
+## 36. How LLMs See Images, Audio, and More
 
 > 🗓️ **Date:** 18 Aug 2025
 {: .label .label-yellow }
@@ -734,7 +872,7 @@ Deep architectural exploration of multimodal tokenization strategies across moda
 
 ---
 
-## 36. How LLMs See the World
+## 37. How LLMs See the World
 
 > 🗓️ **Date:** 04 Aug 2025
 {: .label .label-blue }
