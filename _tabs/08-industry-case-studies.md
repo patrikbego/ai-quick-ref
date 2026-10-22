@@ -10,7 +10,16 @@ toc: true
 
 Architectural breakdown of real-world AI, LLM, and agent deployments across top technology companies (OpenAI, Stripe, Netflix, DoorDash, Grab, Microsoft, Meta, LinkedIn, and more).
 
-<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#case-studies</span><span class="badge bg-light text-dark border">#system-design</span><span class="badge bg-light text-dark border">#production</span><span class="badge bg-light text-dark border">#architecture</span><span class="badge bg-light text-dark border">#netflix</span><span class="badge bg-light text-dark border">#stripe</span><span class="badge bg-light text-dark border">#openai</span><span class="badge bg-light text-dark border">#meta</span></div> 
+<div class="d-flex flex-wrap gap-2 pt-1 pb-2 mb-3">
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#case-studies</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#system-design</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#production</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#architecture</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#netflix</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#stripe</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#openai</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#meta</span>
+</div> 
 
 ---
 

@@ -10,7 +10,14 @@ toc: true
 
 Comprehensive quick reference covering GraphRAG, Agentic RAG control loops, embedding model design, multi-tenant vector partitioning (Airtable Milvus), distributed SQL vector indexing (CockroachDB C-SPANN), and enterprise multimodal search.
 
-<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#rag</span><span class="badge bg-light text-dark border">#vector-search</span><span class="badge bg-light text-dark border">#graphrag</span><span class="badge bg-light text-dark border">#hybrid-retrieval</span><span class="badge bg-light text-dark border">#reranking</span><span class="badge bg-light text-dark border">#pgvector</span></div> 
+<div class="d-flex flex-wrap gap-2 pt-1 pb-2 mb-3">
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#rag</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#vector-search</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#graphrag</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#hybrid-retrieval</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#reranking</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#pgvector</span>
+</div> 
 
 ---
 

@@ -4,13 +4,24 @@ title: "LLM Architecture & Inference"
 icon: fas fa-microchip
 order: 2
 toc: true
+mermaid: true
 ---
 
 # LLM Architecture, Training & Inference
 
 Comprehensive quick reference covering transformer self-attention internals, Rotary Positional Embeddings (RoPE), Energy-Based Models, PagedAttention and KV-cache optimizations, speculative decoding, parameter-efficient fine-tuning (LoRA/QLoRA), model routing gateways, and specialized hardware (GPUs and TPUs).
 
-<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#llm</span><span class="badge bg-light text-dark border">#transformer</span><span class="badge bg-light text-dark border">#rope</span><span class="badge bg-light text-dark border">#rlvr</span><span class="badge bg-light text-dark border">#grpo</span><span class="badge bg-light text-dark border">#kv-cache</span><span class="badge bg-light text-dark border">#speculative-decoding</span><span class="badge bg-light text-dark border">#tpu</span><span class="badge bg-light text-dark border">#serving</span></div> 
+<div class="d-flex flex-wrap gap-2 pt-1 pb-2 mb-3">
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#llm</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#transformer</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#rope</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#rlvr</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#grpo</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#kv-cache</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#speculative-decoding</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#tpu</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#serving</span>
+</div> 
 
 ---
 
@@ -52,11 +63,11 @@ flowchart TD
         DetBench --> JudgeEval["LLM-as-a-Judge (Position Debiasing & Rubrics)"]
         JudgeEval --> RedTeam["Safety Red-Teaming (Prompt Injection & Guardrails)"]
         RedTeam --> GateCheck{"Production Quality Gate Passed?"}
-        GateCheck -- "Fail (Regression Detected)" --> SFT
+        GateCheck -->|"Fail: Regression Detected"| SFT
     end
 
     subgraph S5["5. High-Throughput Serving & Engine Optimization"]
-        GateCheck -- "Pass" --> QuantEngine["Quantization (AWQ / GPTQ / FP8 KV-Cache)"]
+        GateCheck -->|"Pass: Validated"| QuantEngine["Quantization (AWQ / GPTQ / FP8 KV-Cache)"]
         QuantEngine --> Engine["Distributed Serving Engine (vLLM / SGLang)"]
         Engine --> CacheOpt["RadixAttention & PagedAttention (KV Cache Reuse)"]
         Engine --> SpecDec["Speculative Decoding (EAGLE / Medusa Draft)"]
@@ -73,7 +84,7 @@ flowchart TD
         UserTraffic --> OTel["OpenTelemetry / OpenLLMetry (TTFT, ITL, Cost, Tokens/s)"]
         OTel --> DriftEval["Online Drift Detection & Quality Sampling"]
         DriftEval --> Escalation["Human Escalation & Failure Curation"]
-        Escalation -. "Curated Hard Negatives" .-> Synth
+        Escalation -.->|"Curated Hard Negatives"| Synth
     end
 ```
 

@@ -10,7 +10,15 @@ toc: true
 
 Comprehensive quick reference covering LLM evaluation frameworks, safety alignment, sycophancy, emergent misalignment, lost-in-the-middle context limits, security threat models (prompt injection, reasoning leakage), and production resilience.
 
-<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#evals</span><span class="badge bg-light text-dark border">#benchmarking</span><span class="badge bg-light text-dark border">#safety</span><span class="badge bg-light text-dark border">#sycophancy</span><span class="badge bg-light text-dark border">#hallucination</span><span class="badge bg-light text-dark border">#prompt-injection</span><span class="badge bg-light text-dark border">#guardrails</span></div> 
+<div class="d-flex flex-wrap gap-2 pt-1 pb-2 mb-3">
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#evals</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#benchmarking</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#safety</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#sycophancy</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#hallucination</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#prompt-injection</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#guardrails</span>
+</div> 
 
 ---
 

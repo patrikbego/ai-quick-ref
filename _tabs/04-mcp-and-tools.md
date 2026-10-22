@@ -10,7 +10,14 @@ toc: true
 
 Comprehensive quick reference covering Anthropic's Model Context Protocol (MCP), tool use evolution, enterprise MCP ecosystems (Pinterest, Figma), MCP vs Skills, and protocol architectures.
 
-<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#mcp</span><span class="badge bg-light text-dark border">#model-context-protocol</span><span class="badge bg-light text-dark border">#tool-gateways</span><span class="badge bg-light text-dark border">#apis</span><span class="badge bg-light text-dark border">#fastmcp</span><span class="badge bg-light text-dark border">#spring-ai</span></div> 
+<div class="d-flex flex-wrap gap-2 pt-1 pb-2 mb-3">
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#mcp</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#model-context-protocol</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#tool-gateways</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#apis</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#fastmcp</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#spring-ai</span>
+</div> 
 
 ---
 

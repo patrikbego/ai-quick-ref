@@ -4,6 +4,7 @@ title: LLM Architecture, Training & Inference
 nav_order: 8
 has_children: false
 permalink: /docs/llm-architecture-inference/
+mermaid: true
 ---
 
 # LLM Architecture, Training & Inference
@@ -57,11 +58,11 @@ flowchart TD
         DetBench --> JudgeEval["LLM-as-a-Judge (Position Debiasing & Rubrics)"]
         JudgeEval --> RedTeam["Safety Red-Teaming (Prompt Injection & Guardrails)"]
         RedTeam --> GateCheck{"Production Quality Gate Passed?"}
-        GateCheck -- "Fail (Regression Detected)" --> SFT
+        GateCheck -->|"Fail: Regression Detected"| SFT
     end
 
     subgraph S5["5. High-Throughput Serving & Engine Optimization"]
-        GateCheck -- "Pass" --> QuantEngine["Quantization (AWQ / GPTQ / FP8 KV-Cache)"]
+        GateCheck -->|"Pass: Validated"| QuantEngine["Quantization (AWQ / GPTQ / FP8 KV-Cache)"]
         QuantEngine --> Engine["Distributed Serving Engine (vLLM / SGLang)"]
         Engine --> CacheOpt["RadixAttention & PagedAttention (KV Cache Reuse)"]
         Engine --> SpecDec["Speculative Decoding (EAGLE / Medusa Draft)"]
@@ -78,7 +79,7 @@ flowchart TD
         UserTraffic --> OTel["OpenTelemetry / OpenLLMetry (TTFT, ITL, Cost, Tokens/s)"]
         OTel --> DriftEval["Online Drift Detection & Quality Sampling"]
         DriftEval --> Escalation["Human Escalation & Failure Curation"]
-        Escalation -. "Curated Hard Negatives" .-> Synth
+        Escalation -.->|"Curated Hard Negatives"| Synth
     end
 ```
 
