@@ -84,246 +84,253 @@
     "content": "Examines the architectural evolution from single-pass direct prompting to test-time reasoning models (e.g. OpenAI o1/o3, DeepSeek-R1) that allocate dynamic compute search trees before emitting tokens. Deconstructs the full 3-stage training pipeline (web-scale Pre-training, Supervised Fine-Tuning, and Reinforcement Learning), contrasting traditional RLHF (human preference rating models with PPO) with modern RLVR (Reinforcement Learning with Verifi"
   },
   {
-    "title": "LLM Architecture & Inference › 3. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences",
-    "url": "/ai-quick-ref/02-llm-architecture/#3-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences",
+    "title": "LLM Architecture & Inference › 3. LLM Prompt Caching Versus Semantic Caching",
+    "url": "/ai-quick-ref/02-llm-architecture/#3-llm-prompt-caching-versus-semantic-caching",
+    "categories": "LLM Architecture & Inference (Intermediate)",
+    "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
+    "content": "Contrasts model-layer prompt caching (reusing pre-computed transformer Key-Value cache tensors across identical token prefixes) with application-layer semantic caching (vector embedding similarity search to retrieve pre-generated responses without invoking the LLM). Integrates both into a multi-tiered production caching architecture that sequences exact-match lookups, semantic similarity thresholds, and Radix tree KV-cache reuse before triggering"
+  },
+  {
+    "title": "LLM Architecture & Inference › 4. How the Math Used in 19th-Century Heat Physics Helps LLMs Understand Sentences",
+    "url": "/ai-quick-ref/02-llm-architecture/#4-how-the-math-used-in-19th-century-heat-physics-helps-llms-understand-sentences",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Traces the mathematical lineage between Fourier's heat diffusion equations and modern transformer positional encodings, explaining how sinusoidal harmonic frequencies and Rotary Position Embeddings (RoPE) encode relative token order without destroying semantic invariant geometry."
   },
   {
-    "title": "LLM Architecture & Inference › 4. How to Build Models Without Language, with Logical Intelligence",
-    "url": "/ai-quick-ref/02-llm-architecture/#4-how-to-build-models-without-language-with-logical-intelligence",
+    "title": "LLM Architecture & Inference › 5. How to Build Models Without Language, with Logical Intelligence",
+    "url": "/ai-quick-ref/02-llm-architecture/#5-how-to-build-models-without-language-with-logical-intelligence",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Contrasts token-by-token autoregressive LLMs with Energy-Based Models (EBMs) that perform non-autoregressive reasoning in continuous latent space, demonstrating how energy minimization and gradient-based inference solve combinatorial logic and constraint satisfaction at a fraction of LLM compute costs."
   },
   {
-    "title": "LLM Architecture & Inference › 5. How to Customize a Model to Learn New Tricks",
-    "url": "/ai-quick-ref/02-llm-architecture/#5-how-to-customize-a-model-to-learn-new-tricks",
+    "title": "LLM Architecture & Inference › 6. How to Customize a Model to Learn New Tricks",
+    "url": "/ai-quick-ref/02-llm-architecture/#6-how-to-customize-a-model-to-learn-new-tricks",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details parameter-efficient fine-tuning techniques (PEFT), breaking down low-rank adaptation matrix decomposition (LoRA) and 4-bit quantized adaptation (QLoRA) to specialize foundation models on domain tasks while drastically reducing GPU VRAM requirements."
   },
   {
-    "title": "LLM Architecture & Inference › 6. How to Run a Big Model on Cheap Hardware?",
-    "url": "/ai-quick-ref/02-llm-architecture/#6-how-to-run-a-big-model-on-cheap-hardware",
+    "title": "LLM Architecture & Inference › 7. How to Run a Big Model on Cheap Hardware?",
+    "url": "/ai-quick-ref/02-llm-architecture/#7-how-to-run-a-big-model-on-cheap-hardware",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Comprehensive engineering handbook on local and edge LLM inference, analyzing post-training quantization (FP16 down to INT4), layer-wise GPU/CPU/RAM offloading, Mixture-of-Experts sparse routing, KV-cache memory budgeting, and speculative decoding acceleration."
   },
   {
-    "title": "LLM Architecture & Inference › 7. How Smart Model Routing Can Cut LLM Costs by 10X",
-    "url": "/ai-quick-ref/02-llm-architecture/#7-how-smart-model-routing-can-cut-llm-costs-by-10x",
+    "title": "LLM Architecture & Inference › 8. How Smart Model Routing Can Cut LLM Costs by 10X",
+    "url": "/ai-quick-ref/02-llm-architecture/#8-how-smart-model-routing-can-cut-llm-costs-by-10x",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details production model routing architectures that partition incoming prompts across tiered LLMs, comparing SLM classification gateways, cascading fallback verification, semantic vector similarity routing, and learned contextual bandits to cut inference costs by up to 90%."
   },
   {
-    "title": "LLM Architecture & Inference › 8. How to Shrink a Language Model Without Making it Too Dumb",
-    "url": "/ai-quick-ref/02-llm-architecture/#8-how-to-shrink-a-language-model-without-making-it-too-dumb",
+    "title": "LLM Architecture & Inference › 9. How to Shrink a Language Model Without Making it Too Dumb",
+    "url": "/ai-quick-ref/02-llm-architecture/#9-how-to-shrink-a-language-model-without-making-it-too-dumb",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Deep dives into the triad of model compression—post-training quantization (scale factor mapping and INT8/INT4 rounding), structured/unstructured pruning, and teacher-student knowledge distillation with soft-target cross-entropy—to shrink multi-gigabyte models for constrained inference."
   },
   {
-    "title": "LLM Architecture & Inference › 9. What Happens Inside an AI Chatbot Between Enter and the First Word?",
-    "url": "/ai-quick-ref/02-llm-architecture/#9-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word",
+    "title": "LLM Architecture & Inference › 10. What Happens Inside an AI Chatbot Between Enter and the First Word?",
+    "url": "/ai-quick-ref/02-llm-architecture/#10-what-happens-inside-an-ai-chatbot-between-enter-and-the-first-word",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Unpacks the end-to-end request execution lifecycle of modern LLM serving engines, mapping the architectural transition from compute-bound parallel prompt prefill to memory-bandwidth-bound autoregressive decoding, continuous GPU batching, and KV-cache reuse."
   },
   {
-    "title": "LLM Architecture & Inference › 10. How to Make LLMs 3X Faster",
-    "url": "/ai-quick-ref/02-llm-architecture/#10-how-to-make-llms-3x-faster",
+    "title": "LLM Architecture & Inference › 11. How to Make LLMs 3X Faster",
+    "url": "/ai-quick-ref/02-llm-architecture/#11-how-to-make-llms-3x-faster",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Unpacks speculative decoding mechanics, explaining how small auxiliary draft models (or Medusa multi-head decoders) propose candidate token sequences verified concurrently by the target model in a single memory-bandwidth pass with lossless mathematical distribution guarantees."
   },
   {
-    "title": "LLM Architecture & Inference › 11. EP223: Ollama vs vLLM vs SGLang",
-    "url": "/ai-quick-ref/02-llm-architecture/#11-ep223-ollama-vs-vllm-vs-sglang",
+    "title": "LLM Architecture & Inference › 12. EP223: Ollama vs vLLM vs SGLang",
+    "url": "/ai-quick-ref/02-llm-architecture/#12-ep223-ollama-vs-vllm-vs-sglang",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #agents #evals",
     "content": "Evaluates the three dominant open-weight inference serving engines—Ollama (developer ease via llama.cpp backend), vLLM (high-throughput PagedAttention server), and SGLang (RadixAttention tree-structured KV cache reuse for complex structured/agentic outputs)—alongside Claude's pseudorandom logit watermarking algorithm."
   },
   {
-    "title": "LLM Architecture & Inference › 12. The New American AI Model Designed to be Customized",
-    "url": "/ai-quick-ref/02-llm-architecture/#12-the-new-american-ai-model-designed-to-be-customized",
+    "title": "LLM Architecture & Inference › 13. The New American AI Model Designed to be Customized",
+    "url": "/ai-quick-ref/02-llm-architecture/#13-the-new-american-ai-model-designed-to-be-customized",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects Thinking Machines' (Mira Murati) Inkling architecture, detailing its 66-layer hybrid design featuring 256 fine-grained MoE experts (activating only 6 per token), interleaved local sliding-window attention, short token-mixing convolutions, and modular fine-tuning surfaces."
   },
   {
-    "title": "LLM Architecture & Inference › 13. EP222: What is Google’s TPU?",
-    "url": "/ai-quick-ref/02-llm-architecture/#13-ep222-what-is-googles-tpu",
+    "title": "LLM Architecture & Inference › 14. EP222: What is Google’s TPU?",
+    "url": "/ai-quick-ref/02-llm-architecture/#14-ep222-what-is-googles-tpu",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details the microarchitecture of Google’s Tensor Processing Unit (TPU), contrasting general-purpose GPU execution with TPU Matrix Multiply Units (MXUs) that use systolic arrays to stream matrix products directly between registers without intermediate memory access."
   },
   {
-    "title": "LLM Architecture & Inference › 14. How Big Models Teach Small Models to Be Smart",
-    "url": "/ai-quick-ref/02-llm-architecture/#14-how-big-models-teach-small-models-to-be-smart",
+    "title": "LLM Architecture & Inference › 15. How Big Models Teach Small Models to Be Smart",
+    "url": "/ai-quick-ref/02-llm-architecture/#15-how-big-models-teach-small-models-to-be-smart",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Details the mathematical and architectural pipeline of knowledge distillation, examining how student models learn from teacher \"soft labels\" and temperature-scaled logits to capture dark knowledge relationships across tokens while retaining 90%+ accuracy at 10x lower inference latency."
   },
   {
-    "title": "LLM Architecture & Inference › 15. Why An LLM’s Memory Gets Expensive and How to Fix It",
-    "url": "/ai-quick-ref/02-llm-architecture/#15-why-an-llms-memory-gets-expensive-and-how-to-fix-it",
+    "title": "LLM Architecture & Inference › 16. Why An LLM’s Memory Gets Expensive and How to Fix It",
+    "url": "/ai-quick-ref/02-llm-architecture/#16-why-an-llms-memory-gets-expensive-and-how-to-fix-it",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Breaks down why KV-cache memory consumes the majority of GPU VRAM during long-context serving, detailing structural fixes including Grouped-Query Attention (GQA), FP8/INT4 KV quantization, attention sinks/eviction policies, and PagedAttention virtual memory mapping."
   },
   {
-    "title": "LLM Architecture & Inference › 16. How NVIDIA Builds Open Models for the Age of AI",
-    "url": "/ai-quick-ref/02-llm-architecture/#16-how-nvidia-builds-open-models-for-the-age-of-ai",
+    "title": "LLM Architecture & Inference › 17. How NVIDIA Builds Open Models for the Age of AI",
+    "url": "/ai-quick-ref/02-llm-architecture/#17-how-nvidia-builds-open-models-for-the-age-of-ai",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Features an in-depth interview with NVIDIA's VP of Applied Deep Learning Research Bryan Catanzaro, explaining NVIDIA's open model strategy (Nemotron/Cosmos), hardware-software co-design for Tensor Core FP8/FP4 precision, and hybrid Mamba-Transformer SSM architectures that slash linear memory complexity."
   },
   {
-    "title": "LLM Architecture & Inference › 17. How LLMs Learn to Be Helpful (RLHF vs DPO)",
-    "url": "/ai-quick-ref/02-llm-architecture/#17-how-llms-learn-to-be-helpful-rlhf-vs-dpo",
+    "title": "LLM Architecture & Inference › 18. How LLMs Learn to Be Helpful (RLHF vs DPO)",
+    "url": "/ai-quick-ref/02-llm-architecture/#18-how-llms-learn-to-be-helpful-rlhf-vs-dpo",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Explores post-training preference alignment architectures, detailing how pre-trained and fine-tuned base models are aligned using Reinforcement Learning from Human Feedback (RLHF with PPO), Direct Preference Optimization (DPO's closed-form mathematical policy), and Reinforcement Learning with Verifiable Rewards (RLVR) to avoid reward hacking while aligning models with human values."
   },
   {
-    "title": "LLM Architecture & Inference › 18. ChatGPT vs Gemini vs Claude: How They Differ",
-    "url": "/ai-quick-ref/02-llm-architecture/#18-chatgpt-vs-gemini-vs-claude-how-they-differ",
+    "title": "LLM Architecture & Inference › 19. ChatGPT vs Gemini vs Claude: How They Differ",
+    "url": "/ai-quick-ref/02-llm-architecture/#19-chatgpt-vs-gemini-vs-claude-how-they-differ",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Contrasts the core architectural forks across frontier LLMs, analyzing Dense vs Sparse Mixture-of-Experts (MoE) parameter scaling, native multimodal sensor fusion vs modular projection, context window scaling and degradation mitigation, and inference-time thinking tokens (routed vs adaptive reasoning)."
   },
   {
-    "title": "LLM Architecture & Inference › 19. Large Language Models vs Small Language Models",
-    "url": "/ai-quick-ref/02-llm-architecture/#19-large-language-models-vs-small-language-models",
+    "title": "LLM Architecture & Inference › 20. Large Language Models vs Small Language Models",
+    "url": "/ai-quick-ref/02-llm-architecture/#20-large-language-models-vs-small-language-models",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Examines the architectural split between cloud datacenter LLMs and edge/device Small Language Models (SLMs), detailing KV-cache cross-layer sharing, Quantization-Aware Training (QAT), Chinchilla overtraining compute trade-offs, and hybrid hierarchical orchestration."
   },
   {
-    "title": "LLM Architecture & Inference › 20. EP219: 12 Open-source LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#20-ep219-12-open-source-llms",
+    "title": "LLM Architecture & Inference › 21. EP219: 12 Open-source LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#21-ep219-12-open-source-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Visual reference guide and taxonomy comparing 12 leading open-weight LLMs (Llama 3, Mistral, Gemma, DeepSeek, Qwen, Falcon, Phi, Command R+, StarCoder), dissecting parameter scales, architecture types (Dense vs MoE), license terms, and SLM vs LLM serving characteristics."
   },
   {
-    "title": "LLM Architecture & Inference › 21. How Open-Weight Models Changed the AI Landscape",
-    "url": "/ai-quick-ref/02-llm-architecture/#21-how-open-weight-models-changed-the-ai-landscape",
+    "title": "LLM Architecture & Inference › 22. How Open-Weight Models Changed the AI Landscape",
+    "url": "/ai-quick-ref/02-llm-architecture/#22-how-open-weight-models-changed-the-ai-landscape",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects open-weight model architectures and the borrow-and-build innovation transfer cycle, detailing sparse MoE block routing, attention variants (MHA vs GQA vs Sliding Window Attention), and end-to-end training pipelines across open models."
   },
   {
-    "title": "LLM Architecture & Inference › 22. A Guide to AI Inference Engineering",
-    "url": "/ai-quick-ref/02-llm-architecture/#22-a-guide-to-ai-inference-engineering",
+    "title": "LLM Architecture & Inference › 23. A Guide to AI Inference Engineering",
+    "url": "/ai-quick-ref/02-llm-architecture/#23-a-guide-to-ai-inference-engineering",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "In-depth guide to production inference engineering, dissecting the metrics that govern LLM serving (TTFT prefill vs TPS decode), latency-throughput Pareto tradeoffs, prefix caching with KV reuse, speculative decoding under load, and distributed multi-GPU parallelism (Tensor, Pipeline, and Expert Parallelism)."
   },
   {
-    "title": "LLM Architecture & Inference › 23. Token Spend Out of Control? The Case for Smarter Routing",
-    "url": "/ai-quick-ref/02-llm-architecture/#23-token-spend-out-of-control-the-case-for-smarter-routing",
+    "title": "LLM Architecture & Inference › 24. Token Spend Out of Control? The Case for Smarter Routing",
+    "url": "/ai-quick-ref/02-llm-architecture/#24-token-spend-out-of-control-the-case-for-smarter-routing",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Comprehensive guide on production LLM cost optimization through intelligent request routing, breaking down multi-turn context compounding, unified provider abstractions, heuristic vs learned classifier routing, and background chore offloading."
   },
   {
-    "title": "LLM Architecture & Inference › 24. EP205: CPU vs GPU vs TPU",
-    "url": "/ai-quick-ref/02-llm-architecture/#24-ep205-cpu-vs-gpu-vs-tpu",
+    "title": "LLM Architecture & Inference › 25. EP205: CPU vs GPU vs TPU",
+    "url": "/ai-quick-ref/02-llm-architecture/#25-ep205-cpu-vs-gpu-vs-tpu",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Contrasts computer hardware architectures for deep learning, analyzing CPU sequential low-latency execution, GPU massive SIMT thread parallelism and memory latency hiding, and TPU domain-specific systolic array tensor compute."
   },
   {
-    "title": "LLM Architecture & Inference › 25. The Architecture Behind Open-Source LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#25-the-architecture-behind-open-source-llms",
+    "title": "LLM Architecture & Inference › 26. The Architecture Behind Open-Source LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#26-the-architecture-behind-open-source-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Deep dive into the architectural innovations across modern open models, analyzing DeepSeek’s Multi-Head Latent Attention (MLA) low-rank KV compression, Meta Llama's GQA dense scaling, and Reinforcement Learning with Verifiable Rewards (RLVR)."
   },
   {
-    "title": "LLM Architecture & Inference › 26. How Large Language Models Learn",
-    "url": "/ai-quick-ref/02-llm-architecture/#26-how-large-language-models-learn",
+    "title": "LLM Architecture & Inference › 27. How Large Language Models Learn",
+    "url": "/ai-quick-ref/02-llm-architecture/#27-how-large-language-models-learn",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Breaks down the mathematical mechanics of neural network training, detailing cross-entropy loss calculation, automatic differentiation backpropagation, and stochastic gradient descent parameter adjustment loops."
   },
   {
-    "title": "LLM Architecture & Inference › 27. How Transformers Architecture Powers Modern LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#27-how-transformers-architecture-powers-modern-llms",
+    "title": "LLM Architecture & Inference › 28. How Transformers Architecture Powers Modern LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#28-how-transformers-architecture-powers-modern-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Step-by-step technical breakdown of the Transformer architecture, detailing input token embeddings, scaled dot-product multi-head self-attention (Q, K, V), Feed-Forward Networks (FFN), layer normalization, and end-to-end execution."
   },
   {
-    "title": "LLM Architecture & Inference › 28. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs",
-    "url": "/ai-quick-ref/02-llm-architecture/#28-why-ai-needs-gpus-and-tpus-the-hardware-behind-llms",
+    "title": "LLM Architecture & Inference › 29. Why AI Needs GPUs and TPUs: The Hardware Behind LLMs",
+    "url": "/ai-quick-ref/02-llm-architecture/#29-why-ai-needs-gpus-and-tpus-the-hardware-behind-llms",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Explains the hardware architecture requirements of deep learning workloads, detailing the memory-compute Von Neumann bottleneck, 2D systolic array matrix multiplication flow, and floating-point formats (FP32, FP16, BF16, and INT8)."
   },
   {
-    "title": "LLM Architecture & Inference › 29. How Google’s Tensor Processing Unit (TPU) Works?",
-    "url": "/ai-quick-ref/02-llm-architecture/#29-how-googles-tensor-processing-unit-tpu-works",
+    "title": "LLM Architecture & Inference › 30. How Google’s Tensor Processing Unit (TPU) Works?",
+    "url": "/ai-quick-ref/02-llm-architecture/#30-how-googles-tensor-processing-unit-tpu-works",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects Google's custom ASIC Tensor Processing Unit, detailing its weight-stationary matrix multiply unit (MXU), systolic array 2D dataflow, bfloat16 hardware support, and interconnect topology."
   },
   {
-    "title": "LLM Architecture & Inference › 30. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos",
-    "url": "/ai-quick-ref/02-llm-architecture/#30-multimodal-llms-basics-how-llms-process-text-images-audio-videos",
+    "title": "LLM Architecture & Inference › 31. Multimodal LLMs Basics: How LLMs Process Text, Images, Audio & Videos",
+    "url": "/ai-quick-ref/02-llm-architecture/#31-multimodal-llms-basics-how-llms-process-text-images-audio-videos",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Architectural foundations of Multimodal Large Language Models (MLLMs), explaining how modality-specific encoders map visual, auditory, and textual inputs into a shared geometric embedding space via projection layers and cross-attention blocks."
   },
   {
-    "title": "LLM Architecture & Inference › 31. The $250 Million Paper",
-    "url": "/ai-quick-ref/02-llm-architecture/#31-the-250-million-paper",
+    "title": "LLM Architecture & Inference › 32. The $250 Million Paper",
+    "url": "/ai-quick-ref/02-llm-architecture/#32-the-250-million-paper",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Dissects the architecture of the open-weight Molmo vision-language model, analyzing its synthetic-free PixMo human-annotated dataset, visual grounding/pointing mechanism, and efficient cross-attention multi-modal projection."
   },
   {
-    "title": "LLM Architecture & Inference › 32. How LLMs Learn from the Internet: The Training Process",
-    "url": "/ai-quick-ref/02-llm-architecture/#32-how-llms-learn-from-the-internet-the-training-process",
+    "title": "LLM Architecture & Inference › 33. How LLMs Learn from the Internet: The Training Process",
+    "url": "/ai-quick-ref/02-llm-architecture/#33-how-llms-learn-from-the-internet-the-training-process",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Comprehensive breakdown of the end-to-end foundation model training pipeline, from raw web scraping and heuristic quality filtering to BPE subword tokenization, unsupervised autoregressive pre-training, SFT, and RLHF reward alignment."
   },
   {
-    "title": "LLM Architecture & Inference › 33. EP187: Why is DeepSeek-OCR such a BIG DEAL?",
-    "url": "/ai-quick-ref/02-llm-architecture/#33-ep187-why-is-deepseek-ocr-such-a-big-deal",
+    "title": "LLM Architecture & Inference › 34. EP187: Why is DeepSeek-OCR such a BIG DEAL?",
+    "url": "/ai-quick-ref/02-llm-architecture/#34-ep187-why-is-deepseek-ocr-such-a-big-deal",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Analyzes DeepSeek-OCR's architectural breakthrough in extreme visual document compression, demonstrating how visual tokenizers compress high-resolution documents into a fraction of traditional token counts while preserving OCR fidelity."
   },
   {
-    "title": "LLM Architecture & Inference › 34. What Actually Happens When You Press ‘Send’ to ChatGPT",
-    "url": "/ai-quick-ref/02-llm-architecture/#34-what-actually-happens-when-you-press-send-to-chatgpt",
+    "title": "LLM Architecture & Inference › 35. What Actually Happens When You Press ‘Send’ to ChatGPT",
+    "url": "/ai-quick-ref/02-llm-architecture/#35-what-actually-happens-when-you-press-send-to-chatgpt",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Step-by-step trace of a prompt's execution path inside ChatGPT's infrastructure: API gateway routing, content moderation guardrails, high-dimensional vector embeddings lookup, autoregressive decoding loop with KV caching, and dynamic tool orchestration."
   },
   {
-    "title": "LLM Architecture & Inference › 35. How Fine-Tuning Transforms Generic AI Models into Specialists",
-    "url": "/ai-quick-ref/02-llm-architecture/#35-how-fine-tuning-transforms-generic-ai-models-into-specialists",
+    "title": "LLM Architecture & Inference › 36. How Fine-Tuning Transforms Generic AI Models into Specialists",
+    "url": "/ai-quick-ref/02-llm-architecture/#36-how-fine-tuning-transforms-generic-ai-models-into-specialists",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving",
     "content": "Deep dive into domain specialization of pre-trained models, contrasting full parameter fine-tuning, instruction tuning, Low-Rank Adaptation (LoRA), and 4-bit Quantized LoRA (QLoRA) to preserve base knowledge while adapting to specific enterprise tasks."
   },
   {
-    "title": "LLM Architecture & Inference › 36. How LLMs See Images, Audio, and More",
-    "url": "/ai-quick-ref/02-llm-architecture/#36-how-llms-see-images-audio-and-more",
+    "title": "LLM Architecture & Inference › 37. How LLMs See Images, Audio, and More",
+    "url": "/ai-quick-ref/02-llm-architecture/#37-how-llms-see-images-audio-and-more",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #code",
     "content": "Deep architectural exploration of multimodal tokenization strategies across modalities, analyzing Vision Transformer (ViT) patch extraction, discrete codebooks (VQ-VAE / VQGAN), continuous contrastive embeddings (CLIP), and neural audio codecs (SoundStream / EnCodec RVQ)."
   },
   {
-    "title": "LLM Architecture & Inference › 37. How LLMs See the World",
-    "url": "/ai-quick-ref/02-llm-architecture/#37-how-llms-see-the-world",
+    "title": "LLM Architecture & Inference › 38. How LLMs See the World",
+    "url": "/ai-quick-ref/02-llm-architecture/#38-how-llms-see-the-world",
     "categories": "LLM Architecture & Inference (Intermediate)",
     "tags": "#llm #transformer #inference #rlvr #grpo #hardware #tpu #serving #reasoning",
     "content": "Deep dive into the foundational role of tokens in language models, comparing Byte-Pair Encoding (BPE), WordPiece, and Unigram tokenization algorithms while examining edge-case vulnerabilities, mathematical reasoning degradation, and tokenization artifacts."
@@ -343,78 +350,85 @@
     "content": "Deconstructs the complete lifecycle of production Retrieval-Augmented Generation (RAG) systems across six core architectural stages: multi-format document ingestion, semantic chunking and metadata enrichment, dense vector embedding generation, high-dimensional vector database persistence and indexing, similarity/hybrid retrieval, and context-augmented prompt synthesis with guardrails."
   },
   {
-    "title": "RAG & Vector Search › 2. GraphRAG: How AI Answers Questions Hidden Across Many Documents",
-    "url": "/ai-quick-ref/03-rag-vector-search/#2-graphrag-how-ai-answers-questions-hidden-across-many-documents",
+    "title": "RAG & Vector Search › 2. EP229: 8 Chunking Strategies for RAG-Based Agents",
+    "url": "/ai-quick-ref/03-rag-vector-search/#2-ep229-8-chunking-strategies-for-rag-based-agents",
+    "categories": "RAG & Vector Search (Intermediate)",
+    "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents #evals",
+    "content": "Comprehensive technical analysis of eight text chunking strategies for agentic retrieval systems—evaluating fixed-size, sentence-level, recursive character, document structure-aware, semantic similarity shift, and agentic LLM-driven chunking to optimize context window recall versus boundary fidelity. Additionally dissects the sequence-to-sequence neural architecture of Google Translate and the modular anatomy of executable Agent Skills."
+  },
+  {
+    "title": "RAG & Vector Search › 3. GraphRAG: How AI Answers Questions Hidden Across Many Documents",
+    "url": "/ai-quick-ref/03-rag-vector-search/#3-graphrag-how-ai-answers-questions-hidden-across-many-documents",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents",
     "content": "Overcomes standard vector similarity limits on corpus-wide aggregation by extracting knowledge graphs from text, clustering nodes via Leiden community detection into hierarchical summaries, and supporting both Local Search (entity neighborhood traversal) and Global Search (map-reduce over community reports) via agentic routing."
   },
   {
-    "title": "RAG & Vector Search › 3. Why Your RAG System Is Only as Good as Its Translator Model",
-    "url": "/ai-quick-ref/03-rag-vector-search/#3-why-your-rag-system-is-only-as-good-as-its-translator-model",
+    "title": "RAG & Vector Search › 4. Why Your RAG System Is Only as Good as Its Translator Model",
+    "url": "/ai-quick-ref/03-rag-vector-search/#4-why-your-rag-system-is-only-as-good-as-its-translator-model",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #evals",
     "content": "Argues that RAG accuracy is fundamentally bounded by the quality and domain alignment of the embedding model rather than generator LLM capacity, detailing indexing vs. retrieval stages, semantic search failure modes, the high re-indexing cost of model migration, and Matryoshka Representation Learning (MRL) storage designs."
   },
   {
-    "title": "RAG & Vector Search › 4. EP220: RAG vs Graph RAG vs Agentic RAG",
-    "url": "/ai-quick-ref/03-rag-vector-search/#4-ep220-rag-vs-graph-rag-vs-agentic-rag",
+    "title": "RAG & Vector Search › 5. EP220: RAG vs Graph RAG vs Agentic RAG",
+    "url": "/ai-quick-ref/03-rag-vector-search/#5-ep220-rag-vs-graph-rag-vs-agentic-rag",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents #evals",
     "content": "Contrasts the three primary retrieval paradigms—Standard RAG (single-turn semantic vector search for localized queries), Graph RAG (community-clustered knowledge graph traversals for global dataset summaries), and Agentic RAG (multi-step iterative query decomposition, tool-routed retrieval, and automated response validation)."
   },
   {
-    "title": "RAG & Vector Search › 5. How Airtable Built the Search Layer Behind Their AI Features",
-    "url": "/ai-quick-ref/03-rag-vector-search/#5-how-airtable-built-the-search-layer-behind-their-ai-features",
+    "title": "RAG & Vector Search › 6. How Airtable Built the Search Layer Behind Their AI Features",
+    "url": "/ai-quick-ref/03-rag-vector-search/#6-how-airtable-built-the-search-layer-behind-their-ai-features",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #evals",
     "content": "Explains how Airtable architected a multi-tenant vector search system on Milvus across hundreds of thousands of customer bases, leveraging per-base partitioning, DiskANN SSD-resident vector indexing, and dynamic hot/cold partition offloading to achieve p99 <500ms retrieval without paying continuous in-memory RAM costs for 75% idle bases."
   },
   {
-    "title": "RAG & Vector Search › 6. How CockroachDB Built Vector Indexing at Scale",
-    "url": "/ai-quick-ref/03-rag-vector-search/#6-how-cockroachdb-built-vector-indexing-at-scale",
+    "title": "RAG & Vector Search › 7. How CockroachDB Built Vector Indexing at Scale",
+    "url": "/ai-quick-ref/03-rag-vector-search/#7-how-cockroachdb-built-vector-indexing-at-scale",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval",
     "content": "Details C-SPANN, CockroachDB's distributed vector indexing engine designed to eliminate central coordinators and massive RAM requirements by embedding a hierarchical centroid clustering tree directly into SQL table storage, automatically leveraging CockroachDB's native range sharding, Raft replication, and ACID guarantees."
   },
   {
-    "title": "RAG & Vector Search › 7. EP216: RAGs vs Agents",
-    "url": "/ai-quick-ref/03-rag-vector-search/#7-ep216-rags-vs-agents",
+    "title": "RAG & Vector Search › 8. EP216: RAGs vs Agents",
+    "url": "/ai-quick-ref/03-rag-vector-search/#8-ep216-rags-vs-agents",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents",
     "content": "Contrasts the single-turn, low-cost grounding architecture of RAG (embed -> vector retrieve -> context inject -> generate) against the multi-turn dynamic feedback loop of AI Agents (reason -> tool dispatch -> syscall execution -> observe -> reflect), clarifying the performance, latency, and error-drift trade-offs between them."
   },
   {
-    "title": "RAG & Vector Search › 8. How Agentic RAG Works?",
-    "url": "/ai-quick-ref/03-rag-vector-search/#8-how-agentic-rag-works",
+    "title": "RAG & Vector Search › 9. How Agentic RAG Works?",
+    "url": "/ai-quick-ref/03-rag-vector-search/#9-how-agentic-rag-works",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents #evals",
     "content": "Replaces rigid one-way RAG pipelines with an iterative control loop where an agentic coordinator actively evaluates retrieval quality, rewrites ambiguous queries, routes sub-questions across diverse data sources, and performs self-correcting validation before generating the final response."
   },
   {
-    "title": "RAG & Vector Search › 9. Dropbox Multimedia Search: Making File Search More Useful",
-    "url": "/ai-quick-ref/03-rag-vector-search/#9-dropbox-multimedia-search-making-file-search-more-useful",
+    "title": "RAG & Vector Search › 10. Dropbox Multimedia Search: Making File Search More Useful",
+    "url": "/ai-quick-ref/03-rag-vector-search/#10-dropbox-multimedia-search-making-file-search-more-useful",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #evals",
     "content": "Details the architecture powering Dropbox Dash’s multimedia search across billions of images and videos, combining an asynchronous multimodal indexing pipeline (extracting EXIF, transcripts, and CLIP embeddings) with geolocation-aware hybrid vector retrieval and just-in-time thumbnail generation to manage petabyte-scale storage costs."
   },
   {
-    "title": "RAG & Vector Search › 10. How RAG Enables AI For Your Data",
-    "url": "/ai-quick-ref/03-rag-vector-search/#10-how-rag-enables-ai-for-your-data",
+    "title": "RAG & Vector Search › 11. How RAG Enables AI For Your Data",
+    "url": "/ai-quick-ref/03-rag-vector-search/#11-how-rag-enables-ai-for-your-data",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval",
     "content": "Establishes the foundational end-to-end RAG architecture—solving training cutoffs, hallucinations, and private data isolation—by decomposing the pipeline into document preparation (smart chunking and overlap), dense vector embedding generation, vector database indexing, and query-time context augmentation."
   },
   {
-    "title": "RAG & Vector Search › 11. How Dropbox Built an AI Product Dash with RAG and AI Agents",
-    "url": "/ai-quick-ref/03-rag-vector-search/#11-how-dropbox-built-an-ai-product-dash-with-rag-and-ai-agents",
+    "title": "RAG & Vector Search › 12. How Dropbox Built an AI Product Dash with RAG and AI Agents",
+    "url": "/ai-quick-ref/03-rag-vector-search/#12-how-dropbox-built-an-ai-product-dash-with-rag-and-ai-agents",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents",
     "content": "Explores the architecture of Dropbox Dash, uniting enterprise-wide cross-platform RAG with autonomous AI agents to index emails, documents, calendars, and chats while enforcing strict tenant access control lists (ACLs) and executing agent actions inside a custom secure interpreter."
   },
   {
-    "title": "RAG & Vector Search › 12. EP169: RAG vs Agentic RAG",
-    "url": "/ai-quick-ref/03-rag-vector-search/#12-ep169-rag-vs-agentic-rag",
+    "title": "RAG & Vector Search › 13. EP169: RAG vs Agentic RAG",
+    "url": "/ai-quick-ref/03-rag-vector-search/#13-ep169-rag-vs-agentic-rag",
     "categories": "RAG & Vector Search (Intermediate)",
     "tags": "#rag #vector-search #graphrag #hybrid-retrieval #agents #evals",
     "content": "Contrasts static RAG architectures (linear retrieve-and-read pipelines vulnerable to query ambiguity) against Agentic RAG (incorporating query routing, iterative sub-question decomposition, multi-document retrieval, and automated answer validation)."
@@ -840,337 +854,344 @@
     "content": "Introduces the foundational 7-step evaluation and design framework for architecting enterprise Generative AI systems. Breaks down production architectural patterns across 10 core production systems (Smart Compose, Enterprise RAG, Text-to-Image, Text-to-Video, and personal assistants), establishing evaluation criteria, latency budgets, cache tiers, and fallback strategies for the case studies that follow."
   },
   {
-    "title": "Industry Case Studies › 2. How Netflix Taught an LLM to Recommend Movies So That You Keep Watching",
-    "url": "/ai-quick-ref/08-industry-case-studies/#2-how-netflix-taught-an-llm-to-recommend-movies-so-that-you-keep-watching",
+    "title": "Industry Case Studies › 2. How Uber Built a Genie to Answer Questions Correctly",
+    "url": "/ai-quick-ref/08-industry-case-studies/#2-how-uber-built-a-genie-to-answer-questions-correctly",
+    "categories": "Industry Case Studies (Advanced)",
+    "tags": "#case-studies #system-design #production #architecture #rag #evals",
+    "content": "Uber's internal engineering support assistant architecture combines an offline documentation ETL ingestion pipeline (parsing, section-aware chunking, vector indexing) with an online hybrid-search RAG Slack triage bot. Features conversational query rewriting, strict citation grounding, automated on-call escalation, and an offline evaluation harness analyzing answer accuracy and retrieval quality."
+  },
+  {
+    "title": "Industry Case Studies › 3. How Netflix Taught an LLM to Recommend Movies So That You Keep Watching",
+    "url": "/ai-quick-ref/08-industry-case-studies/#3-how-netflix-taught-an-llm-to-recommend-movies-so-that-you-keep-watching",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Netflix's GenRec model converts viewer behavior histories into natural language behavioral descriptions and uses a two-phase training loop (unsupervised sequence modeling followed by supervised multi-task ranking heads) to predict personalized movie recommendations optimized for Mean Reciprocal Rank (MRR)."
   },
   {
-    "title": "Industry Case Studies › 3. How DoorDash Built a Toolbox for AI Agents",
-    "url": "/ai-quick-ref/08-industry-case-studies/#3-how-doordash-built-a-toolbox-for-ai-agents",
+    "title": "Industry Case Studies › 4. How DoorDash Built a Toolbox for AI Agents",
+    "url": "/ai-quick-ref/08-industry-case-studies/#4-how-doordash-built-a-toolbox-for-ai-agents",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #mcp #agents",
     "content": "DoorDash engineered an enterprise MCP tool gateway that centralizes tool discovery, token lifecycle management, and rate limiting between autonomous agent applications and downstream internal microservices, using dynamic bundles and filters to minimize context bloat."
   },
   {
-    "title": "Industry Case Studies › 4. How OpenAI Built GPT-Live",
-    "url": "/ai-quick-ref/08-industry-case-studies/#4-how-openai-built-gpt-live",
+    "title": "Industry Case Studies › 5. How OpenAI Built GPT-Live",
+    "url": "/ai-quick-ref/08-industry-case-studies/#5-how-openai-built-gpt-live",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "OpenAI replaced multi-model speech-to-text -> LLM -> text-to-speech pipelines with an end-to-end multimodal audio neural network running on custom WebRTC media server transceivers, enabling simultaneous listening, barge-in detection, and real-time interruption handling under 300ms."
   },
   {
-    "title": "Industry Case Studies › 5. How Cloudflare Is Making AI Pay for Content",
-    "url": "/ai-quick-ref/08-industry-case-studies/#5-how-cloudflare-is-making-ai-pay-for-content",
+    "title": "Industry Case Studies › 6. How Cloudflare Is Making AI Pay for Content",
+    "url": "/ai-quick-ref/08-industry-case-studies/#6-how-cloudflare-is-making-ai-pay-for-content",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Cloudflare created an edge-level micropayment settlement architecture over HTTP 402, enabling content publishers to charge autonomous AI crawler agents per scraping request using cryptographic challenge tokens and edge gateway metering."
   },
   {
-    "title": "Industry Case Studies › 6. How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference",
-    "url": "/ai-quick-ref/08-industry-case-studies/#6-how-chatgpt-optimizes-its-agent-loop-harness-api-and-inference",
+    "title": "Industry Case Studies › 7. How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference",
+    "url": "/ai-quick-ref/08-industry-case-studies/#7-how-chatgpt-optimizes-its-agent-loop-harness-api-and-inference",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #inference #code",
     "content": "OpenAI dissects the ChatGPT agent loop across the client harness, API gateway, and model inference cluster, detailing how prompt prefix caching, BM25 tool pruning, sandbox state isolation, and disaggregated prefill-decode architectures drop cost-per-task dramatically."
   },
   {
-    "title": "Industry Case Studies › 7. Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways",
-    "url": "/ai-quick-ref/08-industry-case-studies/#7-why-doordash-instacart-and-uber-eats-integrated-llms-into-search-three-different-ways",
+    "title": "Industry Case Studies › 8. Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways",
+    "url": "/ai-quick-ref/08-industry-case-studies/#8-why-doordash-instacart-and-uber-eats-integrated-llms-into-search-three-different-ways",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #evals",
     "content": "Examines the divergent architectural paradigms chosen by three food-delivery titans: DoorDash's query-rewriting LLM prompt layer, Instacart's proprietary domain-fine-tuned embedding models, and Uber Eats' multi-stage retrieval blending semantic vectors with hard attribute filtering."
   },
   {
-    "title": "Industry Case Studies › 8. Inside Roblox’s Bet on World Models",
-    "url": "/ai-quick-ref/08-industry-case-studies/#8-inside-robloxs-bet-on-world-models",
+    "title": "Industry Case Studies › 9. Inside Roblox’s Bet on World Models",
+    "url": "/ai-quick-ref/08-industry-case-studies/#9-inside-robloxs-bet-on-world-models",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Roblox combines classical deterministic game engine physics with generative AI world models via the 'Super Upsampler' pipeline, allowing low-poly authoritative multiplayer states to be photorealistically rendered in real-time across edge data centers without physics drift."
   },
   {
-    "title": "Industry Case Studies › 9. AI Customer Support at Scale: The Travel Industry’s $Billion Bet",
-    "url": "/ai-quick-ref/08-industry-case-studies/#9-ai-customer-support-at-scale-the-travel-industrys-billion-bet",
+    "title": "Industry Case Studies › 10. AI Customer Support at Scale: The Travel Industry’s $Billion Bet",
+    "url": "/ai-quick-ref/08-industry-case-studies/#10-ai-customer-support-at-scale-the-travel-industrys-billion-bet",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Analyzes production multi-agent customer support architectures in global travel enterprises, highlighting automated deterministic escalation boundaries, multilingual context normalization, and human-in-the-loop arbitration for high-liability refund decisions."
   },
   {
-    "title": "Industry Case Studies › 10. How Microsoft Ships AI Agents at Enterprise Scale",
-    "url": "/ai-quick-ref/08-industry-case-studies/#10-how-microsoft-ships-ai-agents-at-enterprise-scale",
+    "title": "Industry Case Studies › 11. How Microsoft Ships AI Agents at Enterprise Scale",
+    "url": "/ai-quick-ref/08-industry-case-studies/#11-how-microsoft-ships-ai-agents-at-enterprise-scale",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #evals",
     "content": "Microsoft Foundry couples agent runtime platforms with Microsoft 365 Work IQ context layers, directory identity integration, and continuous rubric-based auto-eval evaluation loops to govern and scale enterprise copilots across 80,000 organisations."
   },
   {
-    "title": "Industry Case Studies › 11. How OpenAI Delivers Low-Latency Voice AI for 900M Users",
-    "url": "/ai-quick-ref/08-industry-case-studies/#11-how-openai-delivers-low-latency-voice-ai-for-900m-users",
+    "title": "Industry Case Studies › 12. How OpenAI Delivers Low-Latency Voice AI for 900M Users",
+    "url": "/ai-quick-ref/08-industry-case-studies/#12-how-openai-delivers-low-latency-voice-ai-for-900m-users",
     "categories": "Industry Case Studies (Advanced)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Deep dive into the real-time networking and transceiver infrastructure behind OpenAI's Advanced Voice Mode, demonstrating how SFU media relays, packet header routing, and distributed edge pops achieve sub-millisecond audio frame routing."
   },
   {
-    "title": "Industry Case Studies › 12. Inside Thinking Machines’ Interaction Models",
-    "url": "/ai-quick-ref/08-industry-case-studies/#12-inside-thinking-machines-interaction-models",
+    "title": "Industry Case Studies › 13. Inside Thinking Machines’ Interaction Models",
+    "url": "/ai-quick-ref/08-industry-case-studies/#13-inside-thinking-machines-interaction-models",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Explores Thinking Machines' continuous-time interaction architecture, which discards discrete user-turn request/response cycles in favor of asynchronous multimodal streaming pipelines where audio, vision, and text co-exist over shared persistent context buses."
   },
   {
-    "title": "Industry Case Studies › 13. What Salesforce Learned from 20,000 Enterprise Agent Deployments",
-    "url": "/ai-quick-ref/08-industry-case-studies/#13-what-salesforce-learned-from-20000-enterprise-agent-deployments",
+    "title": "Industry Case Studies › 14. What Salesforce Learned from 20,000 Enterprise Agent Deployments",
+    "url": "/ai-quick-ref/08-industry-case-studies/#14-what-salesforce-learned-from-20000-enterprise-agent-deployments",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #reasoning #hardware #code",
     "content": "Salesforce shares hard architectural metrics from Agentforce rollouts, highlighting why 80% of agent effort is spent handling enterprise integration edge cases, how deterministic code bridges the gap between LLM reasoning and CRM execution, and why strict input/output guardrails prevent data leakage."
   },
   {
-    "title": "Industry Case Studies › 14. How OpenAI Built Its Data Agent",
-    "url": "/ai-quick-ref/08-industry-case-studies/#14-how-openai-built-its-data-agent",
+    "title": "Industry Case Studies › 15. How OpenAI Built Its Data Agent",
+    "url": "/ai-quick-ref/08-industry-case-studies/#15-how-openai-built-its-data-agent",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #reasoning",
     "content": "Details OpenAI's internal Data Agent architecture that automates SQL queries, Airflow pipeline telemetry, and data warehouse access via a 4-part stack (LLM reasoning, context assembly layer, curated tool set, and runtime sandbox), achieving 100k-node dependency graph migrations."
   },
   {
-    "title": "Industry Case Studies › 15. How Netflix is Using Multimodal AI to Power Video Search",
-    "url": "/ai-quick-ref/08-industry-case-studies/#15-how-netflix-is-using-multimodal-ai-to-power-video-search",
+    "title": "Industry Case Studies › 16. How Netflix is Using Multimodal AI to Power Video Search",
+    "url": "/ai-quick-ref/08-industry-case-studies/#16-how-netflix-is-using-multimodal-ai-to-power-video-search",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Netflix solves search across 216 million video frames per season by building a decoupled temporal-bucketing pipeline that indexes visual clip embeddings, dialogue audio, and script metadata into a hierarchical hybrid vector-lexical search engine."
   },
   {
-    "title": "Industry Case Studies › 16. How Snapchat Serves a Billion Predictions Per Second",
-    "url": "/ai-quick-ref/08-industry-case-studies/#16-how-snapchat-serves-a-billion-predictions-per-second",
+    "title": "Industry Case Studies › 17. How Snapchat Serves a Billion Predictions Per Second",
+    "url": "/ai-quick-ref/08-industry-case-studies/#17-how-snapchat-serves-a-billion-predictions-per-second",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Snapchat decomposes real-time feed recommendations into a two-stage pipeline: Bento orchestrates ML model pipelines via Kubeflow, while an in-memory 800 TB online feature store serves 1 TB/sec of reads to score billions of candidates with sub-10ms latency."
   },
   {
-    "title": "Industry Case Studies › 17. How Grab is Using AI Agents to Boost Team Productivity",
-    "url": "/ai-quick-ref/08-industry-case-studies/#17-how-grab-is-using-ai-agents-to-boost-team-productivity",
+    "title": "Industry Case Studies › 18. How Grab is Using AI Agents to Boost Team Productivity",
+    "url": "/ai-quick-ref/08-industry-case-studies/#18-how-grab-is-using-ai-agents-to-boost-team-productivity",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Grab deploys specialized, domain-focused multi-agent systems connected to internal platforms (Lighthouse for data contracts, Coban for streaming) to triage alerts, verify bug hypotheses, and resolve production infrastructure incidents autonomously."
   },
   {
-    "title": "Industry Case Studies › 18. How Stripe Detects Fraudulent Transactions Within 100 ms",
-    "url": "/ai-quick-ref/08-industry-case-studies/#18-how-stripe-detects-fraudulent-transactions-within-100-ms",
+    "title": "Industry Case Studies › 19. How Stripe Detects Fraudulent Transactions Within 100 ms",
+    "url": "/ai-quick-ref/08-industry-case-studies/#19-how-stripe-detects-fraudulent-transactions-within-100-ms",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #evals",
     "content": "Stripe Radar migrates from gradient boosted trees to deep neural networks, transforming raw merchant transaction sequences into spatial coordinate embeddings that evaluate fraud probability alongside merchant-specific economic loss curves in under 100 milliseconds."
   },
   {
-    "title": "Industry Case Studies › 19. How Amazon Uses LLMs to Recommend Products",
-    "url": "/ai-quick-ref/08-industry-case-studies/#19-how-amazon-uses-llms-to-recommend-products",
+    "title": "Industry Case Studies › 20. How Amazon Uses LLMs to Recommend Products",
+    "url": "/ai-quick-ref/08-industry-case-studies/#20-how-amazon-uses-llms-to-recommend-products",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Amazon addresses semantic search mismatch by deploying LLMs to infer implicit product categories and user intent from queries (e.g., mapping pregnancy queries to slip-resistant footwear) backed by a two-tiered asynchronous cache store."
   },
   {
-    "title": "Industry Case Studies › 20. The Security Architecture of GitHub Agentic Workflow",
-    "url": "/ai-quick-ref/08-industry-case-studies/#20-the-security-architecture-of-github-agentic-workflow",
+    "title": "Industry Case Studies › 21. The Security Architecture of GitHub Agentic Workflow",
+    "url": "/ai-quick-ref/08-industry-case-studies/#21-the-security-architecture-of-github-agentic-workflow",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #mcp #agents #hardware",
     "content": "GitHub's autonomous CI/CD agent operates under a 'three layers of distrust' security model, sandwiching the agent between containerized Firecracker micro-VM isolation, an MCP gateway firewall that intercepts outbound tool commands, and an output sanitization scanner that scrubs leaked API secrets."
   },
   {
-    "title": "Industry Case Studies › 21. How LinkedIn Feed Uses LLMs to Serve 1.3 Billion Users",
-    "url": "/ai-quick-ref/08-industry-case-studies/#21-how-linkedin-feed-uses-llms-to-serve-13-billion-users",
+    "title": "Industry Case Studies › 22. How LinkedIn Feed Uses LLMs to Serve 1.3 Billion Users",
+    "url": "/ai-quick-ref/08-industry-case-studies/#22-how-linkedin-feed-uses-llms-to-serve-13-billion-users",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "LinkedIn unifies post ranking across 1.3 billion members by running approximate nearest-neighbor search for candidate selection in <50ms, followed by a Mixture-of-Experts (MoE) transformer scoring pipeline optimized with custom kernels that deliver 2x PyTorch speedup."
   },
   {
-    "title": "Industry Case Studies › 22. How Roblox Uses AI to Translate 16 Languages in 100 Milliseconds",
-    "url": "/ai-quick-ref/08-industry-case-studies/#22-how-roblox-uses-ai-to-translate-16-languages-in-100-milliseconds",
+    "title": "Industry Case Studies › 23. How Roblox Uses AI to Translate 16 Languages in 100 Milliseconds",
+    "url": "/ai-quick-ref/08-industry-case-studies/#23-how-roblox-uses-ai-to-translate-16-languages-in-100-milliseconds",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Roblox achieves real-time in-game chat translation in under 100ms using a sparsely-gated Mixture-of-Experts architecture that routes language tokens to specialized sub-networks, trained with back-translation loops and scored by reference-free quality estimation models."
   },
   {
-    "title": "Industry Case Studies › 23. How OpenAI Codex Works",
-    "url": "/ai-quick-ref/08-industry-case-studies/#23-how-openai-codex-works",
+    "title": "Industry Case Studies › 24. How OpenAI Codex Works",
+    "url": "/ai-quick-ref/08-industry-case-studies/#24-how-openai-codex-works",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #code",
     "content": "Breaks down the OpenAI Codex coding agent engine, illustrating how it manages conversational history turns, configures system and tool definitions, and wraps core agent loops inside a standardized JSON-RPC App Server protocol communicating over stdio."
   },
   {
-    "title": "Industry Case Studies › 24. How Stripe’s Minions Ship 1,300 PRs a Week",
-    "url": "/ai-quick-ref/08-industry-case-studies/#24-how-stripes-minions-ship-1300-prs-a-week",
+    "title": "Industry Case Studies › 25. How Stripe’s Minions Ship 1,300 PRs a Week",
+    "url": "/ai-quick-ref/08-industry-case-studies/#25-how-stripes-minions-ship-1300-prs-a-week",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #mcp #agents #code",
     "content": "Stripe ships 1,300 automated PRs weekly by pairing non-deterministic LLM coding agents with rigid, deterministic workflow rails (hardcoded linters, branch pushes, MCP ticket lookups, and test runners) that eliminate human babysitting."
   },
   {
-    "title": "Industry Case Studies › 25. How Vimeo Implemented AI-Powered Subtitles",
-    "url": "/ai-quick-ref/08-industry-case-studies/#25-how-vimeo-implemented-ai-powered-subtitles",
+    "title": "Industry Case Studies › 26. How Vimeo Implemented AI-Powered Subtitles",
+    "url": "/ai-quick-ref/08-industry-case-studies/#26-how-vimeo-implemented-ai-powered-subtitles",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Vimeo overcomes subtitle translation issues (such as grammatical lag in Japanese and incomplete transcript chunks) by decoupling single-pass translation into a 3-phase pipeline separating raw speech transcription, sentence-boundary consolidation, and timestamp synchronization."
   },
   {
-    "title": "Industry Case Studies › 26. The Algorithm That Powers Your X (Twitter) Post",
-    "url": "/ai-quick-ref/08-industry-case-studies/#26-the-algorithm-that-powers-your-x-twitter-post",
+    "title": "Industry Case Studies › 27. The Algorithm That Powers Your X (Twitter) Post",
+    "url": "/ai-quick-ref/08-industry-case-studies/#27-the-algorithm-that-powers-your-x-twitter-post",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #evals",
     "content": "An architectural breakdown of xAI's real-time recommendation engine powering X's 'For You' feed, combining fast vector candidate retrieval, transformer-based engagement prediction models, and graph-based social cluster signals."
   },
   {
-    "title": "Industry Case Studies › 27. The Architecture Behind Atlas: OpenAI’s New ChatGPT-based Browser",
-    "url": "/ai-quick-ref/08-industry-case-studies/#27-the-architecture-behind-atlas-openais-new-chatgpt-based-browser",
+    "title": "Industry Case Studies › 28. The Architecture Behind Atlas: OpenAI’s New ChatGPT-based Browser",
+    "url": "/ai-quick-ref/08-industry-case-studies/#28-the-architecture-behind-atlas-openais-new-chatgpt-based-browser",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Explores OpenAI's Atlas browser architecture, where Chromium's engine is integrated into a native Swift host via custom Mojo bindings and the private CALayerHost API to translate user events and grant ChatGPT real-time DOM agent browsing capabilities."
   },
   {
-    "title": "Industry Case Studies › 28. How Yelp Built “Yelp Assistant”",
-    "url": "/ai-quick-ref/08-industry-case-studies/#28-how-yelp-built-yelp-assistant",
+    "title": "Industry Case Studies › 29. How Yelp Built “Yelp Assistant”",
+    "url": "/ai-quick-ref/08-industry-case-studies/#29-how-yelp-built-yelp-assistant",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #evals",
     "content": "Yelp Assistant extracts factual answers from millions of unstructured reviews, photo captions, and business attributes through an offline embedding indexing pipeline, two-stage vector/keyword retrieval, and strict citation verification guardrails."
   },
   {
-    "title": "Industry Case Studies › 29. How Grab Built a Vision LLM to Scan Images",
-    "url": "/ai-quick-ref/08-industry-case-studies/#29-how-grab-built-a-vision-llm-to-scan-images",
+    "title": "Industry Case Studies › 30. How Grab Built a Vision LLM to Scan Images",
+    "url": "/ai-quick-ref/08-industry-case-studies/#30-how-grab-built-a-vision-llm-to-scan-images",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #rag",
     "content": "Grab replaced fragmented OCR pipelines with an end-to-end Vision LLM to extract structured merchant menus, receipts, and documents, employing a Key Information Extraction (KIE) module trained jointly on visual patches and text sequences."
   },
   {
-    "title": "Industry Case Studies › 30. How AI Transformed Database Debugging at Databricks",
-    "url": "/ai-quick-ref/08-industry-case-studies/#30-how-ai-transformed-database-debugging-at-databricks",
+    "title": "Industry Case Studies › 31. How AI Transformed Database Debugging at Databricks",
+    "url": "/ai-quick-ref/08-industry-case-studies/#31-how-ai-transformed-database-debugging-at-databricks",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #evals",
     "content": "Databricks built an autonomous agent platform that guides engineers through complex distributed database incident investigations by combining structured schema definitions for diagnostic tools with dual-axis eval metrics (identification accuracy vs helpfulness)."
   },
   {
-    "title": "Industry Case Studies › 31. OpenAI CLIP: The Model That Learnt Zero-Shot Image Recognition Using Text",
-    "url": "/ai-quick-ref/08-industry-case-studies/#31-openai-clip-the-model-that-learnt-zero-shot-image-recognition-using-text",
+    "title": "Industry Case Studies › 32. OpenAI CLIP: The Model That Learnt Zero-Shot Image Recognition Using Text",
+    "url": "/ai-quick-ref/08-industry-case-studies/#32-openai-clip-the-model-that-learnt-zero-shot-image-recognition-using-text",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #code",
     "content": "CLIP bridges visual and linguistic representations by training image and text encoders simultaneously using contrastive symmetric cross-entropy loss, enabling zero-shot image classification across diverse distributions without fine-tuning."
   },
   {
-    "title": "Industry Case Studies › 32. How Meta Built a New AI-Powered Ads Model for 5% Better Conversions",
-    "url": "/ai-quick-ref/08-industry-case-studies/#32-how-meta-built-a-new-ai-powered-ads-model-for-5-better-conversions",
+    "title": "Industry Case Studies › 33. How Meta Built a New AI-Powered Ads Model for 5% Better Conversions",
+    "url": "/ai-quick-ref/08-industry-case-studies/#33-how-meta-built-a-new-ai-powered-ads-model-for-5-better-conversions",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Meta's Generative Ads Model (GEM) achieved a 5% conversion uplift by splitting the ad prediction problem into three complementary sub-architectures that jointly capture short-term click interactions and multi-month long-term consumer purchase journeys."
   },
   {
-    "title": "Industry Case Studies › 33. How LinkedIn Built an AI-Powered Hiring Assistant",
-    "url": "/ai-quick-ref/08-industry-case-studies/#33-how-linkedin-built-an-ai-powered-hiring-assistant",
+    "title": "Industry Case Studies › 34. How LinkedIn Built an AI-Powered Hiring Assistant",
+    "url": "/ai-quick-ref/08-industry-case-studies/#34-how-linkedin-built-an-ai-powered-hiring-assistant",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents #evals",
     "content": "LinkedIn's Hiring Assistant uses a 'plan-and-execute' hierarchical agent pattern instead of monolithic ReAct loops, isolating search strategy planning from candidate data retrieval and recruiter communication."
   },
   {
-    "title": "Industry Case Studies › 34. How OpenAI, Gemini, and Claude Use Agents to Power Deep Research",
-    "url": "/ai-quick-ref/08-industry-case-studies/#34-how-openai-gemini-and-claude-use-agents-to-power-deep-research",
+    "title": "Industry Case Studies › 35. How OpenAI, Gemini, and Claude Use Agents to Power Deep Research",
+    "url": "/ai-quick-ref/08-industry-case-studies/#35-how-openai-gemini-and-claude-use-agents-to-power-deep-research",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Comparative analysis of deep research architectures across OpenAI, Google, and Anthropic, highlighting how orchestrator agents spawn parallel research sub-agents with dedicated web search tools and aggregate findings into unified verified dossiers."
   },
   {
-    "title": "Industry Case Studies › 35. How Meta Uses AI Agents for Data Warehouse Access and Security",
-    "url": "/ai-quick-ref/08-industry-case-studies/#35-how-meta-uses-ai-agents-for-data-warehouse-access-and-security",
+    "title": "Industry Case Studies › 36. How Meta Uses AI Agents for Data Warehouse Access and Security",
+    "url": "/ai-quick-ref/08-industry-case-studies/#36-how-meta-uses-ai-agents-for-data-warehouse-access-and-security",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Meta redesigned its internal data warehouse architecture to grant AI agents scoped access via a manager agent dispatch layer, automatic schema relationship discovery, and rule-based risk calculations that temporarily elevate privileges during verified production outages."
   },
   {
-    "title": "Industry Case Studies › 36. How Grab Built an AI Foundation Model To Understand Customers Better",
-    "url": "/ai-quick-ref/08-industry-case-studies/#36-how-grab-built-an-ai-foundation-model-to-understand-customers-better",
+    "title": "Industry Case Studies › 37. How Grab Built an AI Foundation Model To Understand Customers Better",
+    "url": "/ai-quick-ref/08-industry-case-studies/#37-how-grab-built-an-ai-foundation-model-to-understand-customers-better",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Grab created a unified customer representation model by jointly training on tabular user profile attributes and time-series interaction event logs, converting user session histories into unified intent vectors."
   },
   {
-    "title": "Industry Case Studies › 37. How Uber Built a Conversational AI Agent For Financial Analysis",
-    "url": "/ai-quick-ref/08-industry-case-studies/#37-how-uber-built-a-conversational-ai-agent-for-financial-analysis",
+    "title": "Industry Case Studies › 38. How Uber Built a Conversational AI Agent For Financial Analysis",
+    "url": "/ai-quick-ref/08-industry-case-studies/#38-how-uber-built-a-conversational-ai-agent-for-financial-analysis",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Uber engineered 'Finch', an autonomous financial data agent that translates corporate executive questions into live SQL against data lakes, featuring a multi-turn context builder and automated data lineage auditing."
   },
   {
-    "title": "Industry Case Studies › 38. How Perplexity Built an AI Google",
-    "url": "/ai-quick-ref/08-industry-case-studies/#38-how-perplexity-built-an-ai-google",
+    "title": "Industry Case Studies › 39. How Perplexity Built an AI Google",
+    "url": "/ai-quick-ref/08-industry-case-studies/#39-how-perplexity-built-an-ai-google",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #rag #evals",
     "content": "Dissects Perplexity's real-time AI search engine, highlighting how an iterative RAG architecture coordinates web index retrieval, query re-ranking, and low-latency citation generation under tight sub-second SLA requirements."
   },
   {
-    "title": "Industry Case Studies › 39. The Evolution of LinkedIn’s Generative AI Tech Stack",
-    "url": "/ai-quick-ref/08-industry-case-studies/#39-the-evolution-of-linkedins-generative-ai-tech-stack",
+    "title": "Industry Case Studies › 40. The Evolution of LinkedIn’s Generative AI Tech Stack",
+    "url": "/ai-quick-ref/08-industry-case-studies/#40-the-evolution-of-linkedins-generative-ai-tech-stack",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #rag #mcp #agents",
     "content": "Traces the architectural evolution of LinkedIn's GenAI platform from fragmented single-prompt wrappers to an enterprise agentic infrastructure standardizing observability, tool calling, and MCP/A2A communication interfaces."
   },
   {
-    "title": "Industry Case Studies › 40. How Salesforce Used AI To Reduce Test Failure Resolution Time By 30%",
-    "url": "/ai-quick-ref/08-industry-case-studies/#40-how-salesforce-used-ai-to-reduce-test-failure-resolution-time-by-30",
+    "title": "Industry Case Studies › 41. How Salesforce Used AI To Reduce Test Failure Resolution Time By 30%",
+    "url": "/ai-quick-ref/08-industry-case-studies/#41-how-salesforce-used-ai-to-reduce-test-failure-resolution-time-by-30",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #agents",
     "content": "Salesforce built the Test Failure (TF) Triage Agent, using FAISS vector indexing to match stack traces and regression logs against historical resolutions within seconds, slashing engineering debug turnaround by 30%."
   },
   {
-    "title": "Industry Case Studies › 41. How OpenAI Uses Kubernetes And Apache Kafka for GenAI",
-    "url": "/ai-quick-ref/08-industry-case-studies/#41-how-openai-uses-kubernetes-and-apache-kafka-for-genai",
+    "title": "Industry Case Studies › 42. How OpenAI Uses Kubernetes And Apache Kafka for GenAI",
+    "url": "/ai-quick-ref/08-industry-case-studies/#42-how-openai-uses-kubernetes-and-apache-kafka-for-genai",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #inference",
     "content": "OpenAI scales generative AI training and inference pipelines by deploying Kubernetes clusters partitioned with per-namespace isolation and multi-primary Apache Kafka topologies managed by watchdog controllers for automated cluster failover."
   },
   {
-    "title": "Industry Case Studies › 42. How Meta Animates Billions of AI-generated Images",
-    "url": "/ai-quick-ref/08-industry-case-studies/#42-how-meta-animates-billions-of-ai-generated-images",
+    "title": "Industry Case Studies › 43. How Meta Animates Billions of AI-generated Images",
+    "url": "/ai-quick-ref/08-industry-case-studies/#43-how-meta-animates-billions-of-ai-generated-images",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #hardware",
     "content": "Meta distills multi-pass diffusion generation into single-pass execution using half-precision GPU acceleration and dynamic geographic capacity offloading to animate billions of AI images with predictable sub-second response times."
   },
   {
-    "title": "Industry Case Studies › 43. How Anthropic Built a Multi-Agent Research System",
-    "url": "/ai-quick-ref/08-industry-case-studies/#43-how-anthropic-built-a-multi-agent-research-system",
+    "title": "Industry Case Studies › 44. How Anthropic Built a Multi-Agent Research System",
+    "url": "/ai-quick-ref/08-industry-case-studies/#44-how-anthropic-built-a-multi-agent-research-system",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture #mcp #agents",
     "content": "Anthropic's research assistant coordinates multi-agent research through Model Context Protocol (MCP) tool integration, separating evidence collection from final synthesis while auditing citations against source material."
   },
   {
-    "title": "Industry Case Studies › 44. How DoorDash uses AI Models to Understand Restaurant Menus",
-    "url": "/ai-quick-ref/08-industry-case-studies/#44-how-doordash-uses-ai-models-to-understand-restaurant-menus",
+    "title": "Industry Case Studies › 45. How DoorDash uses AI Models to Understand Restaurant Menus",
+    "url": "/ai-quick-ref/08-industry-case-studies/#45-how-doordash-uses-ai-models-to-understand-restaurant-menus",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "DoorDash parses heterogeneous menu photos and text using a multimodal fusion pipeline combined with confidence-scored guardrails that automatically ingest high-confidence items while routing ambiguous items to human operators."
   },
   {
-    "title": "Industry Case Studies › 45. How Nubank Uses AI Models to Analyze Transaction Data for 100M Users",
-    "url": "/ai-quick-ref/08-industry-case-studies/#45-how-nubank-uses-ai-models-to-analyze-transaction-data-for-100m-users",
+    "title": "Industry Case Studies › 46. How Nubank Uses AI Models to Analyze Transaction Data for 100M Users",
+    "url": "/ai-quick-ref/08-industry-case-studies/#46-how-nubank-uses-ai-models-to-analyze-transaction-data-for-100m-users",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Nubank applies Next Token Prediction (NTP) to sequential banking events, converting raw financial descriptions and spending categories via Byte Pair Encoding into unified embeddings that feed cross-network deep fraud classifiers for 100M customers."
   },
   {
-    "title": "Industry Case Studies › 46. How Spotify Uses GenAI and ML to Annotate a Hundred Million Tracks",
-    "url": "/ai-quick-ref/08-industry-case-studies/#46-how-spotify-uses-genai-and-ml-to-annotate-a-hundred-million-tracks",
+    "title": "Industry Case Studies › 47. How Spotify Uses GenAI and ML to Annotate a Hundred Million Tracks",
+    "url": "/ai-quick-ref/08-industry-case-studies/#47-how-spotify-uses-genai-and-ml-to-annotate-a-hundred-million-tracks",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Spotify orchestrates human-in-the-loop track categorization across 100M music titles via a three-pillar platform combining generative audio pre-annotations, specialized modality tooling, and throughput tracking metrics."
   },
   {
-    "title": "Industry Case Studies › 47. Inside Airbnb’s AI-Powered Pipeline to Migrate Tests: Months of Work in Days",
-    "url": "/ai-quick-ref/08-industry-case-studies/#47-inside-airbnbs-ai-powered-pipeline-to-migrate-tests-months-of-work-in-days",
+    "title": "Industry Case Studies › 48. Inside Airbnb’s AI-Powered Pipeline to Migrate Tests: Months of Work in Days",
+    "url": "/ai-quick-ref/08-industry-case-studies/#48-inside-airbnbs-ai-powered-pipeline-to-migrate-tests-months-of-work-in-days",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Airbnb accelerated large-scale test framework migrations using LLMs wired into automated compiler feedback loops that iteratively adjust imports, variable types, and assertions until unit suites pass regression validation."
   },
   {
-    "title": "Industry Case Studies › 48. How Lyft Uses ML to Make 100 Million Predictions A Day",
-    "url": "/ai-quick-ref/08-industry-case-studies/#48-how-lyft-uses-ml-to-make-100-million-predictions-a-day",
+    "title": "Industry Case Studies › 49. How Lyft Uses ML to Make 100 Million Predictions A Day",
+    "url": "/ai-quick-ref/08-industry-case-studies/#49-how-lyft-uses-ml-to-make-100-million-predictions-a-day",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Lyft enforces strict repository isolation boundaries across its service mesh and container fleet to execute 100M daily driver/rider dispatch predictions with predictable latency and zero deployment regressions."
   },
   {
-    "title": "Industry Case Studies › 49. How Airbnb Powers Personalization With 1M Events Per Second",
-    "url": "/ai-quick-ref/08-industry-case-studies/#49-how-airbnb-powers-personalization-with-1m-events-per-second",
+    "title": "Industry Case Studies › 50. How Airbnb Powers Personalization With 1M Events Per Second",
+    "url": "/ai-quick-ref/08-industry-case-studies/#50-how-airbnb-powers-personalization-with-1m-events-per-second",
     "categories": "Industry Case Studies (Intermediate)",
     "tags": "#case-studies #system-design #production #architecture",
     "content": "Airbnb's real-time personalization engine processes 1 million events per second using Apache Kafka, Apache Flink stateful stream processing, and a low-latency key-value store to update user intent features dynamically within short sliding session windows."

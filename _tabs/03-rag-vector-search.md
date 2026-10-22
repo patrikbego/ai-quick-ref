@@ -34,7 +34,31 @@ Deconstructs the complete lifecycle of production Retrieval-Augmented Generation
 
 ---
 
-## 2. GraphRAG: How AI Answers Questions Hidden Across Many Documents
+## 2. EP229: 8 Chunking Strategies for RAG-Based Agents
+
+> 🗓️ **Date:** 17 Oct 2026 · <span class="badge bg-warning text-dark">🟡 Intermediate</span>
+{: .label .label-green }
+
+**Architectural Summary:**  
+Comprehensive technical analysis of eight text chunking strategies for agentic retrieval systems—evaluating fixed-size, sentence-level, recursive character, document structure-aware, semantic similarity shift, and agentic LLM-driven chunking to optimize context window recall versus boundary fidelity. Additionally dissects the sequence-to-sequence neural architecture of Google Translate and the modular anatomy of executable Agent Skills.
+
+### Key Diagrams
+
+#### 8 Chunking Strategies for RAG-Based Agents
+![8 Chunking Strategies](/assets/images/rag/rag-chunking-01-strategies-for-agents.png)
+*Comparative taxonomy of chunking algorithms: character/token fixed-size, recursive chunking, document-aware Markdown/HTML parsing, semantic boundary splitting, and hierarchical parent-child retrieval.*
+
+#### Google Translate Neural Machine Translation Architecture
+![Google Translate Neural Architecture](/assets/images/rag/rag-chunking-02-google-translate-architecture.png)
+*Deep sequence-to-sequence transformer encoder-decoder architecture with residual connections and multi-head cross-attention for multilingual cross-lingual document translation.*
+
+#### Agent Skills Modular Execution Architecture
+![Agent Skills Modular Architecture](/assets/images/rag/rag-chunking-03-agent-skills-execution-architecture.png)
+*Architectural specification of executable agent skills: schema contracts, input validation, tool isolation, state management, and orchestration loops.*
+
+---
+
+## 3. GraphRAG: How AI Answers Questions Hidden Across Many Documents
 
 > 🗓️ **Date:** 19 Aug 2026
 
@@ -73,7 +97,7 @@ Overcomes standard vector similarity limits on corpus-wide aggregation by extrac
 
 ---
 
-## 3. Why Your RAG System Is Only as Good as Its Translator Model
+## 4. Why Your RAG System Is Only as Good as Its Translator Model
 
 > 🗓️ **Date:** 02 Sep 2026
 {: .label .label-blue }
@@ -109,7 +133,7 @@ Argues that RAG accuracy is fundamentally bounded by the quality and domain alig
 
 ---
 
-## 4. EP220: RAG vs Graph RAG vs Agentic RAG
+## 5. EP220: RAG vs Graph RAG vs Agentic RAG
 
 > 🗓️ **Date:** 27 Jun 2026
 {: .label .label-green }
@@ -125,7 +149,7 @@ Contrasts the three primary retrieval paradigms—Standard RAG (single-turn sema
 
 ---
 
-## 5. How Airtable Built the Search Layer Behind Their AI Features
+## 6. How Airtable Built the Search Layer Behind Their AI Features
 
 > 🗓️ **Date:** 27 May 2026
 
@@ -156,7 +180,7 @@ Explains how Airtable architected a multi-tenant vector search system on Milvus 
 
 ---
 
-## 6. How CockroachDB Built Vector Indexing at Scale
+## 7. How CockroachDB Built Vector Indexing at Scale
 
 > 🗓️ **Date:** 25 May 2026
 {: .label .label-blue }
@@ -184,7 +208,7 @@ Details C-SPANN, CockroachDB's distributed vector indexing engine designed to el
 
 ---
 
-## 7. EP216: RAGs vs Agents
+## 8. EP216: RAGs vs Agents
 
 > 🗓️ **Date:** 23 May 2026
 {: .label .label-yellow }
@@ -204,7 +228,7 @@ Contrasts the single-turn, low-cost grounding architecture of RAG (embed -> vect
 
 ---
 
-## 8. How Agentic RAG Works?
+## 9. How Agentic RAG Works?
 
 > 🗓️ **Date:** 23 Mar 2026
 
@@ -231,7 +255,7 @@ Replaces rigid one-way RAG pipelines with an iterative control loop where an age
 
 ---
 
-## 9. Dropbox Multimedia Search: Making File Search More Useful
+## 10. Dropbox Multimedia Search: Making File Search More Useful
 
 > 🗓️ **Date:** 09 Dec 2025
 {: .label .label-blue }
@@ -255,7 +279,7 @@ Details the architecture powering Dropbox Dash’s multimedia search across bill
 
 ---
 
-## 10. How RAG Enables AI For Your Data
+## 11. How RAG Enables AI For Your Data
 
 > 🗓️ **Date:** 23 Sep 2025
 {: .label .label-green }
@@ -283,7 +307,7 @@ Establishes the foundational end-to-end RAG architecture—solving training cuto
 
 ---
 
-## 11. How Dropbox Built an AI Product Dash with RAG and AI Agents
+## 12. How Dropbox Built an AI Product Dash with RAG and AI Agents
 
 > 🗓️ **Date:** 02 Sep 2025
 
@@ -306,7 +330,7 @@ Explores the architecture of Dropbox Dash, uniting enterprise-wide cross-platfor
 
 ---
 
-## 12. EP169: RAG vs Agentic RAG
+## 13. EP169: RAG vs Agentic RAG
 
 > 🗓️ **Date:** 28 Jun 2025
 {: .label .label-yellow }
