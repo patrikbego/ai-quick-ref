@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Systems Architecture Cheat Sheet & Interactive Navigator</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @media print {
+      body { background: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      .tab-content { display: block !important; }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- TOP NAVIGATION HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50 px-6 py-4 flex flex-wrap items-center justify-between gap-4 no-print">
+    <div class="flex items-center gap-3">
+      <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-xl font-bold">
+        ⚡
+      </div>
+      <div>
+        <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
+          AI Systems Architecture Cheat Sheet
+          <span class="text-xs font-mono font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full">v2026.10</span>
+        </h1>
+        <p class="text-xs text-slate-400">Interactive Systems Topology, VRAM Calculator & Production Decision Matrices</p>
+      </div>
+    </div>
+
+    <!-- TAB BUTTONS -->
+    <nav class="flex items-center gap-1.5 bg-slate-950/80 p-1.5 rounded-xl border border-slate-800 text-xs font-medium">
+      <button onclick="switchTab('lifecycle')" id="btn-lifecycle" class="tab-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold transition">
+        🏛️ Lifecycle Flow
+      </button>
+      <button onclick="switchTab('calculator')" id="btn-calculator" class="tab-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition">
+        🧮 VRAM & KV Calculator
+      </button>
+      <button onclick="switchTab('matrices')" id="btn-matrices" class="tab-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition">
+        📋 Decision Matrices
+      </button>
+      <button onclick="switchTab('code')" id="btn-code" class="tab-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition">
+        💻 Code Snippets
+      </button>
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="flex items-center gap-2">
+      <button onclick="window.print()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5 transition">
+        🖨️ Print / PDF
+      </button>
+      <a href="https://patrikbego.github.io/ai-quick-ref/" target="_blank" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/40 flex items-center gap-1.5 transition">
+        🌐 Documentation Site ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: INTERACTIVE PRODUCTION AI LIFECYCLE BLUEPRINT                      -->
+    <!-- ========================================================================= -->
+    <section id="tab-lifecycle" class="tab-content space-y-6">
+      
+      <!-- HERO BANNER -->
+      <div class="bg-gradient-to-r from-indigo-950/60 via-slate-900 to-slate-900 border border-indigo-500/30 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+        <div class="max-w-3xl space-y-2 relative z-10">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold text-indigo-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+            End-to-End Enterprise Systems Architecture
+          </div>
+          <h2 class="text-2xl font-extrabold text-white">Production AI Lifecycle Blueprint</h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Click on any of the seven stages in the pipeline below to inspect systems dataflow, target latency budgets, mathematical formulations, and engineering mitigations.
+          </p>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE PIPELINE STEPS CAROUSEL / GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-7 gap-2.5">
+        
+        <button onclick="selectStage(1)" id="stage-btn-1" class="stage-nav-btn text-left p-3.5 rounded-xl border border-indigo-500/40 bg-indigo-950/40 hover:bg-indigo-900/40 transition group">
+          <div class="text-[10px] font-mono text-indigo-400 font-bold uppercase mb-1">Stage 01</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Data Engine</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">MinHash & BPE</div>
+        </button>
+
+        <button onclick="selectStage(2)" id="stage-btn-2" class="stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group">
+          <div class="text-[10px] font-mono text-slate-400 font-bold uppercase mb-1">Stage 02</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Pre-Training</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">3D Parallelism</div>
+        </button>
+
+        <button onclick="selectStage(3)" id="stage-btn-3" class="stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group">
+          <div class="text-[10px] font-mono text-slate-400 font-bold uppercase mb-1">Stage 03</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Alignment</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">RLVR & GRPO</div>
+        </button>
+
+        <button onclick="selectStage(4)" id="stage-btn-4" class="stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group">
+          <div class="text-[10px] font-mono text-slate-400 font-bold uppercase mb-1">Stage 04</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Eval Gates</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">Debiased Judge</div>
+        </button>
+
+        <button onclick="selectStage(5)" id="stage-btn-5" class="stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group">
+          <div class="text-[10px] font-mono text-slate-400 font-bold uppercase mb-1">Stage 05</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Serving Engine</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">vLLM & Radix</div>
+        </button>
+
+        <button onclick="selectStage(6)" id="stage-btn-6" class="stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group">
+          <div class="text-[10px] font-mono text-slate-400 font-bold uppercase mb-1">Stage 06</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Tool / MCP</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">Agent Gateways</div>
+        </button>
+
+        <button onclick="selectStage(7)" id="stage-btn-7" class="stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group">
+          <div class="text-[10px] font-mono text-slate-400 font-bold uppercase mb-1">Stage 07</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 transition">Telemetry</div>
+          <div class="text-[11px] text-slate-400 mt-1 truncate">Active Flywheel</div>
+        </button>
+
+      </div>
+
+      <!-- ACTIVE STAGE INSPECTOR DRAWER -->
+      <div id="stage-inspector" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl space-y-6">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: INTERACTIVE VRAM & KV-CACHE SIZING CALCULATOR                      -->
+    <!-- ========================================================================= -->
+    <section id="tab-calculator" class="tab-content hidden space-y-6">
+      
+      <div class="bg-gradient-to-r from-violet-950/60 via-slate-900 to-slate-900 border border-violet-500/30 rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+          🧮 LLM VRAM & KV-Cache Sizing Calculator
+        </h2>
+        <p class="text-sm text-slate-300 mt-1">
+          Accurately size GPU memory requirements for model weights, multi-turn KV-cache paging, and CUDA runtime overhead across frontier and open-weight architectures.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- INPUT CONTROLS (5 COLS) -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-5">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300 border-b border-slate-800 pb-2">
+            Model & Serving Parameters
+          </h3>
+
+          <!-- PRESETS -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Model Architecture Preset</label>
+            <select id="calc-preset" onchange="applyPreset()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-indigo-500">
+              <option value="8">Llama-3.1 8B (32 Layers, 8 KV Heads, 128 Dim)</option>
+              <option value="70">Llama-3.1 70B (80 Layers, 8 KV Heads, 128 Dim)</option>
+              <option value="405">Llama-3.1 405B (126 Layers, 8 KV Heads, 128 Dim)</option>
+              <option value="37">DeepSeek-V3 / MoE (37B Active, 61 Layers, 128 Dim)</option>
+              <option value="custom">Custom Parameters</option>
+            </select>
+          </div>
+
+          <!-- PARAM COUNT -->
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Parameters (Billions)</label>
+              <input type="number" id="calc-params" value="8" step="0.5" oninput="calculateVRAM()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-100 font-mono">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Weight Precision</label>
+              <select id="calc-weight-prec" onchange="calculateVRAM()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-100">
+                <option value="2">FP16 / BF16 (16-bit, 2B)</option>
+                <option value="1">FP8 / INT8 (8-bit, 1B)</option>
+                <option value="0.5">AWQ / GPTQ INT4 (4-bit, 0.5B)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CONTEXT LENGTH SLIDER -->
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <label class="text-xs font-semibold text-slate-300">Context Window Length</label>
+              <span id="label-context" class="text-xs font-mono font-bold text-indigo-400">8,192 tokens</span>
+            </div>
+            <input type="range" id="calc-context" min="1024" max="131072" step="1024" value="8192" oninput="updateContextLabel(); calculateVRAM()" class="w-full accent-indigo-500">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+              <span>1k</span>
+              <span>32k</span>
+              <span>64k</span>
+              <span>128k</span>
+            </div>
+          </div>
+
+          <!-- BATCH SIZE SLIDER -->
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <label class="text-xs font-semibold text-slate-300">Concurrent Streams (Batch Size)</label>
+              <span id="label-batch" class="text-xs font-mono font-bold text-indigo-400">8 requests</span>
+            </div>
+            <input type="range" id="calc-batch" min="1" max="64" step="1" value="8" oninput="updateBatchLabel(); calculateVRAM()" class="w-full accent-indigo-500">
+          </div>
+
+          <!-- KV CACHE PRECISION -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">KV-Cache Quantization</label>
+            <select id="calc-kv-prec" onchange="calculateVRAM()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-100">
+              <option value="2">FP16 (Standard 2 Bytes / element)</option>
+              <option value="1" selected>FP8 Paged KV-Cache (1 Byte / element)</option>
+              <option value="0.5">INT4 Compressed KV-Cache (0.5 Bytes / element)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- CALCULATION RESULTS (7 COLS) -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300 border-b border-slate-800 pb-2">
+              VRAM Sizing Breakdown
+            </h3>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-5">
+              
+              <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4">
+                <div class="text-[11px] text-slate-400 font-medium">Model Weights</div>
+                <div id="res-weights" class="text-xl font-bold font-mono text-white mt-1">16.0 GB</div>
+                <div class="text-[10px] text-slate-500 mt-1">In VRAM</div>
+              </div>
+
+              <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4">
+                <div class="text-[11px] text-slate-400 font-medium">KV Cache Pool</div>
+                <div id="res-kv" class="text-xl font-bold font-mono text-indigo-400 mt-1">4.2 GB</div>
+                <div class="text-[10px] text-slate-500 mt-1">PagedAttention</div>
+              </div>
+
+              <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4">
+                <div class="text-[11px] text-slate-400 font-medium">CUDA & Overhead</div>
+                <div id="res-cuda" class="text-xl font-bold font-mono text-slate-300 mt-1">3.0 GB</div>
+                <div class="text-[10px] text-slate-500 mt-1">Kernels & buffers</div>
+              </div>
+
+            </div>
+
+            <!-- TOTAL VRAM REQUIREMENT -->
+            <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-indigo-950/80 to-slate-950 border border-indigo-500/40">
+              <div class="flex justify-between items-baseline">
+                <div>
+                  <span class="text-xs uppercase font-mono font-semibold text-indigo-400">Total VRAM Required</span>
+                  <div id="res-total" class="text-3xl font-extrabold font-mono text-white mt-0.5">23.2 GB</div>
+                </div>
+                <div id="res-badge" class="px-3 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  Fits on 1x 24GB GPU
+                </div>
+              </div>
+              <div class="w-full bg-slate-800 h-2.5 rounded-full mt-3 overflow-hidden flex">
+                <div id="bar-weights" class="bg-indigo-500 h-full" style="width: 60%"></div>
+                <div id="bar-kv" class="bg-violet-400 h-full" style="width: 25%"></div>
+                <div id="bar-cuda" class="bg-slate-500 h-full" style="width: 15%"></div>
+              </div>
+            </div>
+
+            <!-- HARDWARE RECOMMENDATION BOX -->
+            <div class="mt-5 bg-slate-950 border border-slate-800 rounded-xl p-4">
+              <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Recommended Hardware Cluster Topology
+              </div>
+              <div id="res-hardware" class="text-sm font-semibold text-indigo-300 flex items-center gap-2">
+                🚀 1x NVIDIA RTX 4090 (24 GB) or 1x RTX 6000 Ada (48 GB)
+              </div>
+              <div class="text-xs text-slate-400 mt-1 leading-relaxed" id="res-hardware-desc">
+                Serving using vLLM with PagedAttention and chunked prefill enabled.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- KV FORMULA CALLOUT -->
+          <div class="text-xs font-mono bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-slate-400">
+            <span class="text-slate-300 font-semibold">KV Cache Formula:</span>
+            Memory = 2 × Layers × Heads_KV × Head_Dim × Tokens × Batch_Size × Bytes
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: ARCHITECTURAL DECISION MATRICES                                    -->
+    <!-- ========================================================================= -->
+    <section id="tab-matrices" class="tab-content hidden space-y-6">
+      
+      <div class="bg-gradient-to-r from-emerald-950/60 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+          📋 Production Architecture Decision Matrices
+        </h2>
+        <p class="text-sm text-slate-300 mt-1">
+          Comparative trade-off matrices covering Caching Tiers, RAG Chunking, and Mathematical Post-Training Alignment.
+        </p>
+      </div>
+
+      <!-- MATRIX 1: CACHING TIERS -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          ⚡ 1. Multi-Tier Caching Decision Matrix
+          <span class="text-xs font-normal text-slate-400 font-mono">(L1 Exact → L2 Semantic → L3 Prompt KV → L4 Generation)</span>
+        </h3>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border-collapse font-sans">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-950/80 text-slate-300 font-semibold uppercase text-[11px]">
+                <th class="p-3">Cache Tier</th>
+                <th class="p-3">Where It Lives</th>
+                <th class="p-3">Lookup Mechanism</th>
+                <th class="p-3">Hit Latency</th>
+                <th class="p-3">Cost per Hit</th>
+                <th class="p-3">Primary Invalidation Risk</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300 font-mono text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-bold text-white font-sans">L1: Exact Match</td>
+                <td class="p-3">In-Memory / Redis</td>
+                <td class="p-3">SHA-256 hash of normalized prompt</td>
+                <td class="p-3 text-emerald-400 font-bold">&lt; 5 ms</td>
+                <td class="p-3 text-emerald-400">$0.00</td>
+                <td class="p-3 font-sans">Zero false positives; rigid match.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-bold text-indigo-300 font-sans">L2: Semantic Cache</td>
+                <td class="p-3">Vector DB (Milvus/Qdrant)</td>
+                <td class="p-3">Cosine similarity (&gt; 0.94 threshold)</td>
+                <td class="p-3 text-emerald-400 font-bold">15 – 35 ms</td>
+                <td class="p-3 text-emerald-400">$0.00</td>
+                <td class="p-3 font-sans">False positive hallucinations; session context drift.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-bold text-violet-300 font-sans">L3: Prompt Prefix KV</td>
+                <td class="p-3">GPU VRAM (RadixAttention)</td>
+                <td class="p-3">Token Radix prefix tree matching</td>
+                <td class="p-3 text-amber-400 font-bold">50 – 120 ms</td>
+                <td class="p-3 text-amber-400">~20% token cost</td>
+                <td class="p-3 font-sans">Non-prefix modifications invalidate downstream KV blocks.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-bold text-rose-300 font-sans">L4: Full Generation</td>
+                <td class="p-3">GPU Tensor Cores</td>
+                <td class="p-3">Full forward prefill + decode loop</td>
+                <td class="p-3 text-rose-400 font-bold">400 – 2500 ms</td>
+                <td class="p-3 text-rose-400">100% token cost</td>
+                <td class="p-3 font-sans">Full compute invocation & latency.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MATRIX 2: 8 RAG CHUNKING STRATEGIES -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          🧩 2. RAG Chunking Strategies Decision Matrix
+        </h3>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-950/80 text-slate-300 font-semibold uppercase text-[11px]">
+                <th class="p-3">Strategy</th>
+                <th class="p-3">Typical Size</th>
+                <th class="p-3">Boundary Logic</th>
+                <th class="p-3">Best Used For</th>
+                <th class="p-3">Critical Trade-off</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300 text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-white">Fixed-Size</td>
+                <td class="p-3 font-mono">256 - 512 tokens</td>
+                <td class="p-3">Arbitrary token/char count with 10% overlap</td>
+                <td class="p-3">High-volume raw text, uniform baseline</td>
+                <td class="p-3 text-rose-400">Splits sentences and code mid-syntax.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-indigo-300">Recursive Character</td>
+                <td class="p-3 font-mono">512 - 1000 tokens</td>
+                <td class="p-3">Hierarchical delimiters: `\n\n`, `\n`, ` `, `""`</td>
+                <td class="p-3">General articles, prose, markdown notes</td>
+                <td class="p-3 text-amber-400">Irregular chunk sizes vary variance in vector scores.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-emerald-300">Document AST / Header</td>
+                <td class="p-3 font-mono">Variable (by section)</td>
+                <td class="p-3">Markdown `#` headers, HTML tags, code functions</td>
+                <td class="p-3">Engineering docs, Confluence, API specs</td>
+                <td class="p-3 text-amber-400">Requires clean structured source documents.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-cyan-300">Semantic Shift</td>
+                <td class="p-3 font-mono">Dynamic</td>
+                <td class="p-3">Embedding cosine drop between adjacent sentences</td>
+                <td class="p-3">Transcripts, conversational logs, podcasts</td>
+                <td class="p-3 text-rose-400">High computational overhead during offline ingestion.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-violet-300">Parent-Child / Hierarchical</td>
+                <td class="p-3 font-mono">Small (128) child, Large (1024) parent</td>
+                <td class="p-3">Search small chunk; return parent context to LLM</td>
+                <td class="p-3">Dense factual question answering, manuals</td>
+                <td class="p-3 text-indigo-400">Increases context token load during prompt synthesis.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 4: RUNNABLE CODE SNIPPETS                                             -->
+    <!-- ========================================================================= -->
+    <section id="tab-code" class="tab-content hidden space-y-6">
+      
+      <div class="bg-gradient-to-r from-amber-950/60 via-slate-900 to-slate-900 border border-amber-500/30 rounded-2xl p-6 shadow-xl">
+        <h2 class="text-2xl font-extrabold text-white flex items-center gap-2">
+          💻 Production Reference Implementations
+        </h2>
+        <p class="text-sm text-slate-300 mt-1">
+          Hardened runnable code patterns for FastMCP servers, Hybrid RAG with Reciprocal Rank Fusion, and Multi-Tier Caching.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- CODE 1: FAST MCP SERVER -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+          <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-indigo-300 uppercase font-mono">Python: FastMCP Production Server</span>
+            <span class="text-[10px] text-slate-500 font-mono">MCP Protocol Standard</span>
+          </div>
+          <pre class="bg-slate-950 p-4 rounded-xl text-xs font-mono text-slate-200 overflow-x-auto leading-relaxed border border-slate-800/80"><code>from mcp.server.fastmcp import FastMCP
+from pydantic import BaseModel, Field
+
+mcp = FastMCP("enterprise-inventory-gateway")
+
+class QueryParams(BaseModel):
+    sku: str = Field(description="Unique inventory SKU")
+    warehouse: str = Field(default="primary", description="Warehouse ID")
+
+@mcp.tool()
+def check_stock(params: QueryParams) -> dict:
+    """Deterministic stock lookup for autonomous agent loops."""
+    # Production database query with telemetry
+    return {"sku": params.sku, "available": 142, "status": "IN_STOCK"}
+
+if __name__ == "__main__":
+    mcp.run(transport="stdio")</code></pre>
+        </div>
+
+        <!-- CODE 2: HYBRID RAG WITH RRF -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+          <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+            <span class="text-xs font-bold text-emerald-300 uppercase font-mono">Python: Reciprocal Rank Fusion (RRF)</span>
+            <span class="text-[10px] text-slate-500 font-mono">Dense + BM25 Hybrid</span>
+          </div>
+          <pre class="bg-slate-950 p-4 rounded-xl text-xs font-mono text-slate-200 overflow-x-auto leading-relaxed border border-slate-800/80"><code>def reciprocal_rank_fusion(dense_ranks, bm25_ranks, k=60):
+    """Fuses dense vector and sparse keyword rankings."""
+    rrf_scores = {}
+    for rank, doc_id in enumerate(dense_ranks):
+        rrf_scores[doc_id] = rrf_scores.get(doc_id, 0.0) + (1.0 / (k + rank + 1))
+    for rank, doc_id in enumerate(bm25_ranks):
+        rrf_scores[doc_id] = rrf_scores.get(doc_id, 0.0) + (1.0 / (k + rank + 1))
+    
+    # Sort descending by fused score
+    return sorted(rrf_scores.items(), key=lambda x: x[1], reverse=True)</code></pre>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-6 px-6 text-center text-xs text-slate-500 space-y-1 no-print">
+    <p>AI Quick Reference Engineering Knowledge Base · Open Source Systems Architecture</p>
+    <p class="text-[11px] text-slate-600">Built for production ML engineers, infrastructure architects, and system designers.</p>
+  </footer>
+
+  <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+  <script>
+    // STAGES DATA STORE
+    const STAGES = {
+      1: {
+        title: "Stage 1: Data Engine & Tokenization Pipeline",
+        icon: "🧹",
+        sla: "Deduplication > 35% · Zero PII Leakage · Tokenizer byte-fallback enabled",
+        stack: "MinHash LSH, FastText classifiers, Datatrove, Tiktoken, HuggingFace Tokenizers",
+        summary: "Web-scale text crawls (Common Crawl, FineWeb) undergo multi-stage decontamination. MinHash Locality-Sensitive Hashing identifies near-duplicate documents at a 0.8 Jaccard index. BPE vocabularies enforce byte-fallback to guarantee zero out-of-vocabulary exceptions.",
+        mitigation: "Data Contamination: Pre-training data must be aggressively decontaminated using 13-gram overlap checks against standard test suites (GSM8K, HumanEval, SWE-bench).",
+        link: "https://patrikbego.github.io/ai-quick-ref/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture"
+      },
+      2: {
+        title: "Stage 2: Distributed Foundation Pre-Training",
+        icon: "⚡",
+        sla: "Model FLOPs Utilization (MFU) > 48% · Linear scaling to 16,384 accelerators",
+        stack: "Megatron-LM, PyTorch FSDP / DeepSpeed ZeRO-3, FlashAttention-3, NVIDIA NeMo",
+        summary: "Scales billions of parameters across GPU clusters combining 3D Parallelism: Tensor Parallelism (TP) over intra-node NVLink, Pipeline Parallelism (PP) over inter-node InfiniBand, and ZeRO-3 Data Parallelism to eliminate optimizer state memory redundancy.",
+        mitigation: "Loss Spikes: Implement automated gradient clipping, dynamic FP8 scaling factors, and rolling periodic checkpoints every 100 steps for instant rollback.",
+        link: "https://patrikbego.github.io/ai-quick-ref/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture"
+      },
+      3: {
+        title: "Stage 3: Post-Training Alignment (SFT, DPO, RLVR)",
+        icon: "🎯",
+        sla: "Verifiable Pass Rate pass@1 > 85% · 50% VRAM reduction via Critic removal",
+        stack: "TRL, OpenRLHF, vLLM-GRPO, DeepSeek-Math Verifiers, Ray Train",
+        summary: "Transitions models from next-token completion to instruction following and formal reasoning. Combines multi-turn SFT with Group Relative Policy Optimization (GRPO) using automated compilers, math engines, and unit tests to provide deterministic reward signals without subjective human judges.",
+        mitigation: "Reward Hacking: Replace subjective neural reward models with deterministic compilers, Python execution sandboxes, and formal proof checkers.",
+        link: "https://patrikbego.github.io/ai-quick-ref/02-llm-architecture/#2-test-time-reasoning--post-training-alignment-direct-prompting-sft-rlhf-and-rlvr"
+      },
+      4: {
+        title: "Stage 4: Multi-Tier Evaluation & Safety Gates",
+        icon: "🛡️",
+        sla: "Regression delta < 0.5% · 100% position debiasing on LLM judge",
+        stack: "Promptfoo, DeepEval, Ragas, Cleanlab, NeMo Guardrails, Llama Guard",
+        summary: "Multi-tier evaluation pyramid: Level 1 deterministic code/math tests (pass@k), Level 2 LLM-as-a-judge with order-swapping (evaluating A vs B and B vs A to cancel position bias), and Level 3 adversarial red-teaming for prompt injection and sycophancy.",
+        mitigation: "Judge Bias: Enforce neutral rubrics, score normalization, length penalties, and swap candidate output order on every comparison query.",
+        link: "https://patrikbego.github.io/ai-quick-ref/06-ai-evals-safety/"
+      },
+      5: {
+        title: "Stage 5: High-Throughput Serving & Engine Optimization",
+        icon: "🚀",
+        sla: "TTFT < 250ms · ITL < 25ms · KV Cache Hit Rate > 75%",
+        stack: "vLLM, SGLang, RadixAttention, PagedAttention, TensorRT-LLM, Triton",
+        summary: "High-throughput serving architecture separates compute-bound prompt prefill from memory-bandwidth-bound decode tokens. Continuous batching interleaves requests, while Radix trees maintain cached KV prefixes across multi-turn sessions.",
+        mitigation: "KV-Cache OOM: Paged memory allocation eliminates external memory fragmentation; requests are preempted to host DRAM when GPU pools saturate.",
+        link: "https://patrikbego.github.io/ai-quick-ref/02-llm-architecture/#3-llm-prompt-caching-versus-semantic-caching"
+      },
+      6: {
+        title: "Stage 6: Tool Gateway, MCP & Agentic Control",
+        icon: "🔌",
+        sla: "JSON Schema failure rate < 0.01% · Tool execution timeout < 1500ms",
+        stack: "Model Context Protocol (MCP), FastMCP, Outlines, LangGraph, Spring AI",
+        summary: "Standardized Model Context Protocol (MCP) servers expose database, search, and enterprise microservices over JSON-RPC. Constrained logit decoding enforces strict Pydantic schemas, eliminating invalid JSON syntax exceptions.",
+        mitigation: "Context Bloat: Implement semantic tool pruning, dynamic schema loading, and context window compression before injecting external tool outputs.",
+        link: "https://patrikbego.github.io/ai-quick-ref/04-mcp-and-tools/"
+      },
+      7: {
+        title: "Stage 7: Production Telemetry & Continuous Feedback Flywheel",
+        icon: "📊",
+        sla: "Distributed tracing coverage = 100% · Shadow eval sampling = 2–5%",
+        stack: "OpenLLMetry, OpenTelemetry, Arize Phoenix, Prometheus, Grafana",
+        summary: "Monitors real-time serving performance (Time-To-First-Token, Inter-Token Latency, tokens/sec, and cost economics). Hard negative requests and customer escalations are automatically anonymized and transformed into unit tests for next-cycle fine-tuning.",
+        mitigation: "Silent Quality Drift: Schedule automated daily shadow evaluations comparing live traffic samples against golden baselines with automated alerting.",
+        link: "https://patrikbego.github.io/ai-quick-ref/08-industry-case-studies/"
+      }
+    };
+
+    function selectStage(num) {
+      const stage = STAGES[num];
+      if (!stage) return;
+
+      // Update button highlights
+      for (let i = 1; i <= 7; i++) {
+        const btn = document.getElementById(`stage-btn-${i}`);
+        if (i === num) {
+          btn.className = "stage-nav-btn text-left p-3.5 rounded-xl border border-indigo-500 bg-indigo-950/60 shadow-lg shadow-indigo-500/20 transition group";
+        } else {
+          btn.className = "stage-nav-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 transition group";
+        }
+      }
+
+      // Render Inspector Drawer
+      const inspector = document.getElementById('stage-inspector');
+      inspector.innerHTML = `
+        <div class="flex flex-wrap justify-between items-start gap-4 border-b border-slate-800 pb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-3xl">${stage.icon}</span>
+            <div>
+              <h3 class="text-xl font-bold text-white">${stage.title}</h3>
+              <p class="text-xs text-indigo-400 font-mono mt-0.5">${stage.sla}</p>
+            </div>
+          </div>
+          <a href="${stage.link}" target="_blank" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-1.5 shadow">
+            Read Full Guide Section ↗
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="md:col-span-2 space-y-4">
+            <div>
+              <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">Architectural Flow & Mechanics</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">${stage.summary}</p>
+            </div>
+            <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+              <h4 class="text-xs font-bold text-rose-400 uppercase tracking-wider mb-1">Critical Failure Mode & Engineering Mitigation</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">${stage.mitigation}</p>
+            </div>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
+            <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider">Recommended 2026/2027 Stack</h4>
+            <div class="flex flex-wrap gap-1.5">
+              ${stage.stack.split(', ').map(item => `<span class="px-2 py-1 rounded bg-slate-800 text-[11px] font-mono text-slate-200 border border-slate-700/60">${item}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // TAB SWITCHER
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white', 'font-semibold');
+        btn.classList.add('text-slate-400');
+      });
+
+      const target = document.getElementById(`tab-${tabId}`);
+      const targetBtn = document.getElementById(`btn-${tabId}`);
+      if (target) target.classList.remove('hidden');
+      if (targetBtn) {
+        targetBtn.classList.add('bg-indigo-600', 'text-white', 'font-semibold');
+        targetBtn.classList.remove('text-slate-400');
+      }
+    }
+
+    // CALCULATOR LOGIC
+    const PRESETS = {
+      "8": { params: 8, layers: 32, kvHeads: 8, headDim: 128 },
+      "70": { params: 70, layers: 80, kvHeads: 8, headDim: 128 },
+      "405": { params: 405, layers: 126, kvHeads: 8, headDim: 128 },
+      "37": { params: 37, layers: 61, kvHeads: 8, headDim: 128 }
+    };
+
+    function applyPreset() {
+      const val = document.getElementById('calc-preset').value;
+      if (val !== 'custom') {
+        document.getElementById('calc-params').value = PRESETS[val].params;
+      }
+      calculateVRAM();
+    }
+
+    function updateContextLabel() {
+      const val = parseInt(document.getElementById('calc-context').value);
+      document.getElementById('label-context').innerText = val.toLocaleString() + ' tokens';
+    }
+
+    function updateBatchLabel() {
+      const val = parseInt(document.getElementById('calc-batch').value);
+      document.getElementById('label-batch').innerText = val + ' requests';
+    }
+
+    function calculateVRAM() {
+      const paramsB = parseFloat(document.getElementById('calc-params').value) || 8;
+      const weightBytes = parseFloat(document.getElementById('calc-weight-prec').value);
+      const tokens = parseInt(document.getElementById('calc-context').value);
+      const batch = parseInt(document.getElementById('calc-batch').value);
+      const kvBytes = parseFloat(document.getElementById('calc-kv-prec').value);
+
+      // 1. Model Weights VRAM (in GB)
+      const weightsGB = paramsB * weightBytes;
+
+      // 2. Estimate layers & KV heads if custom or standard
+      let layers = 32;
+      let kvHeads = 8;
+      let headDim = 128;
+      if (paramsB >= 400) { layers = 126; kvHeads = 8; }
+      else if (paramsB >= 65) { layers = 80; kvHeads = 8; }
+      else if (paramsB >= 30) { layers = 61; kvHeads = 8; }
+
+      // KV Cache: 2 * Layers * KV_Heads * Head_Dim * Tokens * Batch * kvBytes
+      const kvBytesTotal = 2 * layers * kvHeads * headDim * tokens * batch * kvBytes;
+      const kvGB = kvBytesTotal / (1024 * 1024 * 1024);
+
+      // 3. CUDA & Runtime Overhead (Base 2GB + 10% of total)
+      const cudaGB = 2.0 + (weightsGB + kvGB) * 0.08;
+
+      const totalGB = weightsGB + kvGB + cudaGB;
+
+      // Update UI
+      document.getElementById('res-weights').innerText = weightsGB.toFixed(1) + ' GB';
+      document.getElementById('res-kv').innerText = kvGB.toFixed(1) + ' GB';
+      document.getElementById('res-cuda').innerText = cudaGB.toFixed(1) + ' GB';
+      document.getElementById('res-total').innerText = totalGB.toFixed(1) + ' GB';
+
+      // Bars
+      const pWeights = (weightsGB / totalGB) * 100;
+      const pKV = (kvGB / totalGB) * 100;
+      const pCUDA = (cudaGB / totalGB) * 100;
+      document.getElementById('bar-weights').style.width = pWeights + '%';
+      document.getElementById('bar-kv').style.width = pKV + '%';
+      document.getElementById('bar-cuda').style.width = pCUDA + '%';
+
+      // Topology recommendation
+      const badge = document.getElementById('res-badge');
+      const hw = document.getElementById('res-hardware');
+      const desc = document.getElementById('res-hardware-desc');
+
+      if (totalGB <= 23.5) {
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+        badge.innerText = "Fits on 1x 24GB GPU";
+        hw.innerText = "🚀 1x NVIDIA RTX 4090 / L4 (24 GB VRAM)";
+        desc.innerText = "Single accelerator deployment with vLLM PagedAttention and chunked prefill.";
+      } else if (totalGB <= 47.0) {
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+        badge.innerText = "Fits on 1x 48GB GPU";
+        hw.innerText = "🚀 1x NVIDIA RTX 6000 Ada / A6000 (48 GB VRAM)";
+        desc.innerText = "Single workstation GPU or 2x 24GB GPUs using Tensor Parallelism (TP=2).";
+      } else if (totalGB <= 78.0) {
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30";
+        badge.innerText = "Fits on 1x 80GB GPU";
+        hw.innerText = "⚡ 1x NVIDIA H100 / A100 (80 GB VRAM)";
+        desc.innerText = "Enterprise datacenter accelerator with 3.35 TB/s HBM3 memory bandwidth.";
+      } else if (totalGB <= 156.0) {
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-violet-500/20 text-violet-300 border border-violet-500/30";
+        badge.innerText = "Requires 2x 80GB GPUs";
+        hw.innerText = "⚡ 2x NVIDIA H100 80GB (Tensor Parallelism TP=2)";
+        desc.innerText = "High-speed NVLink interconnect required between GPUs to avoid communication stalls.";
+      } else if (totalGB <= 312.0) {
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30";
+        badge.innerText = "Requires 4x 80GB GPUs";
+        hw.innerText = "🔥 4x NVIDIA H100 80GB (Tensor Parallelism TP=4)";
+        desc.innerText = "Full multi-GPU pod with NVLink switch fabric.";
+      } else {
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-rose-500/20 text-rose-300 border border-rose-500/30";
+        badge.innerText = "Requires 8x 80GB Node / Cluster";
+        hw.innerText = "🔥 8x NVIDIA H100/H200 or 1x DGX B200 (TP=8)";
+        desc.innerText = "Distributed 8-way Tensor Parallelism cluster running across full HGX baseboard.";
+      }
+    }
+
+    // INITIALIZATION
+    window.onload = function() {
+      selectStage(1);
+      calculateVRAM();
+    };
+  </script>
+
+</body>
+</html>

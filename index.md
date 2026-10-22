@@ -17,6 +17,14 @@ Jump directly to content matched to your engineering focus:
 | <span class="badge bg-warning text-dark">🟡 Intermediate</span> | Application engineering, RAG pipelines, MCP tool gateways, and agent loops | [03 RAG & Vector Search]({{ '/03-rag-vector-search/' | relative_url }}), [04 Model Context Protocol]({{ '/04-mcp-and-tools/' | relative_url }}), [05 AI Agents]({{ '/05-ai-agents/' | relative_url }}), [06 Evals & Safety]({{ '/06-ai-evals-safety/' | relative_url }}), [07 Dev Tools & Code]({{ '/07-developer-tools/' | relative_url }}) |
 | <span class="badge bg-danger">🔴 Advanced</span> | Low-level transformer mechanics, mathematical alignment (RLVR/GRPO), and distributed serving | [02 LLM Architecture & Inference]({{ '/02-llm-architecture/' | relative_url }}), [08 Industry Case Studies]({{ '/08-industry-case-studies/' | relative_url }}), [Production AI Lifecycle]({{ '/02-llm-architecture/#1-the-production-ai-lifecycle-blueprint-end-to-end-enterprise-systems-architecture' | relative_url }}), [TPU Hardware]({{ '/02-llm-architecture/#14-ep222-what-is-googles-tpu' | relative_url }}), [Speculative Decoding]({{ '/02-llm-architecture/#11-how-to-make-llms-3x-faster' | relative_url }}) |
 
+<div class="my-3 p-3 bg-light rounded border d-flex flex-wrap align-items-center justify-content-between gap-2">
+  <div>
+    <strong>⚡ Interactive Cheat Sheet & VRAM Sizing Calculator:</strong>
+    <span class="text-muted d-block small">Interactive 7-stage lifecycle flowchart, GPU VRAM sizing simulator, and multi-tier decision matrices.</span>
+  </div>
+  <a href="{{ '/cheatsheet/' | relative_url }}" class="btn btn-sm btn-primary">Launch Interactive Cheat Sheet ↗</a>
+</div>
+
 ---
 
 ## 🏷️ Quick Topic Tag Filter
