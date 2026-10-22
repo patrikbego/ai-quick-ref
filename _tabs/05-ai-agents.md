@@ -11,12 +11,12 @@ toc: true
 Comprehensive quick reference covering autonomous agent loops, memory architectures, agent-to-agent communication protocols, multi-agent collaboration patterns, and agent payment systems.
 
 <div class="d-flex flex-wrap gap-2 pt-1 pb-2 mb-3">
-  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#agents</span>
-  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#react-loop</span>
-  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#multi-agent</span>
-  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#a2a</span>
-  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#mpp</span>
-  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#memory</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#agents</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#react-loop</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#multi-agent</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#a2a</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#mpp</span>
+  <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.75rem; font-family: var(--bs-font-monospace, monospace);">#memory</span>
 </div> 
 
 ---
