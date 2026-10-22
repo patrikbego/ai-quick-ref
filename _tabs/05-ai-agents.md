@@ -8,7 +8,9 @@ toc: true
 
 # AI Agents & Multi-Agent Architectures
 
-Comprehensive quick reference covering autonomous agent loops, memory architectures, agent-to-agent communication protocols, multi-agent collaboration patterns, and agent payment systems 
+Comprehensive quick reference covering autonomous agent loops, memory architectures, agent-to-agent communication protocols, multi-agent collaboration patterns, and agent payment systems.
+
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#agents</span><span class="badge bg-light text-dark border">#react-loop</span><span class="badge bg-light text-dark border">#multi-agent</span><span class="badge bg-light text-dark border">#a2a</span><span class="badge bg-light text-dark border">#mpp</span><span class="badge bg-light text-dark border">#memory</span></div> 
 
 ---
 

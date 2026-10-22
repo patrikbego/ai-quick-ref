@@ -10,6 +10,8 @@ toc: true
 
 A comprehensive architectural gateway covering the macro history of artificial intelligence, core algorithmic workflows, technology stacks, machine learning taxonomies, open-source landscapes, and engineering learning paths.
 
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#foundations</span><span class="badge bg-light text-dark border">#taxonomy</span><span class="badge bg-light text-dark border">#history</span><span class="badge bg-light text-dark border">#roadmaps</span><span class="badge bg-light text-dark border">#genai-stack</span><span class="badge bg-light text-dark border">#open-source</span></div>
+
 ---
 
 ## 1. AI & LLM History Timeline (1950–2026)

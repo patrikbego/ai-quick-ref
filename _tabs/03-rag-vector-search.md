@@ -8,7 +8,9 @@ toc: true
 
 # RAG, Vector Search & Retrieval
 
-Comprehensive quick reference covering GraphRAG, Agentic RAG control loops, embedding model design, multi-tenant vector partitioning (Airtable Milvus), distributed SQL vector indexing (CockroachDB C-SPANN), and enterprise multimodal search 
+Comprehensive quick reference covering GraphRAG, Agentic RAG control loops, embedding model design, multi-tenant vector partitioning (Airtable Milvus), distributed SQL vector indexing (CockroachDB C-SPANN), and enterprise multimodal search.
+
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#rag</span><span class="badge bg-light text-dark border">#vector-search</span><span class="badge bg-light text-dark border">#graphrag</span><span class="badge bg-light text-dark border">#hybrid-retrieval</span><span class="badge bg-light text-dark border">#reranking</span><span class="badge bg-light text-dark border">#pgvector</span></div> 
 
 ---
 

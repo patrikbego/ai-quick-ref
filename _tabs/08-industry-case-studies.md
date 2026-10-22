@@ -8,7 +8,9 @@ toc: true
 
 # Industry AI Implementations & Case Studies
 
-Architectural breakdown of real-world AI, LLM, and agent deployments across top technology companies (OpenAI, Stripe, Netflix, DoorDash, Grab, Microsoft, Meta, LinkedIn, and more) 
+Architectural breakdown of real-world AI, LLM, and agent deployments across top technology companies (OpenAI, Stripe, Netflix, DoorDash, Grab, Microsoft, Meta, LinkedIn, and more).
+
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#case-studies</span><span class="badge bg-light text-dark border">#system-design</span><span class="badge bg-light text-dark border">#production</span><span class="badge bg-light text-dark border">#architecture</span><span class="badge bg-light text-dark border">#netflix</span><span class="badge bg-light text-dark border">#stripe</span><span class="badge bg-light text-dark border">#openai</span><span class="badge bg-light text-dark border">#meta</span></div> 
 
 ---
 

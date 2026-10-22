@@ -8,7 +8,9 @@ toc: true
 
 # AI Evaluations, Safety & Robustness
 
-Comprehensive quick reference covering LLM evaluation frameworks, safety alignment, sycophancy, emergent misalignment, lost-in-the-middle context limits, security threat models (prompt injection, reasoning leakage), and production resilience 
+Comprehensive quick reference covering LLM evaluation frameworks, safety alignment, sycophancy, emergent misalignment, lost-in-the-middle context limits, security threat models (prompt injection, reasoning leakage), and production resilience.
+
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#evals</span><span class="badge bg-light text-dark border">#benchmarking</span><span class="badge bg-light text-dark border">#safety</span><span class="badge bg-light text-dark border">#sycophancy</span><span class="badge bg-light text-dark border">#hallucination</span><span class="badge bg-light text-dark border">#prompt-injection</span><span class="badge bg-light text-dark border">#guardrails</span></div> 
 
 ---
 

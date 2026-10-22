@@ -10,6 +10,8 @@ toc: true
 
 Comprehensive quick reference covering Claude Code, Cursor's coding agent and multi-line completion serving engines, next-generation dev platforms (GitHub, Vercel, Replit), production code patterns, and AI-native software engineering practices.
 
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#dev-tools</span><span class="badge bg-light text-dark border">#claude-code</span><span class="badge bg-light text-dark border">#cursor</span><span class="badge bg-light text-dark border">#coding-agents</span><span class="badge bg-light text-dark border">#python</span><span class="badge bg-light text-dark border">#java</span><span class="badge bg-light text-dark border">#github-repos</span></div>
+
 ---
 
 ## 1. Hands-on Production Architectures: Python & Java Implementation Guide

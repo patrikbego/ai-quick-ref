@@ -8,7 +8,9 @@ toc: true
 
 # LLM Architecture, Training & Inference
 
-Comprehensive quick reference covering transformer self-attention internals, Rotary Positional Embeddings (RoPE), Energy-Based Models, PagedAttention and KV-cache optimizations, speculative decoding, parameter-efficient fine-tuning (LoRA/QLoRA), model routing gateways, and specialized hardware (GPUs and TPUs) 
+Comprehensive quick reference covering transformer self-attention internals, Rotary Positional Embeddings (RoPE), Energy-Based Models, PagedAttention and KV-cache optimizations, speculative decoding, parameter-efficient fine-tuning (LoRA/QLoRA), model routing gateways, and specialized hardware (GPUs and TPUs).
+
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#llm</span><span class="badge bg-light text-dark border">#transformer</span><span class="badge bg-light text-dark border">#rope</span><span class="badge bg-light text-dark border">#rlvr</span><span class="badge bg-light text-dark border">#grpo</span><span class="badge bg-light text-dark border">#kv-cache</span><span class="badge bg-light text-dark border">#speculative-decoding</span><span class="badge bg-light text-dark border">#tpu</span><span class="badge bg-light text-dark border">#serving</span></div> 
 
 ---
 

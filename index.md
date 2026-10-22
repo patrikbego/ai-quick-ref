@@ -19,6 +19,37 @@ Jump directly to content matched to your engineering focus:
 
 ---
 
+## 🏷️ Quick Topic Tag Filter
+
+Click any tag to search and filter across all 159+ architectural guides:
+
+<div class="d-flex flex-wrap gap-2 mb-4">
+  <button type="button" class="btn btn-sm btn-outline-primary" onclick="filterByTag('rag')">🏷️ #RAG (12)</button>
+  <button type="button" class="btn btn-sm btn-outline-success" onclick="filterByTag('agents')">🤖 #AI-Agents (12)</button>
+  <button type="button" class="btn btn-sm btn-outline-info text-dark" onclick="filterByTag('mcp')">🔌 #MCP (11)</button>
+  <button type="button" class="btn btn-sm btn-outline-danger" onclick="filterByTag('reasoning')">🧠 #Reasoning & RLVR (6)</button>
+  <button type="button" class="btn btn-sm btn-outline-warning text-dark" onclick="filterByTag('inference')">⚡ #Inference & KV-Cache (18)</button>
+  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="filterByTag('evals')">🛡️ #Evals & Safety (18)</button>
+  <button type="button" class="btn btn-sm btn-outline-dark" onclick="filterByTag('code')">💻 #Coding-Agents (13)</button>
+  <button type="button" class="btn btn-sm btn-outline-danger" onclick="filterByTag('hardware')">⚙️ #TPU & Hardware (8)</button>
+  <button type="button" class="btn btn-sm btn-outline-success" onclick="filterByTag('case-studies')">🏛️ #Case-Studies (49)</button>
+</div>
+
+<script>
+function filterByTag(tag) {
+  var searchInput = document.getElementById('search-input');
+  var searchTrigger = document.getElementById('search-trigger');
+  if (searchInput) {
+    if (searchTrigger) searchTrigger.click();
+    searchInput.focus();
+    searchInput.value = tag;
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+}
+</script>
+
+---
+
 ## 🗺️ Engineering Learning Paths
 
 Choose a structured learning track or explore the complete topic guides below:

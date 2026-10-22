@@ -8,7 +8,9 @@ toc: true
 
 # Model Context Protocol (MCP) & Tools
 
-Comprehensive quick reference covering Anthropic's Model Context Protocol (MCP), tool use evolution, enterprise MCP ecosystems (Pinterest, Figma), MCP vs Skills, and protocol architectures 
+Comprehensive quick reference covering Anthropic's Model Context Protocol (MCP), tool use evolution, enterprise MCP ecosystems (Pinterest, Figma), MCP vs Skills, and protocol architectures.
+
+<div class="d-flex flex-wrap gap-1 mb-3"><span class="badge bg-light text-dark border">#mcp</span><span class="badge bg-light text-dark border">#model-context-protocol</span><span class="badge bg-light text-dark border">#tool-gateways</span><span class="badge bg-light text-dark border">#apis</span><span class="badge bg-light text-dark border">#fastmcp</span><span class="badge bg-light text-dark border">#spring-ai</span></div> 
 
 ---
 
