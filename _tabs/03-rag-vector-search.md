@@ -350,3 +350,44 @@ Contrasts static RAG architectures (linear retrieve-and-read pipelines vulnerabl
 #### Static RAG vs. Agentic Control Architecture
 ![RAG vs Agentic RAG EP169](/assets/images/rag/rag-vs-agentic-rag-ep169.jpeg)
 *Architectural comparison highlighting router, reflection, and iterative retrieval stages.*
+
+
+---
+
+## 14. How Vector Database Search Billions of Vectors in Milliseconds
+
+> 🗓️ **Date:** 04 Oct 2026
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Deconstructs Hierarchical Navigable Small World (HNSW) indexing for billion-scale vector search, showing how multi-layer probabilistic skip-graphs enable logarithmic nearest neighbor traversal by navigating sparse top-layer highways before greedily refining candidates across dense local layers.
+
+### Key Diagrams
+
+#### Skiplist Routing Intuition & Highway Shortcuts
+![Skiplist Routing Intuition](/assets/images/rag/hnsw-skiplist-routing-intuition.jpeg)
+*Conceptual analogy illustrating how multi-tier expressways and skip-lists bypass linear exhaustive comparison to reach target neighborhoods rapidly.*
+
+#### Navigable Small World (NSW) Graph Topology
+![NSW Graph Topology](/assets/images/rag/hnsw-navigable-small-world-graph-topology.png)
+*Graph topology showing high-dimensional clustering where nodes maintain local neighborhood clusters alongside long-range bridge edges.*
+
+#### Vector Distance & Similarity Metrics Comparison
+![Vector Distance Metrics](/assets/images/rag/hnsw-vector-distance-metrics-comparison.png)
+*Geometric comparison of Euclidean distance ($L_2$), Cosine similarity (angular distance), and Dot Product similarity for normalized embeddings.*
+
+#### Hierarchical Navigable Small World (HNSW) Multi-Layer Architecture
+![HNSW Multi-Layer Architecture](/assets/images/rag/hnsw-multi-layer-hierarchical-architecture.jpeg)
+*Multi-layered graph structure organizing vectors hierarchically from a sparse top layer (expressway) down to the dense base layer containing every vector.*
+
+#### Top-Down Greedy Traversal & Search Algorithm
+![Greedy Search Traversal](/assets/images/rag/hnsw-top-down-greedy-search-traversal.png)
+*Search traversal path starting from the top entry point, greedily descending through nearest neighbor hops, and expanding the candidate pool at Layer 0.*
+
+#### HNSW Dynamic Graph Construction & Insertion
+![Dynamic Graph Construction](/assets/images/rag/hnsw-dynamic-graph-construction-insertion.png)
+*Algorithmic workflow for inserting new vectors: probabilistic layer assignment, nearest neighbor exploration, and heuristic edge pruning.*
+
+#### Production Tuning Parameters Matrix ($M$, $efConstruction$, $efSearch$)
+![Production Tuning Tradeoffs](/assets/images/rag/hnsw-production-tuning-parameters-tradeoffs.png)
+*Engineering trade-off matrix detailing how tuning max connections per node ($M$), construction beam width ($efConstruction$), and search queue size ($efSearch$) balances recall, query latency, and RAM utilization.*

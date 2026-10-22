@@ -936,3 +936,44 @@ Deep dive into the foundational role of tokens in language models, comparing Byt
 #### Tokenization Artifacts & Edge-Case Failure Modes
 ![Tokenization Artifacts](../assets/images/llm/llm-tokens-world-04-tokenization-artifacts-quirks.png)
 *Why subword fragmentation causes arithmetic calculation errors and spelling sensitivity.*
+
+
+---
+
+## 39. The 80/20 of AI Concepts
+{: .d-inline-block }
+22 Oct 2026
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Explores the core systems engineering principles of modern AI infrastructure—decoupling compute from parameter capacity via Mixture-of-Experts sparse routing, maximizing serving throughput with continuous batching and dedicated inference runtimes, and accelerating lifecycle pipelines through Direct Preference Optimization (DPO), knowledge distillation, and rubric-based LLM-as-a-judge evaluation.
+
+### Key Diagrams
+
+#### Mixture-of-Experts (MoE) Sparse Routing Architecture
+![MoE Sparse Routing](../assets/images/llm/llm-moe-sparse-routing-architecture.png)
+*Sparse gating router dynamically activating top-k expert feed-forward subnetworks per token, decoupling active FLOPs from total parameter capacity.*
+
+#### LLM Serving & Inference Engine Topology
+![LLM Serving & Inference Engine Topology](../assets/images/llm/llm-serving-inference-engine-topology.png)
+*Architectural separation between API orchestration gateways and dedicated backend inference runtimes (vLLM, SGLang, TensorRT-LLM) using continuous batching and PagedAttention KV-caching.*
+
+#### Synthetic Data & Self-Instruction Pipeline
+![Synthetic Data & Self-Instruction Pipeline](../assets/images/llm/llm-synthetic-data-generation-pipeline.png)
+*Multi-stage synthetic dataset generation with teacher LLMs, rubric validation, and quality-filtering pipelines.*
+
+#### LLM-as-a-Judge Evaluation Architecture
+![LLM-as-a-Judge Evaluation Architecture](../assets/images/llm/llm-as-a-judge-evaluation-architecture.png)
+*Automated evaluation architecture utilizing rubric-guided evaluators, multi-model consensus, and positional bias mitigation.*
+
+#### Direct Preference Optimization (DPO) Dataflow
+![Direct Preference Optimization Dataflow](../assets/images/llm/llm-dpo-direct-preference-optimization-dataflow.png)
+*Closed-form implicit reward optimization directly on chosen/rejected preference pairs without separate reward model training or PPO reinforcement learning loops.*
+
+#### Knowledge Distillation (Teacher to Student Transfer)
+![Knowledge Distillation](../assets/images/llm/llm-knowledge-distillation-teacher-student.png)
+*Soft-target logit probability distribution transfer from heavy teacher models to compact, low-latency student models for cost-effective edge inference.*
+
+#### Temperature & Probability Distribution Sampling
+![Temperature & Probability Distribution Sampling](../assets/images/llm/llm-temperature-sampling-probability-distribution.png)
+*Logit scaling and token selection dynamics comparing greedy decoding with stochastic sampling.*

@@ -308,3 +308,64 @@ Provides an architectural breakdown of DeepSeek's Mixture-of-Experts (MoE) model
 #### What is an AI Agent?
 ![What is an AI Agent Overview](../assets/images/agents/agents-00-what-is-an-ai-agent-overview.gif)
 *Visual overview of an agent's perception, brain, memory, and action execution cycle.*
+
+
+---
+
+## 13. How to Build AI Agents That Don't Start Over When They Fail
+{: .d-inline-block }
+20 Aug 2026
+{: .label .label-purple }
+
+**Architectural Summary:**  
+Analyzes durable execution infrastructure for long-running autonomous AI agents, replacing volatile in-memory loops with deterministic step-level checkpointing, event-driven state memoization, and independent retries so failed steps resume without re-running expensive upstream LLM calls or duplicating side effects.
+
+### Key Diagrams
+
+#### The Failure Problem in Long-Running AI Agents
+![Failure Problem](../assets/images/agents/durable-agents-failure-problem-sequential-loops.png)
+*Demonstrates the vulnerability of standard sequential agent execution, where a failure or API timeout at Step 4 erases previous progress, forcing costly restarts from Step 1.*
+
+#### Durable Execution & Step Memoization Architecture
+![Step Memoization Architecture](../assets/images/agents/durable-agents-step-memoization-architecture.png)
+*Architectural model of step-level persistence where completed step results are recorded to durable state storage, allowing agents to resume directly from the point of failure.*
+
+#### Agent Concurrency, Throttling & Rate Limit Isolation
+![Concurrency & Rate Limits](../assets/images/agents/durable-agents-concurrency-throttling-rate-limits.png)
+*Multi-tenant quota management and rate-limit guardrails preventing parallel agent bursts from exhausting shared downstream model provider tokens.*
+
+#### Durable Step Execution Primitives (`step.run()`)
+![Durable Step Primitives](../assets/images/agents/durable-agents-atomic-step-run-primitives.png)
+*Breakdown of atomic step boundaries that guarantee idempotency and deterministic replay across transient infrastructure crashes.*
+
+#### Asynchronous Pausing & Human-in-the-Loop
+![Async Pausing](../assets/images/agents/durable-agents-async-pause-human-in-the-loop.png)
+*Dataflow for sleeping and waiting on external webhook events (e.g., human editorial approval) without keeping compute containers or serverless runtimes active.*
+
+#### Framework Topology: Workflow Engines vs. Agent Frameworks
+![Workflow Engines vs Agent Frameworks](../assets/images/agents/durable-agents-workflow-engines-vs-agent-frameworks.png)
+*Comparison matrix contrasting lightweight task queues, monolithic agent frameworks, and stateful durable execution engines.*
+
+#### Under-the-Hood Function Execution Pattern & Dispatch Loop
+![Execution Dispatch Loop](../assets/images/agents/durable-agents-execution-pattern-dispatch-loop.png)
+*Interaction sequence between the durable execution coordinator and the application worker executing individual steps over HTTP.*
+
+#### Deterministic Result Interception via Step IDs
+![Deterministic Result Interception](../assets/images/agents/durable-agents-deterministic-result-interception.png)
+*How the runtime matches unique Step IDs against stored history to bypass completed operations and immediately return memoized payloads.*
+
+#### Independent Step Retries with Exponential Backoff
+![Step Retries Backoff](../assets/images/agents/durable-agents-independent-step-retries-backoff.png)
+*Isolated retry policies applying jittered backoff to transient network glitches without invalidating preceding agent computations.*
+
+#### Queue Buffering, Throttling & LLM Burst Protection
+![Queue Buffering](../assets/images/agents/durable-agents-queue-buffering-burst-protection.png)
+*Buffer queue architecture smoothing out spiky workloads and prioritizing mission-critical agent jobs over batch background tasks.*
+
+#### Observability, Tracing & Step Timeline Visualization
+![Observability Waterfall](../assets/images/agents/durable-agents-observability-waterfall-tracing.png)
+*Step-level waterfall timeline visualizing per-step latencies, input/output token payloads, and error traces.*
+
+#### End-to-End Autonomous Research Agent Durable Lifecycle
+![End-to-End Research Lifecycle](../assets/images/agents/durable-agents-end-to-end-research-agent-lifecycle.png)
+*Complete production topology of a research agent pipeline: Source Retrieval → Evidence Extraction → Draft Generation → Human Approval Event → Publishing.*

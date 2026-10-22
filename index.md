@@ -8,9 +8,9 @@ title: "AI Quick Reference"
     A curated, searchable engineering knowledge base covering modern <strong class="text-light">Artificial Intelligence</strong>, <strong class="text-light">Large Language Models (LLMs)</strong>, <strong class="text-light">Autonomous AI Agents</strong>, <strong class="text-light">Model Context Protocol (MCP)</strong>, <strong class="text-light">RAG Systems</strong>, and <strong class="text-light">Production ML Infrastructure</strong>.
   </p>
   <div class="d-flex flex-wrap gap-3 align-items-center text-muted small mt-2">
-    <span>📐 <strong>159+</strong> Architectural Guides</span>
+    <span>📐 <strong>162+</strong> Architectural Guides</span>
     <span>•</span>
-    <span>🖼️ <strong>690+</strong> High-Res Diagrams</span>
+    <span>🖼️ <strong>716+</strong> High-Res Diagrams</span>
     <span>•</span>
     <span>⚡ <strong>8</strong> Engineering Domains</span>
   </div>
@@ -102,14 +102,14 @@ title: "AI Quick Reference"
 ---
 
 <h3 class="fw-bold mt-4 mb-1">Quick Topic Tag Filter</h3>
-<p class="text-muted small mb-3">Click any tag to search and filter across all 159+ architectural guides:</p>
+<p class="text-muted small mb-3">Click any tag to search and filter across all 162+ architectural guides:</p>
 
 <div class="d-flex flex-wrap gap-2 mb-4">
-  <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('rag')">#rag <span class="tag-count">13</span></button>
-  <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('agents')">#ai-agents <span class="tag-count">12</span></button>
+  <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('rag')">#rag <span class="tag-count">14</span></button>
+  <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('agents')">#ai-agents <span class="tag-count">13</span></button>
   <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('mcp')">#mcp <span class="tag-count">11</span></button>
   <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('reasoning')">#reasoning-rlvr <span class="tag-count">6</span></button>
-  <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('inference')">#inference-kvcache <span class="tag-count">19</span></button>
+  <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('inference')">#inference-kvcache <span class="tag-count">20</span></button>
   <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('evals')">#evals-safety <span class="tag-count">18</span></button>
   <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('code')">#coding-agents <span class="tag-count">13</span></button>
   <button type="button" class="btn btn-sm tag-filter-btn" onclick="filterByTag('hardware')">#tpu-hardware <span class="tag-count">8</span></button>
@@ -213,4 +213,4 @@ function filterByTag(tag) {
 - **Sidebar Navigation:** Rapid access to all 8 domains with section counts and active path highlights.
 - **Instant Full-Text Search:** Press the search bar or type `/` to instantly filter topics, systems concepts, and summaries.
 - **Adaptive Dark/Light Themes:** Automatic system preference detection with manual toggle at the bottom of the sidebar.
-- **690+ High-Resolution Architectural Diagrams:** Persisted and served locally to ensure immediate loading and zero broken links.
+- **716+ High-Resolution Architectural Diagrams:** Persisted and served locally to ensure immediate loading and zero broken links.
